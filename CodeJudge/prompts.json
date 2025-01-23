@@ -1,0 +1,9 @@
+{
+    "version": "CodeJudge 2025.0.alpha",
+    "faultlocalization": [
+        {
+            "promptNumber": 0,
+            "prompt": "You will be provided with a problem statement, a code snippet that supposedly addresses the problem,\nand a catalog of code inconsistencies.\nEvaluation Steps:\n1. Read the problem statement carefully to identify the functionalities required for the\nimplementation.\n2. Read the code snippet and compare it to the problem statement. Check if the code snippet covers\nthe required functionalities.\n3. Output your answer in a JSON format list, with the key being \"inconsistencies\" and the value being the list of inconsistency dictionaries formated as follows.\na) If the code snippet is correct, output: [\"inconsistency\": \"None\", \"severity\": \"Negligible\"].\nb) If the code snippet is incorrect, output the identified inconsistencies and their severity\naccording to the catalog of code inconsistencies. For example: [\"inconsistency\": \"<inconsistency1>\",\n\"severity\": \"<severity1>\", \"inconsistency\": \"<inconsistency2>\", \"severity\": \"<severity2>\", ...]\nProblem: {PROBLEM}\nCode Snippet: {CODE}\nTaxonomy of Common Inconsistencies:\n1. Missing dependency declarations: Negligible\n2. No error messages for unexpected input cases: Negligible\n3. Inefficiency, unnecessary statements: Negligible\n4. Edge case not handled: Small\n5. Logic error: Major\n6. Function or variable not defined: Fatal\n7. Code not completed: Fatal\nEvaluation Form:\nSample JSON output (make sure to return a JSON list only, and always return a list (enclosed in square brackets):\n[{\"inconsistency\": \"None\", \"severity\": \"Negligible\"}]"
+        }
+    ]        
+}
