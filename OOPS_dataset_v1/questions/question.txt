@@ -1,0 +1,27 @@
+You are required to implement functionalities for a Cricket Analytics application. The provided template 
+code for this application contains multiple classes and methods related to cricket players, their roles, 
+team information, and various data-handling operations. Your tasks involve implementing several 
+methods, each responsible for performing specific actions like reading data from a file, writing data back, 
+updating player statistics, and filtering data. You have been provided with the following files for this 
+question:
+1. CBT_PART_1_QP.java [Code template file where you need to write code for PART-1]
+2. inputCricketData.csv [Input file which is required to be read as part of this question]
+Tasks and Methods to be Implemented:
+1. RunsComparator: compare Method [2 marks]
+Write code for comparing runs scored by two players in descending order.
+Return a negative value if the first player has more runs, a positive value if the second player has more 
+runs, or zero if they have the same number of runs.
+2. CricketDataHandler: readPlayersFromFile Method [9 marks]
+Write code for reading player data from the input CSV file and creating a list of Player objects.
+3. CricketDataHandler: writePlayersToFile Method [4 marks]
+Write code to write the updated list of players back to the output CSV file. The format of the output file 
+should be the same as that of the input file.
+4. CricketDataHandler: updatePlayerStats Method [5 marks]
+Implement the method to update a player's stats (runs and wickets).
+5. CricketDataHandler: calculateTeamAverageRuns Method [5 marks]
+Write code to calculate the average runs scored by players of a specific team.
+6. TeamFilter: filter Method [5 marks]
+Write code to filter players by their team.
+7. AllRounderStatsFilter: filter Method [5 marks]
+Write code to filter all-rounder players which satisfy the provided criteria (i.e. filter those all-rounders who 
+have runs and wickets greater than or equal to the runs and wickets specified in the criteria respectively).
