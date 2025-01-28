@@ -1,0 +1,30 @@
+
+def add_book(collection, title, author, year):
+    """Adds a new book to the collection."""
+    book = {'title': title, 'author': author, 'year': year}
+    collection.append(book)
+
+def main():
+    """Main function to interact with the user."""
+    collection = []
+    while True:
+        print("\nWelcome to the Library Management System")
+        print("1. Add a new book")
+        print("2. Exit")
+        choice = input("Choose an option: ")
+
+        if choice == '1':
+            title = input("Enter book title: ")
+            author = input("Enter author: ")
+            year = input("Enter publication year: ")
+            add_book(collection, title, author, year)
+            print("Book added successfully!")
+
+        elif choice == '2':
+            print("Goodbye!")
+            break
+
+if __name__ == "__main__":
+    main()
+
+

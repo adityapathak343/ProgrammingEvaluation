@@ -1,0 +1,71 @@
+### Problem Statement: Adventure in the Enchanted Forest
+
+Welcome to the Enchanted Forest Adventure! As a brave adventurer, your task is to navigate through the forest, collect hidden treasures, and avoid dangerous traps. You will use your newfound knowledge of control structures to make decisions and repeat actions until you achieve your goal.
+
+#### Scenario:
+
+You start at the entrance of the Enchanted Forest with the following objectives:
+1. Collect 3 treasures hidden in different parts of the forest.
+2. Avoid falling into traps that can end your adventure prematurely.
+3. Find the exit to successfully complete your journey.
+
+#### Environment Details:
+
+1. **Locations**: The forest is divided into a grid. Each position in the grid may contain:
+   - A treasure (`T`)
+   - A trap (`X`)
+   - An empty space (`E`)
+   - The exit (`O`)
+
+2. **Player Actions**: You can move in four directions:
+   - Up
+   - Down
+   - Left
+   - Right
+
+3. **Game Rules**:
+   - You start at position `(0, 0)`.
+   - You must collect all 3 treasures.
+   - You cannot land on a trap.
+   - You must find the exit after collecting all treasures.
+
+#### Task:
+
+Write a program to simulate the journey using conditional statements and loops. Your program should:
+
+1. **Initialize the Forest Grid**: Create a 5x5 grid with predefined positions for treasures, traps, and the exit. You can hard-code this grid for simplicity.
+
+2. **User Input**: Prompt the user to decide their next move (Up, Down, Left, Right).
+
+3. **Control Flow**:
+   - Use `if` and `else` statements to check the grid position after each move.
+   - Implement a `switch` statement (or equivalent if-else if structure) to handle different grid elements (`T`, `X`, `E`, `O`).
+
+4. **Looping**:
+   - Use a `while` loop to keep the game running until the player collects all treasures and finds the exit.
+   - Use a `for` loop to iterate over user inputs if necessary.
+
+5. **Output**:
+   - Display messages to the user when they collect a treasure, encounter a trap, or reach the exit.
+   - If the player steps on a trap, end the game with a message.
+   - Once all treasures are collected and the exit is found, congratulate the player.
+
+#### Example:
+
+plaintext
+Welcome to the Enchanted Forest Adventure!
+You are currently at position (0, 0).
+Choose your move (Up, Down, Left, Right): Down
+You moved to position (1, 0). It's an empty space.
+Choose your move (Up, Down, Left, Right): Right
+You found a treasure! Total treasures collected: 1
+...
+Congratulations! You have collected all treasures and found the exit!
+
+
+#### Additional Considerations:
+
+- Ensure the player does not move outside the boundaries of the grid.
+- Consider edge cases, such as invalid inputs for movement or attempting to move in a direction that doesn't exist.
+
+This exercise will help you understand how to use conditional statements and loops to control program flow, make decisions, and repeat actions based on user inputs. Good luck, and may you find all the treasures in the Enchanted Forest!

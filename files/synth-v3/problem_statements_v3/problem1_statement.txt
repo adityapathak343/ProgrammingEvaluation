@@ -1,0 +1,66 @@
+Certainly! Below is a detailed coding problem statement suitable for a first-year CS student. The problem covers basic programming concepts typically introduced in a CS1 class, such as variables, data types, control structures, loops, and basic input/output.
+
+---
+
+**Problem Statement: Student Grade Calculator**
+
+**Objective:**
+
+Write a Python program that calculates the final grade for a student in a course. The program should prompt the user to input scores for assignments, quizzes, a midterm exam, and a final exam. It should then compute the final grade based on the following weight distribution:
+
+- Assignments: 30% 
+- Quizzes: 20%
+- Midterm Exam: 25%
+- Final Exam: 25%
+
+**Requirements:**
+
+1. **Input:**
+   - The program should prompt the user to enter the following:
+     - Five assignment scores (each out of 100).
+     - Three quiz scores (each out of 100).
+     - One midterm exam score (out of 100).
+     - One final exam score (out of 100).
+
+2. **Process:**
+   - Calculate the average score for the assignments and quizzes.
+   - Compute the weighted contribution of each component (assignments, quizzes, midterm, and final) to the final grade.
+   - Sum these weighted contributions to get the final grade.
+
+3. **Output:**
+   - Display the computed final grade as a percentage.
+   - Provide a letter grade based on the following scale:
+     - A: 90% and above
+     - B: 80% to 89%
+     - C: 70% to 79%
+     - D: 60% to 69%
+     - F: below 60%
+
+**Constraints:**
+
+- Assume all input scores are valid integers between 0 and 100.
+- Use appropriate variable names and comments to make the code readable.
+- The program should handle input and output in a user-friendly manner.
+
+**Example:**
+
+
+Enter your five assignment scores: 85 90 78 92 88
+Enter your three quiz scores: 80 85 90
+Enter your midterm exam score: 75
+Enter your final exam score: 85
+
+Your final grade is: 84.75%
+Your letter grade is: B
+
+
+**Hints:**
+
+- Use lists to store multiple scores for assignments and quizzes.
+- Use the `sum()` function to calculate the total score for assignments and quizzes.
+- Remember to convert integer scores to floats when calculating averages to ensure accurate division.
+- Consider defining functions for repetitive tasks such as calculating averages or weighted scores.
+
+---
+
+This problem introduces students to basic programming concepts, including input handling, calculations, and conditional logic, which form the foundation for more advanced programming tasks.

@@ -1,0 +1,53 @@
+Here's a 10-point rubric for evaluating the Library Management System project:
+
+1. **Functionality of Main Menu (1 point)**
+   - Full Marks (1 point): The main menu is implemented correctly, allowing users to select and navigate between different operations seamlessly.
+   - Partial Marks (0.5 points): The main menu is implemented but has minor issues in navigation or user interaction.
+   - No Marks (0 points): The main menu is missing or non-functional.
+
+2. **Implementation of `add_book` Function (1 point)**
+   - Full Marks (1 point): The function correctly adds a book to the collection and returns the updated collection.
+   - Partial Marks (0.5 points): The function adds a book but has issues with returning the updated collection or handling inputs.
+   - No Marks (0 points): The function is missing or does not add books correctly.
+
+3. **Implementation of `remove_book` Function (1 point)**
+   - Full Marks (1 point): The function correctly removes a book by title and returns the appropriate boolean status.
+   - Partial Marks (0.5 points): The function removes a book but has issues with returning the correct status or handling non-existent books.
+   - No Marks (0 points): The function is missing or does not remove books correctly.
+
+4. **Implementation of `search_book` Function (1 point)**
+   - Full Marks (1 point): The function correctly searches for a book by title and returns the book details if found.
+   - Partial Marks (0.5 points): The function searches for a book but has issues with returning details or handling non-existent books.
+   - No Marks (0 points): The function is missing or does not search books correctly.
+
+5. **Implementation of `list_books` Function (1 point)**
+   - Full Marks (1 point): The function correctly lists all books in the collection.
+   - Partial Marks (0.5 points): The function lists books but has issues with formatting or handling an empty collection.
+   - No Marks (0 points): The function is missing or does not list books correctly.
+
+6. **Use of Data Structure (1 point)**
+   - Full Marks (1 point): Books are stored using a list of dictionaries with correct keys (`title`, `author`, `year`).
+   - Partial Marks (0.5 points): Books are stored using a list of dictionaries but with minor issues in structure or key usage.
+   - No Marks (0 points): Books are not stored using the specified data structure.
+
+7. **User Input Handling (1 point)**
+   - Full Marks (1 point): User input is handled effectively with appropriate prompts and validation for all operations.
+   - Partial Marks (0.5 points): User input is handled but lacks validation or has minor issues with prompts.
+   - No Marks (0 points): User input handling is inadequate or missing.
+
+8. **Variable Scope and Reusability (1 point)**
+   - Full Marks (1 point): Variables are properly scoped, and functions are reusable without unnecessary global variables.
+   - Partial Marks (0.5 points): Variables are mostly scoped correctly, but some global variables are used unnecessarily.
+   - No Marks (0 points): Variable scope is poorly managed, with excessive use of global variables.
+
+9. **Return Values (1 point)**
+   - Full Marks (1 point): Functions return appropriate values based on their operations, facilitating correct program flow.
+   - Partial Marks (0.5 points): Functions return values but with inconsistencies or minor issues affecting program flow.
+   - No Marks (0 points): Functions do not return appropriate values, disrupting program flow.
+
+10. **Code Clarity and Organization (1 point)**
+    - Full Marks (1 point): Code is well-organized, with clear structure, comments, and naming conventions.
+    - Partial Marks (0.5 points): Code is mostly organized but lacks comments or has inconsistent naming conventions.
+    - No Marks (0 points): Code is poorly organized, making it difficult to understand or follow.
+
+This rubric ensures that each aspect of the project is evaluated based on its contribution to the overall functionality and quality of the Library Management System.

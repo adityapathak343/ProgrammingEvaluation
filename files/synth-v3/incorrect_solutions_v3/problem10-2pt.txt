@@ -1,0 +1,41 @@
+
+
+from typing import List, Tuple
+
+def find_and_sort_treasures(grid: List[List[int]]) -> Tuple[int, List[int]]:
+
+    treasure_count = 0
+
+
+    treasure_values = []
+
+
+    for row in grid:
+        for value in row:
+            if value > 0:
+
+                treasure_count += 1
+
+
+    treasure_values.sort()
+
+
+    return treasure_count, treasure_values
+
+
+if __name__ == "__main__":
+
+    grid = [
+        [0, 5, 0, 0],
+        [4, 0, 0, 3],
+        [0, 0, 1, 0]
+    ]
+
+
+    num_treasures, sorted_treasures = find_and_sort_treasures(grid)
+
+
+    print(num_treasures)
+    print(' '.join(map(str, sorted_treasures)))
+
+

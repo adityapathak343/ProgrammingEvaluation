@@ -1,0 +1,45 @@
+Here's a 10-point grading rubric for the problem statement, structured to align with the learning objectives and requirements:
+
+1. **Correctness of Arithmetic Operations (2 points)**
+   - **2 points**: The program correctly performs all four arithmetic operations (addition, subtraction, multiplication, division) based on user input.
+   - **1 point**: The program performs some operations correctly but has errors in others.
+   - **0 points**: The program fails to perform any arithmetic operations correctly.
+
+2. **Syntax and Semantics (2 points)**
+   - **2 points**: The code adheres to the syntax rules of the chosen language and demonstrates a clear understanding of semantics.
+   - **1 point**: Minor syntax errors or misunderstandings of semantics that do not significantly affect program execution.
+   - **0 points**: Major syntax errors or a lack of understanding of semantics that prevent the program from running.
+
+3. **Use of Variables and Data Types (1 point)**
+   - **1 point**: Variables are declared and used appropriately with correct data types for storing numerical values.
+   - **0 points**: Incorrect or inappropriate use of variables and data types.
+
+4. **User Input Handling (1 point)**
+   - **1 point**: The program correctly prompts for and handles user input for numbers and operators.
+   - **0 points**: The program fails to correctly prompt for or handle user input.
+
+5. **Conditional Statements (1 point)**
+   - **1 point**: Correct use of if-else or switch-case statements to determine the operation based on user input.
+   - **0 points**: Incorrect or missing use of conditional statements.
+
+6. **Loop Implementation (optional) (1 point)**
+   - **1 point**: A loop is implemented to allow multiple calculations, with a clear exit condition.
+   - **0 points**: No loop is implemented, or the loop does not function correctly.
+
+7. **Function Implementation (optional) (1 point)**
+   - **1 point**: Separate functions are defined and used for each arithmetic operation.
+   - **0 points**: No functions are implemented, or functions do not work as intended.
+
+8. **Error Handling (1 point)**
+   - **1 point**: The program includes error handling for division by zero and invalid operator inputs.
+   - **0 points**: No error handling, or error handling is ineffective.
+
+9. **User Interaction and Output (1 point)**
+   - **1 point**: The program provides clear, user-friendly prompts and outputs the results in an understandable format.
+   - **0 points**: The program's prompts and outputs are unclear or confusing.
+
+10. **Code Structure and Documentation (1 point)**
+    - **1 point**: The code is well-organized, with clear structure and comments explaining the syntax and semantics used.
+    - **0 points**: The code is poorly organized, with little to no documentation or explanation.
+
+This rubric provides a clear and measurable framework for evaluating submissions, ensuring alignment with the learning objectives and requirements of the problem statement.

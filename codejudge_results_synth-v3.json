@@ -1,0 +1,986 @@
+{
+    "problem1_correct": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 1.0
+    },
+    "problem2_correct": {
+        "response": [
+            {
+                "inconsistency": "None",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 1.0,
+        "expected_score": 1.0
+    },
+    "problem3_correct": {
+        "response": [
+            {
+                "inconsistency": "None",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 1.0,
+        "expected_score": 1.0
+    },
+    "problem4_correct": {
+        "response": [
+            {
+                "inconsistency": "Logic error in the while loop condition; it should use 'and' instead of 'or' to check for both treasures collected and exit found.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The game does not handle the case where the player collects a treasure and then immediately steps on a trap in the same turn.",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 1.0
+    },
+    "problem5_correct": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled (e.g., non-integer input for publication year)",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 1.0
+    },
+    "problem6_correct": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled (removing a book that doesn't exist)",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 1.0
+    },
+    "problem7_correct": {
+        "response": [
+            {
+                "inconsistency": "None",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 1.0,
+        "expected_score": 1.0
+    },
+    "problem8_correct": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 1.0
+    },
+    "problem9_correct": {
+        "response": [
+            {
+                "inconsistency": "Setter for available copies allows setting negative values without error handling.",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 1.0
+    },
+    "problem10_correct": {
+        "response": [
+            {
+                "inconsistency": "None",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 1.0,
+        "expected_score": 1.0
+    },
+    "problem1_0pt": {
+        "response": [
+            {
+                "inconsistency": "Final grade calculation does not consider weights for assignments, quizzes, midterm, and final exam.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Letter grade is hardcoded as 'A' without any calculation based on final percentage.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "No calculation of averages for assignments and quizzes before computing the final grade.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.0
+    },
+    "problem2_0pt": {
+        "response": [
+            {
+                "inconsistency": "Logic error: The calc function does not correctly perform the operation based on the operator input.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "No error messages for unexpected input cases: The program does not handle invalid operators or non-numeric inputs.",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled: The program does not handle division by zero.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Function or variable not defined: The calc function is not defined to handle the operator correctly.",
+                "severity": "Fatal"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.0
+    },
+    "problem3_0pt": {
+        "response": [
+            {
+                "inconsistency": "Product name should be a string, but it is declared as an integer.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Product price should be a float, but it is declared as a string.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Product quantity should be an integer, but it is declared as a string.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Product on sale should be a boolean, but it is declared as a string.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Total inventory value calculation is incorrect due to type mismatch.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Product quantity cannot be decremented by a string.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The condition to check if the product is on sale is incorrect; it should check the boolean value.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.0
+    },
+    "problem4_0pt": {
+        "response": [
+            {
+                "inconsistency": "Code not completed",
+                "severity": "Fatal"
+            },
+            {
+                "inconsistency": "Logic error",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Edge case not handled",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.0
+    },
+    "problem5_0pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled (removing a book that does not exist)",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Logic error (removing a book does not confirm success or failure)",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Logic error (searching for a book does not handle case where book is not found)",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.0
+    },
+    "problem6_0pt": {
+        "response": [
+            {
+                "inconsistency": "addBook function does not create a Book object and adds only the title to the list.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "removeBook function attempts to remove a title string instead of a Book object.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "searchBook function does not display book details; it only checks for the title in the list.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "displayBooks function prints only the title instead of the full book details.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "menu function is not implemented, making user interaction impossible.",
+                "severity": "Fatal"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.0
+    },
+    "problem7_0pt": {
+        "response": [
+            {
+                "inconsistency": "The program does not prompt for the number of students.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The program does not validate that the grade is a numerical value between 0 and 100.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The program does not handle potential file I/O errors.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The program does not display the data in a formatted table as required.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The program does not allow for multiple students to be entered; it only handles one student.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.0
+    },
+    "problem8_0pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled (negative or zero values for deposit/withdrawal)",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Logic error (withdraw method does not check for insufficient funds)",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.0
+    },
+    "problem9_0pt": {
+        "response": [
+            {
+                "inconsistency": "Class attributes are not private, violating encapsulation.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Constructor is missing to initialize book attributes.",
+                "severity": "Fatal"
+            },
+            {
+                "inconsistency": "No getter and setter methods implemented for attributes.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Borrowing a book does not check if copies are available.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Display details method does not print book attributes.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Main method does not demonstrate full functionality as required.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.0
+    },
+    "problem10_0pt": {
+        "response": [
+            {
+                "inconsistency": "Logic error: The code incorrectly filters treasure values using 'value > 1' instead of 'value > 0'.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The function does not sort the treasure values before returning them.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The output for the number of treasures is incorrect; it returns the length of the grid instead of the count of treasures found.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.0
+    },
+    "problem1_2pt": {
+        "response": [
+            {
+                "inconsistency": "Final grade is displayed without a percentage sign.",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Letter grade calculation is missing.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.5,
+        "expected_score": 0.2
+    },
+    "problem2_2pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled (division by zero)",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.2
+    },
+    "problem3_2pt": {
+        "response": [
+            {
+                "inconsistency": "Product name should be a string, but it is declared as an integer.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Product price should be a float, but it is declared as a string.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Product quantity should be an integer, but it is declared as a string.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Product on sale should be a boolean, but it is declared as a string.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The condition to check if the product is on sale uses a string comparison instead of a boolean.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.2
+    },
+    "problem4_2pt": {
+        "response": [
+            {
+                "inconsistency": "Edge case not handled: Player can move outside the boundaries of the grid.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Logic error: The game does not check if all treasures are collected before allowing the player to find the exit.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.2
+    },
+    "problem5_2pt": {
+        "response": [
+            {
+                "inconsistency": "Missing functionality for removing a book.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Missing functionality for searching for a book.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Missing functionality for listing all books.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "No error messages for unexpected input cases.",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.2
+    },
+    "problem6_2pt": {
+        "response": [
+            {
+                "inconsistency": "Edge case not handled: Removing a book from an empty collection should provide a message.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "No error messages for unexpected input cases: The program does not handle non-integer input for the year.",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Logic error: The program does not limit the number of books to 100 as specified in the problem statement.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.2
+    },
+    "problem7_2pt": {
+        "response": [
+            {
+                "inconsistency": "No validation for grade input to ensure it is between 0 and 100.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "No error handling for file I/O operations.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Grades are stored as strings instead of integers, which may lead to issues when processing.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Output format does not match the specified table format in the problem statement.",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.8,
+        "expected_score": 0.2
+    },
+    "problem8_2pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled (negative or zero values for deposit/withdrawal)",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Logic error (not handling non-numeric input for deposit and withdrawal)",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.2
+    },
+    "problem9_2pt": {
+        "response": [
+            {
+                "inconsistency": "Class attributes are not private, violating encapsulation.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Missing getter and setter methods for attributes.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "No implementation of borrowBook() method.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "No implementation of returnBook() method.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "No implementation of displayDetails() method.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Main method does not demonstrate borrowing and returning functionality.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.2
+    },
+    "problem10_2pt": {
+        "response": [
+            {
+                "inconsistency": "treasure_values list is not populated with found treasures before sorting",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "No handling for edge cases such as maps with no treasures",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.2
+    },
+    "problem1_4pt": {
+        "response": [
+            {
+                "inconsistency": "No letter grade output based on final percentage",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "No error handling for invalid input (e.g., non-integer values)",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.4
+    },
+    "problem2_4pt": {
+        "response": [
+            {
+                "inconsistency": "None",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 1.0,
+        "expected_score": 0.4
+    },
+    "problem3_4pt": {
+        "response": [
+            {
+                "inconsistency": "Product quantity should be an integer, but it is declared as a string.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Product on sale should be a boolean, but it is declared as a string.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The output for 'Product On Sale' should display 'Yes' or 'No' instead of 'True' or 'False'.",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.4
+    },
+    "problem4_4pt": {
+        "response": [
+            {
+                "inconsistency": "Edge case not handled: The code does not check if the player has collected all treasures before allowing them to find the exit.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Logic error: The grid does not contain an exit ('O') which is required for the player to complete the game.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.4
+    },
+    "problem5_4pt": {
+        "response": [
+            {
+                "inconsistency": "The add_book function does not return the updated collection.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "The remove_book function does not return a boolean value indicating success or failure.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "The search_book function does not return the book details; it only prints them.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "The main function does not handle non-integer menu choices or invalid inputs gracefully.",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 0.85,
+        "expected_score": 0.4
+    },
+    "problem6_4pt": {
+        "response": [
+            {
+                "inconsistency": "Edge case not handled: The program does not handle the case where the user tries to add a book with a title that already exists in the collection.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Edge case not handled: The program does not handle the case where the user tries to remove a book that does not exist in the collection.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Edge case not handled: The program does not handle the case where the user tries to search for a book that does not exist in the collection.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "No error messages for unexpected input cases: The program does not validate the year of publication input to ensure it is an integer.",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 0.85,
+        "expected_score": 0.4
+    },
+    "problem7_4pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled (grades not validated to be between 0 and 100)",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Logic error (grades are stored as strings instead of integers)",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.4
+    },
+    "problem8_4pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled (negative deposit or withdrawal amounts)",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.4
+    },
+    "problem9_4pt": {
+        "response": [
+            {
+                "inconsistency": "Setter method for ISBN is implemented, but it should not be changeable once set.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The returnBook() method is not implemented.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The main method does not demonstrate borrowing and returning a book as required.",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.4
+    },
+    "problem10_4pt": {
+        "response": [
+            {
+                "inconsistency": "Sorting the treasures in descending order instead of ascending order.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "No handling for the case where there are no treasures found (output should be 0 and an empty list).",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.4
+    },
+    "problem1_6pt": {
+        "response": [
+            {
+                "inconsistency": "Weighted contributions for assignments and quizzes are incorrectly calculated.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Letter grade calculation is missing.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.6
+    },
+    "problem2_6pt": {
+        "response": [
+            {
+                "inconsistency": "Edge case not handled: Division by zero is not managed.",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.6
+    },
+    "problem3_6pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Code not completed",
+                "severity": "Fatal"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.6
+    },
+    "problem4_6pt": {
+        "response": [
+            {
+                "inconsistency": "The game does not check if all treasures have been collected before allowing the player to find the exit.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The game does not end after finding the exit, even if all treasures are collected.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The game does not handle the case where the player collects all treasures and then tries to move to the exit.",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.0,
+        "expected_score": 0.6
+    },
+    "problem5_6pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled (e.g., non-integer publication year input)",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.6
+    },
+    "problem6_6pt": {
+        "response": [
+            {
+                "inconsistency": "Edge case not handled: The program does not handle the case where the user tries to remove a book that does not exist in the collection, which is addressed in the problem statement.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "No error messages for unexpected input cases: The program does not handle non-integer input for the year when adding a book, which could lead to a runtime error.",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.6
+    },
+    "problem7_6pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.6
+    },
+    "problem8_6pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.6
+    },
+    "problem9_6pt": {
+        "response": [
+            {
+                "inconsistency": "Setter method for ISBN is missing, which violates encapsulation as ISBN should not be changeable once set.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The returnBook method does not check if the available copies exceed a certain limit (e.g., it should not allow increasing copies beyond the initial count).",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.6
+    },
+    "problem10_6pt": {
+        "response": [
+            {
+                "inconsistency": "Edge case not handled: The code does not handle the case where the grid contains no treasures (all zeros).",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Inefficiency, unnecessary statements: The bubble sort algorithm used for sorting is inefficient for larger datasets.",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.6
+    },
+    "problem1_8pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled (e.g., handling non-integer inputs or scores outside the range of 0-100)",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.8
+    },
+    "problem2_8pt": {
+        "response": [
+            {
+                "inconsistency": "Edge case not handled: Division by zero is not managed, which can lead to runtime errors.",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.8
+    },
+    "problem3_8pt": {
+        "response": [
+            {
+                "inconsistency": "None",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 1.0,
+        "expected_score": 0.8
+    },
+    "problem4_8pt": {
+        "response": [
+            {
+                "inconsistency": "Logic error: The while loop condition should be 'and' instead of 'or' to ensure the game continues until all treasures are collected and the exit is found.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "Edge case not handled: The code does not handle the case where the player tries to move into a trap or exit before collecting all treasures.",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.8
+    },
+    "problem5_8pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.8
+    },
+    "problem6_8pt": {
+        "response": [
+            {
+                "inconsistency": "Edge case not handled: The program does not handle the case where the user tries to add a book with a title that already exists in the collection.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Edge case not handled: The program does not handle the case where the user tries to remove a book from an empty collection.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Edge case not handled: The program does not handle the case where the user inputs a non-integer value for the year of publication.",
+                "severity": "Small"
+            },
+            {
+                "inconsistency": "Logic error: The removeBook function modifies the list while iterating over it, which can lead to unexpected behavior.",
+                "severity": "Major"
+            }
+        ],
+        "assigned_score": 0.35,
+        "expected_score": 0.8
+    },
+    "problem7_8pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.8
+    },
+    "problem8_8pt": {
+        "response": [
+            {
+                "inconsistency": "No error messages for unexpected input cases",
+                "severity": "Negligible"
+            },
+            {
+                "inconsistency": "Edge case not handled",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.95,
+        "expected_score": 0.8
+    },
+    "problem9_8pt": {
+        "response": [
+            {
+                "inconsistency": "Setter method for ISBN is missing, which violates encapsulation as ISBN should not be changeable once set.",
+                "severity": "Major"
+            },
+            {
+                "inconsistency": "The setter for available copies allows setting to a negative number, which is not handled.",
+                "severity": "Small"
+            }
+        ],
+        "assigned_score": 0.44999999999999996,
+        "expected_score": 0.8
+    },
+    "problem10_8pt": {
+        "response": [
+            {
+                "inconsistency": "None",
+                "severity": "Negligible"
+            }
+        ],
+        "assigned_score": 1.0,
+        "expected_score": 0.8
+    }
+}

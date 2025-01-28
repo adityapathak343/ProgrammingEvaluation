@@ -1,0 +1,39 @@
+
+
+
+
+
+product_name = 12345
+product_price = "25.99"
+product_quantity = "50"
+product_on_sale = "True"
+
+
+
+
+print("Product Name:", product_name)
+print("Product Price:", product_price)
+print("Product Quantity:", product_quantity)
+print("Product On Sale:", product_on_sale)
+
+
+
+total_inventory_value = float(product_price) * int(product_quantity)
+
+print(total_inventory_value)
+
+
+
+
+product_quantity = int(product_quantity) - 5
+
+print(product_quantity)
+
+
+
+if product_on_sale == "True":
+    print("This product is currently on sale! Enjoy the discount.")
+else:
+    print("This product is sold at regular price.")
+
+

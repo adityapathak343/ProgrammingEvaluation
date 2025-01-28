@@ -1,0 +1,40 @@
+
+
+def calculate_average(scores):
+    return sum(scores) / len(scores)
+
+def main():
+
+    print("Enter your five assignment scores:")
+    assignment_scores = [int(input()) for _ in range(5)]
+
+    print("Enter your three quiz scores:")
+    quiz_scores = [int(input()) for _ in range(3)]
+
+    midterm_score = int(input("Enter your midterm exam score: "))
+    final_exam_score = int(input("Enter your final exam score: "))
+
+
+    average_assignments = calculate_average(assignment_scores)
+    average_quizzes = calculate_average(quiz_scores)
+
+
+    weighted_assignments = average_assignments * 0.20
+    weighted_quizzes = average_quizzes * 0.10
+    weighted_midterm = midterm_score * 0.25
+    weighted_final = final_exam_score * 0.25
+
+
+    final_percentage = (weighted_assignments +
+                        weighted_quizzes +
+                        weighted_midterm +
+                        weighted_final)
+
+
+    print(f"Your final grade is: {final_percentage:.2f}%")
+
+
+if __name__ == "__main__":
+    main()
+
+

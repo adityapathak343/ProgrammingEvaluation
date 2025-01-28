@@ -1,0 +1,35 @@
+
+
+print("Enter your five assignment scores (each out of 100):")
+assignment1 = int(input())
+assignment2 = int(input())
+assignment3 = int(input())
+assignment4 = int(input())
+assignment5 = int(input())
+
+print("Enter your three quiz scores (each out of 100):")
+quiz1 = int(input())
+quiz2 = int(input())
+quiz3 = int(input())
+
+print("Enter your midterm exam score (out of 100):")
+midterm = int(input())
+
+print("Enter your final exam score (out of 100):")
+final_exam = int(input())
+
+
+total_assignments = assignment1 + assignment2 + assignment3 + assignment4 + assignment5
+total_quizzes = quiz1 + quiz2 + quiz3
+
+
+average_assignments = total_assignments / 5
+average_quizzes = total_quizzes / 3
+
+
+final_grade = (average_assignments * 30) + (average_quizzes * 20) + (midterm * 25) + (final_exam * 25)
+
+
+
+print("Your final grade is: ", final_grade)
+

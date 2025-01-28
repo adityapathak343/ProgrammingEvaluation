@@ -1,0 +1,58 @@
+## Problem Statement: Treasure Hunt
+
+### Background:
+Welcome to the world of "Treasure Hunt," a game where players search for hidden treasures on a map. The map is a grid consisting of various locations, each of which might contain a treasure. Your task is to assist the treasure hunters by developing an efficient algorithm to locate these treasures using basic searching and sorting techniques.
+
+### Objective:
+Design a program that helps identify the location of treasures on a map using searching algorithms. Once the treasures are found, sort them based on their value to help players decide the best treasures to collect.
+
+### Problem Details:
+
+1. **Map Representation:**
+   - The map is represented as a two-dimensional grid (list of lists in Python) with dimensions `n x m` where `n` is the number of rows and `m` is the number of columns.
+   - Each cell in the grid contains an integer value representing either an empty spot (`0`) or a treasure with a certain value (positive integer).
+
+2. **Input:**
+   - The first line contains two integers `n` and `m` (1 ≤ n, m ≤ 100) representing the dimensions of the map.
+   - The next `n` lines each contain `m` integers, representing the grid. Each integer is either `0` (no treasure) or a positive integer (value of the treasure).
+
+3. **Output:**
+   - The first line should output the total number of treasures found on the map.
+   - The second line should output the list of treasure values in ascending order.
+
+4. **Algorithm Requirements:**
+   - Implement a search algorithm to traverse the grid and locate all the treasures.
+   - Use a sorting algorithm to arrange the treasure values in ascending order.
+   - The choice of searching and sorting algorithms is up to you, but consider efficiency and clarity.
+
+### Example:
+
+#### Input:
+
+3 4
+0 5 0 0
+4 0 0 3
+0 0 1 0
+
+
+#### Output:
+
+3
+1 3 4 5
+
+
+### Instructions:
+
+- Write a function `find_and_sort_treasures(grid: List[List[int]]) -> Tuple[int, List[int]]` that implements the solution.
+- Ensure your code is well-documented with comments explaining the logic and flow.
+- Consider edge cases, such as maps with no treasures or maps where all cells contain treasures.
+- Test your solution with different grid configurations to ensure correctness.
+
+### Evaluation Criteria:
+
+- Correctness: The program should accurately identify and sort the treasures.
+- Efficiency: Consider the efficiency of your algorithms, especially with larger maps.
+- Code Quality: Code should be organized, with clear variable names and comments.
+- Robustness: Handle edge cases gracefully.
+
+By completing this task, you will strengthen your understanding of basic algorithms and develop problem-solving skills crucial for tackling more complex computer science challenges. Happy hunting!
