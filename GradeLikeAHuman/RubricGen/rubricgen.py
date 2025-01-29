@@ -33,7 +33,7 @@ class DataError(RubricGeneratorError):
     pass
 
 class RubricGenerator:
-    def __init__(self, model_name: str = "gpt-4", prompts_file: str = r"prompts.json") -> None:
+    def __init__(self, model_name: str = "gpt-4", prompts_file: str = r"../prompts.json") -> None:
         """Initialize the RubricGenerator with specified LLM model and prompts file."""
         try:
             self._load_api_key()
@@ -240,11 +240,22 @@ async def main():
     try:
         generator = RubricGenerator()
         
-        # Define file paths
-        base_path = "OOPS_dataset_v1"
-        excel_path = os.path.join(base_path, "cleaned_oops.xlsx")
-        initial_rubric_path = os.path.join(base_path, "questions", "rubrick.txt")
-        question_path = os.path.join(base_path, "questions", "question.txt")
+        # Define file paths using Path for better cross-platform compatibility
+        current_dir = Path(__file__).resolve().parent
+        print(f"Current directory: {current_dir}")
+        
+        # Go up one level to GradeLikeAHuman directory
+        project_root = current_dir.parent
+        print(f"Project root: {project_root}")
+        
+        # Define paths relative to project root
+        excel_path = "cleaned_oops.xlsx"
+        initial_rubric_path = "rubrick.txt"
+        question_path = "question.txt"
+        
+        print(f"Looking for Excel file at: {excel_path}")
+        print(f"Looking for rubric at: {initial_rubric_path}")
+        print(f"Looking for question at: {question_path}")
 
         # Generate rubric using distribution-aware sampling
         logger.info("Starting distribution-aware sampling process...")
@@ -252,7 +263,7 @@ async def main():
             excel_path=excel_path,
             initial_rubric_path=initial_rubric_path,
             question_path=question_path,
-            sample_size=10,
+            sample_size=50,
             use_distribution=True
         )
         
@@ -274,6 +285,22 @@ async def main():
         print("\n=== Random Sampling Results ===")
         print("Sampled Data:\n", random_samples)
         print("\nImproved Rubric:\n", random_rubric)
+        
+        # Save rubrics to files
+        output_dir = current_dir / "output"
+        output_dir.mkdir(exist_ok=True)  # Create output directory if it doesn't exist
+        
+        # Save distribution-aware rubric
+        dist_rubric_path = output_dir / "distribution_aware_rubric.txt"
+        with open(dist_rubric_path, 'w') as f:
+            f.write(dist_rubric)
+        print(f"\nDistribution-aware rubric saved to: {dist_rubric_path}")
+        
+        # Save random sampling rubric
+        random_rubric_path = output_dir / "random_sampling_rubric.txt"
+        with open(random_rubric_path, 'w') as f:
+            f.write(random_rubric)
+        print(f"Random sampling rubric saved to: {random_rubric_path}")
         
         logger.info("Successfully completed all processes")
         

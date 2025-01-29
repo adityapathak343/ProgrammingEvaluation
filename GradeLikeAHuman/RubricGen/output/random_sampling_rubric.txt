@@ -1,0 +1,277 @@
+{
+    'method_criteria': [
+        {
+            'method_name': 'RunsComparator: compare Method',
+            'total_points': 2,
+            'implementation_steps': [
+                {
+                    'step': 'Create a function to return the difference between player1_runs and player2_runs.',
+                    'points': 1,
+                    'requirements': 'The function should correctly calculate the difference between the runs of two players.',
+                    'common_errors': 'Not correctly calculating the difference, not handling the case where the runs are equal.',
+                    'partial_credit': 'Partial credit can be given if the function correctly calculates the difference but does not handle the case where the runs are equal.'
+                },
+                {
+                    'step': 'Do error handling to ensure the functions return correctly.',
+                    'points': 1,
+                    'requirements': 'The function should handle any potential errors and return the correct value.',
+                    'common_errors': 'Not handling potential errors, not returning the correct value.',
+                    'partial_credit': 'Partial credit can be given if the function handles some but not all potential errors.'
+                }
+            ],
+            'example_implementation': 'public int compare(Player p1, Player p2) { return p2.getRuns() - p1.getRuns(); }'
+        },
+        {
+            'method_name': 'CricketDataHandler: readPlayersFromFile Method',
+            'total_points': 9,
+            'implementation_steps': [
+                {
+                    'step': 'Create an empty list to store player details.',
+                    'points': 1,
+                    'requirements': 'The list should be correctly initialized and ready to store Player objects.',
+                    'common_errors': 'Not initializing the list, trying to add to a null list.',
+                    'partial_credit': 'Partial credit can be given if the list is initialized but not used correctly.'
+                },
+                {
+                    'step': 'Open the specified file for reading data.',
+                    'points': 1,
+                    'requirements': 'The file should be correctly opened and ready for reading.',
+                    'common_errors': 'Not opening the file, trying to read from a closed file.',
+                    'partial_credit': 'Partial credit can be given if the file is opened but not read from correctly.'
+                },
+                {
+                    'step': 'Ignore the first line since it contains the column names.',
+                    'points': 1,
+                    'requirements': 'The first line of the file should be correctly ignored.',
+                    'common_errors': 'Not ignoring the first line, trying to parse the column names as data.',
+                    'partial_credit': 'Partial credit can be given if the first line is read but not used in the data.'
+                },
+                {
+                    'step': 'Read each line one by one until reaching the end of the file.',
+                    'points': 1,
+                    'requirements': 'Each line of the file should be correctly read and processed.',
+                    'common_errors': 'Not reading all lines, trying to read past the end of the file.',
+                    'partial_credit': 'Partial credit can be given if some but not all lines are read.'
+                },
+                {
+                    'step': 'Split the line into different pieces of information.',
+                    'points': 1,
+                    'requirements': 'Each line should be correctly split into its constituent parts.',
+                    'common_errors': 'Not splitting the line correctly, trying to access data that does not exist.',
+                    'partial_credit': 'Partial credit can be given if the line is split but not all data is accessed correctly.'
+                },
+                {
+                    'step': 'Create a new player using this information.',
+                    'points': 1,
+                    'requirements': 'A new Player object should be correctly created using the data from the line.',
+                    'common_errors': 'Not creating a new Player, trying to use null or incorrect data.',
+                    'partial_credit': 'Partial credit can be given if a Player is created but not all data is used correctly.'
+                },
+                {
+                    'step': 'Add the new player to the list.',
+                    'points': 1,
+                    'requirements': 'The new Player should be correctly added to the list.',
+                    'common_errors': 'Not adding the Player to the list, trying to add a null Player.',
+                    'partial_credit': 'Partial credit can be given if the Player is added to the list but not in the correct order or position.'
+                },
+                {
+                    'step': 'Close the file after reading all data.',
+                    'points': 1,
+                    'requirements': 'The file should be correctly closed after all data has been read.',
+                    'common_errors': 'Not closing the file, trying to read from a closed file.',
+                    'partial_credit': 'Partial credit can be given if the file is closed but not at the correct time.'
+                },
+                {
+                    'step': 'Return the complete list of players.',
+                    'points': 1,
+                    'requirements': 'The complete list of Players should be correctly returned.',
+                    'common_errors': 'Not returning the list, returning a null or incomplete list.',
+                    'partial_credit': 'Partial credit can be given if the list is returned but not all Players are included.'
+                }
+            ],
+            'example_implementation': 'public List<Player> readPlayersFromFile(String filename) { /* implementation */ }'
+        },
+        {
+            'method_name': 'CricketDataHandler: writePlayersToFile Method',
+            'total_points': 4,
+            'implementation_steps': [
+                {
+                    'step': 'Prepare to write data into the specified file.',
+                    'points': 1,
+                    'requirements': 'The file should be correctly opened and ready for writing.',
+                    'common_errors': 'Not opening the file, trying to write to a closed file.',
+                    'partial_credit': 'Partial credit can be given if the file is opened but not ready for writing.'
+                },
+                {
+                    'step': 'Write the column names as the first line of the file.',
+                    'points': 1,
+                    'requirements': 'The column names should be correctly written to the file.',
+                    'common_errors': 'Not writing the column names, writing them in the wrong order or format.',
+                    'partial_credit': 'Partial credit can be given if the column names are written but not in the correct order or format.'
+                },
+                {
+                    'step': 'For each player in the list, convert their details to the desired format.',
+                    'points': 1,
+                    'requirements': 'Each Player\'s details should be correctly converted to the desired format.',
+                    'common_errors': 'Not converting the details correctly, trying to access null or incorrect data.',
+                    'partial_credit': 'Partial credit can be given if the details are converted but not in the correct format.'
+                },
+                {
+                    'step': 'Write each player\'s information to the file.',
+                    'points': 1,
+                    'requirements': 'Each Player\'s information should be correctly written to the file.',
+                    'common_errors': 'Not writing the information, writing it in the wrong order or format.',
+                    'partial_credit': 'Partial credit can be given if the information is written but not in the correct order or format.'
+                }
+            ],
+            'example_implementation': 'public void writePlayersToFile(List<Player> players, String filename) { /* implementation */ }'
+        },
+        {
+            'method_name': 'CricketDataHandler: updatePlayerStats Method',
+            'total_points': 5,
+            'implementation_steps': [
+                {
+                    'step': 'Go through each player in the list.',
+                    'points': 1,
+                    'requirements': 'Each Player in the list should be correctly accessed.',
+                    'common_errors': 'Not accessing all Players, trying to access a null or non-existent Player.',
+                    'partial_credit': 'Partial credit can be given if some but not all Players are accessed.'
+                },
+                {
+                    'step': 'Check if the current player\'s name matches the given name.',
+                    'points': 1,
+                    'requirements': 'The current Player\'s name should be correctly compared to the given name.',
+                    'common_errors': 'Not comparing the names correctly, trying to compare a null or incorrect name.',
+                    'partial_credit': 'Partial credit can be given if the names are compared but not correctly.'
+                },
+                {
+                    'step': 'If it matches, update the player\'s runs with the new value.',
+                    'points': 1,
+                    'requirements': 'The Player\'s runs should be correctly updated.',
+                    'common_errors': 'Not updating the runs, updating them with a null or incorrect value.',
+                    'partial_credit': 'Partial credit can be given if the runs are updated but not with the correct value.'
+                },
+                {
+                    'step': 'Similarly, update the player\'s wickets with the new value.',
+                    'points': 1,
+                    'requirements': 'The Player\'s wickets should be correctly updated.',
+                    'common_errors': 'Not updating the wickets, updating them with a null or incorrect value.',
+                    'partial_credit': 'Partial credit can be given if the wickets are updated but not with the correct value.'
+                },
+                {
+                    'step': 'If no player matches the given name, throw an IllegalArgumentException.',
+                    'points': 1,
+                    'requirements': 'An IllegalArgumentException should be correctly thrown if no Player matches the given name.',
+                    'common_errors': 'Not throwing an exception, throwing the wrong type of exception.',
+                    'partial_credit': 'Partial credit can be given if an exception is thrown but not the correct type.'
+                }
+            ],
+            'example_implementation': 'public void updatePlayerStats(String name, int runs, int wickets) { /* implementation */ }'
+        },
+        {
+            'method_name': 'CricketDataHandler: calculateTeamAverageRuns Method',
+            'total_points': 5,
+            'implementation_steps': [
+                {
+                    'step': 'Filter players belonging to the specified team.',
+                    'points': 2,
+                    'requirements': 'Players belonging to the specified team should be correctly filtered.',
+                    'common_errors': 'Not filtering the Players correctly, trying to filter on a null or incorrect team name.',
+                    'partial_credit': 'Partial credit can be given if some but not all Players are correctly filtered.'
+                },
+                {
+                    'step': 'If no players for this team exist, throw an IllegalArgumentException exception.',
+                    'points': 1,
+                    'requirements': 'An IllegalArgumentException should be correctly thrown if no Players exist for the specified team.',
+                    'common_errors': 'Not throwing an exception, throwing the wrong type of exception.',
+                    'partial_credit': 'Partial credit can be given if an exception is thrown but not the correct type.'
+                },
+                {
+                    'step': 'Calculate the total runs scored by all players from this team.',
+                    'points': 1,
+                    'requirements': 'The total runs scored by all Players from the specified team should be correctly calculated.',
+                    'common_errors': 'Not calculating the total runs correctly, trying to calculate runs for a null or non-existent Player.',
+                    'partial_credit': 'Partial credit can be given if the total runs are calculated but not correctly.'
+                },
+                {
+                    'step': 'Compute and return the average runs scored.',
+                    'points': 1,
+                    'requirements': 'The average runs scored should be correctly computed and returned.',
+                    'common_errors': 'Not calculating the average correctly, returning a null or incorrect value.',
+                    'partial_credit': 'Partial credit can be given if the average is calculated but not returned correctly.'
+                }
+            ],
+            'example_implementation': 'public double calculateTeamAverageRuns(String teamName) { /* implementation */ }'
+        },
+        {
+            'method_name': 'TeamFilter: filter Method',
+            'total_points': 5,
+            'implementation_steps': [
+                {
+                    'step': 'Create an empty list for players matching the criteria.',
+                    'points': 1,
+                    'requirements': 'The list should be correctly initialized and ready to store Player objects.',
+                    'common_errors': 'Not initializing the list, trying to add to a null list.',
+                    'partial_credit': 'Partial credit can be given if the list is initialized but not used correctly.'
+                },
+                {
+                    'step': 'Go through each player in the players list.',
+                    'points': 1,
+                    'requirements': 'Each Player in the list should be correctly accessed.',
+                    'common_errors': 'Not accessing all Players, trying to access a null or non-existent Player.',
+                    'partial_credit': 'Partial credit can be given if some but not all Players are accessed.'
+                },
+                {
+                    'step': 'If the player\'s team matches the given name, add them to the list.',
+                    'points': 2,
+                    'requirements': 'Players whose team matches the given name should be correctly added to the list.',
+                    'common_errors': 'Not adding matching Players to the list, trying to add a null or non-matching Player.',
+                    'partial_credit': 'Partial credit can be given if some but not all matching Players are added to the list.'
+                },
+                {
+                    'step': 'Return the list containing all matching players.',
+                    'points': 1,
+                    'requirements': 'The list of matching Players should be correctly returned.',
+                    'common_errors': 'Not returning the list, returning a null or incomplete list.',
+                    'partial_credit': 'Partial credit can be given if the list is returned but not all matching Players are included.'
+                }
+            ],
+            'example_implementation': 'public List<Player> filter(List<Player> players, String teamName) { /* implementation */ }'
+        },
+        {
+            'method_name': 'AllRounderStatsFilter: filter Method',
+            'total_points': 5,
+            'implementation_steps': [
+                {
+                    'step': 'Create an empty list for players matching the criteria.',
+                    'points': 1,
+                    'requirements': 'The list should be correctly initialized and ready to store Player objects.',
+                    'common_errors': 'Not initializing the list, trying to add to a null list.',
+                    'partial_credit': 'Partial credit can be given if the list is initialized but not used correctly.'
+                },
+                {
+                    'step': 'Go through each player in the list.',
+                    'points': 1,
+                    'requirements': 'Each Player in the list should be correctly accessed.',
+                    'common_errors': 'Not accessing all Players, trying to access a null or non-existent Player.',
+                    'partial_credit': 'Partial credit can be given if some but not all Players are accessed.'
+                },
+                {
+                    'step': 'If the player is an all-rounder and meets the given criteria for both runs and wickets, add them to the list.',
+                    'points': 2,
+                    'requirements': 'All-rounders who meet the given criteria should be correctly added to the list.',
+                    'common_errors': 'Not adding matching Players to the list, trying to add a null or non-matching Player.',
+                    'partial_credit': 'Partial credit can be given if some but not all matching Players are added to the list.'
+                },
+                {
+                    'step': 'Return the list containing all matching players.',
+                    'points': 1,
+                    'requirements': 'The list of matching Players should be correctly returned.',
+                    'common_errors': 'Not returning the list, returning a null or incomplete list.',
+                    'partial_credit': 'Partial credit can be given if the list is returned but not all matching Players are included.'
+                }
+            ],
+            'example_implementation': 'public List<Player> filter(List<Player> players, int minRuns, int minWickets) { /* implementation */ }'
+        }
+    ]
+}
