@@ -1,0 +1,43 @@
+Here's a 10-point rubric for evaluating the Library Management System project based on the problem statement provided:
+
+1. **Class Design (2 points)**
+   - **2 points:** The `Book` class is correctly defined with private attributes for title, author, ISBN, and available copies. A constructor is implemented to initialize these attributes.
+   - **1 point:** The `Book` class is defined, but either the attributes are not private or the constructor is incomplete.
+   - **0 points:** The `Book` class is missing or incorrectly implemented.
+
+2. **Encapsulation (2 points)**
+   - **2 points:** Public getter and setter methods are correctly implemented for all attributes except ISBN, which has no setter. The methods ensure controlled access and modification.
+   - **1 point:** Getter and setter methods are implemented, but there are issues with encapsulation (e.g., ISBN has a setter).
+   - **0 points:** Getter and setter methods are missing or incorrectly implemented.
+
+3. **Borrowing Functionality (1 point)**
+   - **1 point:** The `borrowBook()` method correctly reduces available copies by 1 and handles the case where no copies are available by printing an appropriate message.
+   - **0.5 points:** The `borrowBook()` method is implemented but does not handle the case of zero available copies correctly.
+   - **0 points:** The `borrowBook()` method is missing or incorrectly implemented.
+
+4. **Returning Functionality (1 point)**
+   - **1 point:** The `returnBook()` method correctly increases the number of available copies by 1.
+   - **0.5 points:** The `returnBook()` method is implemented but has minor issues (e.g., incorrect logic).
+   - **0 points:** The `returnBook()` method is missing or incorrectly implemented.
+
+5. **Display Details Functionality (1 point)**
+   - **1 point:** The `displayDetails()` method correctly prints the book's title, author, ISBN, and available copies.
+   - **0.5 points:** The `displayDetails()` method is implemented but does not display all required information correctly.
+   - **0 points:** The `displayDetails()` method is missing or incorrectly implemented.
+
+6. **Testing and Demonstration (2 points)**
+   - **2 points:** At least three `Book` objects are created with different attributes. The program demonstrates borrowing and returning functionality with updated details displayed correctly.
+   - **1 point:** Some testing is done, but it is incomplete or does not fully demonstrate the required functionality.
+   - **0 points:** Testing is missing or does not demonstrate the required functionality.
+
+7. **Code Organization and Comments (1 point)**
+   - **1 point:** The code is well-organized, with clear and meaningful comments explaining the logic and functionality.
+   - **0.5 points:** The code is somewhat organized, but comments are sparse or unclear.
+   - **0 points:** The code is poorly organized, with no comments or unclear logic.
+
+8. **Naming Conventions (1 point)**
+   - **1 point:** Proper naming conventions are used for classes, methods, and variables, enhancing code readability.
+   - **0.5 points:** Naming conventions are inconsistent, but the code is still understandable.
+   - **0 points:** Poor naming conventions make the code difficult to understand.
+
+This rubric provides clear criteria for evaluating the project, ensuring that each aspect of the problem statement is addressed and assessed appropriately.

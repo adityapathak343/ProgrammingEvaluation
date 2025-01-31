@@ -1,0 +1,79 @@
+
+class Book:
+    def __init__(self, title, author, isbn, available_copies):
+
+        self.__title = title
+        self.__author = author
+        self.__isbn = isbn
+        self.__available_copies = available_copies
+
+
+    def get_title(self):
+        return self.__title
+
+
+    def set_title(self, title):
+        self.__title = title
+
+
+    def get_author(self):
+        return self.__author
+
+
+    def set_author(self, author):
+        self.__author = author
+
+
+    def get_isbn(self):
+        return self.__isbn
+
+
+    def get_available_copies(self):
+        return self.__available_copies
+
+
+    def borrow_book(self):
+        if self.__available_copies > 0:
+            self.__available_copies -= 1
+            print("Book borrowed.")
+        else:
+            print("No copies available.")
+
+
+    def return_book(self):
+        self.__available_copies += 1
+        print("Book returned.")
+
+
+    def display_details(self):
+        print(f"Title: {self.__title}, Author: {self.__author}, ISBN: {self.__isbn}, Copies: {self.__available_copies}")
+
+
+def main():
+
+    book1 = Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565", 3)
+    book2 = Book("1984", "George Orwell", "9780451524935", 5)
+    book3 = Book("To Kill a Mockingbird", "Harper Lee", "9780061120084", 2)
+
+
+    book1.display_details()
+    book2.display_details()
+    book3.display_details()
+
+
+    book1.borrow_book()
+
+
+    book1.display_details()
+
+
+    book1.return_book()
+
+
+    book1.display_details()
+
+
+if __name__ == "__main__":
+    main()
+
+

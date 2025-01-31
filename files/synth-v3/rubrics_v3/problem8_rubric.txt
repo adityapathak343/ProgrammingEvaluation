@@ -1,0 +1,53 @@
+Creating a grading rubric for the debugging and error handling problem statement involves defining clear criteria for evaluating the student's work. Here's a 10-point rubric that aligns with the expected learning outcomes:
+
+1. **Identification of Errors and Bugs (2 points)**
+   - **2 points**: Accurately identifies all syntax, logical, and runtime errors in the given code, including edge cases.
+   - **1 point**: Identifies some errors but misses key issues or edge cases.
+   - **0 points**: Fails to identify significant errors or only identifies superficial issues.
+
+2. **Implementation of Error Handling (2 points)**
+   - **2 points**: Implements comprehensive error handling using try-except blocks for all potential exceptions, including invalid input types and negative transaction amounts.
+   - **1 point**: Implements some error handling but misses handling for certain exceptions or scenarios.
+   - **0 points**: Fails to implement any meaningful error handling.
+
+3. **Input Validation (1 point)**
+   - **1 point**: Successfully validates all user inputs, ensuring only valid numeric inputs are accepted for menu choices and transaction amounts.
+   - **0.5 points**: Partially validates inputs, but some invalid inputs are not handled.
+   - **0 points**: Does not implement input validation or validation is ineffective.
+
+4. **Handling of Negative and Zero Values (1 point)**
+   - **1 point**: Ensures that negative or zero values cannot be deposited or withdrawn, with appropriate error messages.
+   - **0.5 points**: Partially handles negative or zero values, but some cases are not covered.
+   - **0 points**: Fails to handle negative or zero values appropriately.
+
+5. **Code Robustness and Reliability (1 point)**
+   - **1 point**: The revised code runs smoothly without crashing, handling all expected and unexpected inputs gracefully.
+   - **0.5 points**: The code runs but has minor issues or crashes under certain conditions.
+   - **0 points**: The code frequently crashes or fails to handle common scenarios.
+
+6. **Testing and Scenario Coverage (1 point)**
+   - **1 point**: Thoroughly tests the program with a wide range of scenarios, including invalid inputs, large transactions, and proper exit functionality.
+   - **0.5 points**: Tests the program but misses some important scenarios or edge cases.
+   - **0 points**: Fails to test the program adequately or only tests a limited number of scenarios.
+
+7. **Code Documentation and Comments (1 point)**
+   - **1 point**: Provides clear and concise comments explaining the changes made and the purpose of each error handling block.
+   - **0.5 points**: Provides some comments, but they are unclear or insufficiently detailed.
+   - **0 points**: Fails to provide meaningful comments or documentation.
+
+8. **User Experience and Feedback (1 point)**
+   - **1 point**: Provides clear and user-friendly error messages and feedback for all operations, enhancing the user experience.
+   - **0.5 points**: Provides some feedback, but it is unclear or not user-friendly.
+   - **0 points**: Provides little to no feedback, or feedback is confusing.
+
+9. **Code Structure and Readability (1 point)**
+   - **1 point**: Maintains a clean and organized code structure, with consistent formatting and naming conventions.
+   - **0.5 points**: Code is somewhat organized but has inconsistencies or readability issues.
+   - **0 points**: Code is poorly organized and difficult to read.
+
+10. **Overall Solution Effectiveness (1 point)**
+    - **1 point**: The final solution effectively meets all the requirements of the problem statement, demonstrating a strong understanding of debugging and error handling.
+    - **0.5 points**: The solution meets most requirements but has some gaps or weaknesses.
+    - **0 points**: The solution fails to meet the key requirements of the problem statement.
+
+This rubric provides a structured and detailed approach to evaluating the student's work, ensuring that all aspects of the problem statement are addressed.

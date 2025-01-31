@@ -1,0 +1,94 @@
+
+
+class Book:
+    def __init__(self, title, author, isbn, available_copies):
+        # Initialize the private attributes for the Book class
+        self.__title = title
+        self.__author = author
+        self.__isbn = isbn
+        self.__available_copies = available_copies
+
+    # Getter for title
+    def get_title(self):
+        return self.__title
+
+    # Setter for title
+    def set_title(self, title):
+        self.__title = title
+
+    # Getter for author
+    def get_author(self):
+        return self.__author
+
+    # Setter for author
+    def set_author(self, author):
+        self.__author = author
+
+    # Getter for ISBN (no setter as ISBN should not change)
+    def get_isbn(self):
+        return self.__isbn
+
+    # Getter for available copies
+    def get_available_copies(self):
+        return self.__available_copies
+
+    # Setter for available copies
+    def set_available_copies(self, copies):
+        if copies >= 0:
+            self.__available_copies = copies
+
+    # Method to borrow a book
+    def borrow_book(self):
+        if self.__available_copies > 0:
+            self.__available_copies -= 1
+            print("Book borrowed successfully.")
+        else:
+            print("Sorry, this book is not available for borrowing.")
+
+    # Method to return a book
+    def return_book(self):
+        self.__available_copies += 1
+        print("Book returned successfully.")
+
+    # Method to display book details
+    def display_details(self):
+        print(f"Title: {self.__title}")
+        print(f"Author: {self.__author}")
+        print(f"ISBN: {self.__isbn}")
+        print(f"Available Copies: {self.__available_copies}")
+        print()
+
+# Main function to demonstrate the functionality
+def main():
+    # Create book objects
+    book1 = Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565", 3)
+    book2 = Book("1984", "George Orwell", "9780451524935", 5)
+    book3 = Book("To Kill a Mockingbird", "Harper Lee", "9780061120084", 2)
+
+    # Display details of each book
+    print("Initial Book Details:")
+    book1.display_details()
+    book2.display_details()
+    book3.display_details()
+
+    # Borrow a book
+    print("Borrowing The Great Gatsby...")
+    book1.borrow_book()
+
+    # Display updated details of the first book
+    print("\nUpdated Book Details after Borrowing:")
+    book1.display_details()
+
+    # Return a book
+    print("Returning The Great Gatsby...")
+    book1.return_book()
+
+    # Display updated details of the first book again
+    print("\nUpdated Book Details after Returning:")
+    book1.display_details()
+
+# Run the main function
+if __name__ == "__main__":
+    main()
+
+
