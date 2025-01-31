@@ -98,7 +98,7 @@ class RubricGenerator:
                 
             grades_df = df[['Folder Name', 'Part1 Total']].copy()
             grades_df = grades_df.dropna()
-            
+           
             if len(grades_df) == 0:
                 raise DataError("No valid data found after processing Excel file")
                 
@@ -247,8 +247,8 @@ async def main():
         # Go up one level to GradeLikeAHuman directory
         project_root = current_dir.parent
         print(f"Project root: {project_root}")
-        
-        # Define paths relative to project root
+       
+        # Define paths relative to project roo
         excel_path = "cleaned_oops.xlsx"
         initial_rubric_path = "rubrick.txt"
         question_path = "question.txt"
