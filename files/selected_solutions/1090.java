@@ -1,9 +1,11 @@
+package Hello;
+
 /**********************************************************
 * PROVIDE THE FOLLOWING INFORMATION
-* ID Number: 2023A7PS0561P
-* Name: Aakarsh Mishra
-* Lab Number: 6016
-* System Number: 4
+* ID Number:
+* Name:
+* Lab Number:
+* System Number:
 ***********************************************************/
 
 import java.io.*;
@@ -101,19 +103,18 @@ enum Role {
 class RunsComparator implements Comparator<Player> {
 	/************************** Q.1 WRITE CODE FOR THIS METHOD *********************************/
     public int compare(Player p1, Player p2) {
+    	
         // Question 1: Write code for comparing/sorting runs in descending order [Total: 2 marks]
         // Return a negative value if the first player has more runs, 
         // a positive value if the second player has more runs, or zero if they have the same number of runs.
-    	
-    	if (p1.getRunsScored() > p2.getRunsScored()){
+    	if(p1.getRunsScored()>p2.getRunsScored()){
     		return -1;
     	}
-    	else if (p1.getRunsScored() < p2.getRunsScored()) {
-			return 1;
-		}
-    	else {
-    		return 0;
+    	if(p1.getRunsScored()<p2.getRunsScored()){
+    		return 1;
     	}
+    	else{return 0;}
+    	
     }
 }
 
@@ -123,125 +124,108 @@ class CricketDataHandler {
 	public List<Player> readPlayersFromFile(String fileName) throws IOException {
         // Question 2: Write code for reading players from a file [Total: 9 marks]
         // Step 1: Create an empty list to store player details. [1 mark]
+		List<Player> Players = new ArrayList<>();
         // Step 2: Open the specified file for reading data. [1 mark]
+		Scanner s=null;
+		try {
+			s = new Scanner(new FileInputStream(fileName));
+             }
+		catch(FileNotFoundException e){
+			System.out.println("file not found");
+		}
         // Step 3: Ignore the first line since it contains the column names. [1 mark]
+		s.nextLine();
+		
         // Step 4: Read each line one by one until reaching the end of the file. [1 mark]
+		while(s.hasNextLine()){
         // Step 5: Split the line into different pieces of information. [1 mark]
+			List<String[]> records = new ArrayList<>();
+			records.add(s.nextLine().split(","));
+			String Line=s.nextLine();
+			
+			String parts[]=Line.split(",");
+			String name=new String(parts[0]);
+			Role role=Role.fromString(parts[1]);
+			
+			int runs= Integer.parseInt(parts[2]);
+			int wickets= Integer.parseInt(parts[3]);
+			String team=parts[4];
+			
+			
+			
+			
+			
+			
+			
+			Player p1=new Player(name,role,runs,wickets,team);
+			Players.add(p1);
+			
+			
+		}
+		s.close();
         // Step 6: Create a new player using this information. [1 mark]
         // Step 7: Add the new player to the list. [1 mark]
         // Step 8: Close the file after reading all data. [1 mark]
         // Step 9: Return the complete list of players. [1 mark]
-		
-		List<Player> players = new ArrayList<>();
-		Scanner inputStream = null;
-		try {
-			inputStream = new Scanner(new FileInputStream(fileName));
-			inputStream.nextLine();
-			
-			while(inputStream.hasNext()){
-				String playerName = inputStream.next();
-				Role role = Role.fromString(inputStream.next());
-				int runsScored = inputStream.nextInt();
-				int wicketsTaken = inputStream.nextInt();
-				String teamName = inputStream.next();
-				inputStream.nextLine();
-				
-				Player newPlayer = new Player(playerName, role, runsScored, wicketsTaken, teamName);
-				players.add(newPlayer);
-				
-			}
-		} 
-		catch (Exception e) {
-			System.out.println("Some error occured!");
-			System.out.println(e.getMessage());
-		}
-		finally{
-			inputStream.close();
-		}
-		
-		return players;	
+		return Players;
     }
 
 	/************************** Q.3 WRITE CODE FOR THIS METHOD *********************************/
     public void writePlayersToFile(String fileName, List<Player> players) throws IOException {
         // Question 3: Write code for writing players to a file [Total: 4 marks]
+    	PrintWriter outstream=null;
+    	try{
+    		outstream=new PrintWriter(new FileOutputStream(fileName));
+    		
+    	}
+    	catch(FileNotFoundException e){
+			System.out.println("file not found");
+		}
         // Step 1: Prepare to write data into the specified file. [1 mark]
         // Step 2: Write the column names as the first line of the file. [1 mark]
+    	outstream.println("Player Name Role RunsScored WicketsTaken TeamName");
         // Step 3: For each player in the list, convert their details to the desired format. [1 mark]
+    	for (int i=0;i<players.size();i++ ){
+    		System.out.println(players.get(i).toCsvFormat());
+    		
+    	}
+    	
         // Step 4: Write each player's information to the file. [1 mark]
-    	
-    	
-    	PrintWriter outputStream = null;
-    	try {
-			outputStream = new PrintWriter(new FileOutputStream(fileName));
-			outputStream.println("PlayerName" + "," + "Role" + "," + "RunsScored" + "," + "WicketsTaken" + "," + "TeamName");
-			for (Player p : players){
-				outputStream.println(p.getPlayerName() + "," + p.getRole() + "," + p.getRunsScored() + "," + p.getWicketsTaken() + "," + p.getTeamName());
-			}
-		} catch (Exception e) {
-			System.err.println(e.getMessage());
-		} 
-    	finally {
-    		outputStream.close();
-		}
     }
     
 	/************************** Q.4 WRITE CODE FOR THIS METHOD *********************************/
     public void updatePlayerStats(List<Player> players, String playerName, int runs, int wickets) {
         // Question 4: Write code for updating player stats [Total: 5 marks]
         // Step 1: Go through each player in the list. [1 mark]
+    	for (int i =0;i<players.size();i++){
+    		if(players.get(i).getPlayerName()==playerName){
+    			players.get(i).setRunsScored(runs);
+    			players.get(i).setWicketsTaken(wickets);
+    			
+    		}}
         // Step 2: Check if the current player's name matches the given name. [1 mark]
         // Step 3: If it matches, update the player's runs with the new value. Updated value will be the sum of the old runs and the argument runs. [1 mark]
         // Step 4: Similarly, update the player's wickets with the new value. Updated value will be the sum of the old wickets and the argument wickets. [1 mark]
         // Step 5: If no player matches the given name, throw an IllegalArgumentException exception. [1 mark]
-    	boolean not_found = true;
-    	for (Player p: players){
-    		if (p.getPlayerName().equalsIgnoreCase(playerName)){
-    			int updated_runs = p.getRunsScored() + runs;
-    			int updated_wickets = p.getWicketsTaken() + wickets;
-    			
-    			p.setRunsScored(updated_runs);
-    			p.setWicketsTaken(updated_wickets);
-    			not_found = false;
-    		}
-    		
-    		if (not_found) {
-    			 Exception IllegalArgumentException;
-			}
-    	}
     }
 
 	/************************** Q.5 WRITE CODE FOR THIS METHOD *********************************/
     public double calculateTeamAverageRuns(List<Player> players, String teamName) {
         // Question 5: Write code for calculating team average runs [Total: 5 marks]
         // Step 1: Filter players belonging to the specified team. [2 marks]
-        // Step 2: If no players from the specified team are found, throw an IllegalArgumentException exception. [1 mark]
+    	int totalrun=0;
+    			double count=0;
+    	for (int i =0;i<players.size();i++){
+    		if(players.get(i).getTeamName()==teamName){
+    			totalrun+=players.get(i).getRunsScored();
+    			count++;
+    			}
+    	}
+    	double av=totalrun/count;
+        return av;
+    	// Step 2: If no players from the specified team are found, throw an IllegalArgumentException exception. [1 mark]
         // Step 3: Calculate the total runs scored by all players from this team. [1 mark]
         // Step 4: Compute and return the average runs scored. [1 mark]
-    	List<Player> filteredPlayers = new ArrayList<>();
-    	
-    	boolean not_found = true; 
-    	for (Player p : players){
-    		if (p.getTeamName().equalsIgnoreCase(teamName)){
-    			filteredPlayers.add(p);
-    			not_found = false;
-    		}
-    	}
-    	
-    	if (not_found) {
-			 Exception IllegalArgumentException;
-		}
-    	
-    	double total_runs_scored = 0;
-    	int count = 0;
-    	for (Player p : filteredPlayers){
-    		total_runs_scored += (double) p.getRunsScored();
-    		count ++;
-    	}
-    	
-    	double avg = (double) total_runs_scored/count;
-    	return avg;
-    	
     }
 }
 
@@ -256,18 +240,19 @@ class TeamFilterStrategy implements PlayerFilter<String> {
     public List<Player> filter(List<Player> players, String teamName) {
         // Question 6: Write code for filtering players by team [Total: 5 marks]
         // Step 1: Create an empty list for players matching the criteria. [1 mark]
-        // Step 2: Go through each player in the players list. [1 mark]
-        // Step 3: If the player's team matches the given name, add them to the list. [2 marks]
-        // Step 4: Return the list containing all matching players. [1 mark]
-    	List<Player> sameTeamPlayers = new ArrayList<>();
-    	
-    	for (Player p : players){
-    		if (p.getTeamName().equalsIgnoreCase(teamName)){
-    			sameTeamPlayers.add(p);
-    		}
+    	List<Player>p=new ArrayList<>();
+    	for (int i =0;i<players.size();i++){
+    	if(players.get(i).getTeamName()==teamName){
+    		p.add(players.get(i));
+    		
+    	}
+    		
     	}
     	
-    	return sameTeamPlayers;	
+        // Step 2: Go through each player in the players list. [1 mark]
+    	return p;
+        // Step 3: If the player's team matches the given name, add them to the list. [2 marks]
+        // Step 4: Return the list containing all matching players. [1 mark]
     }
 }
 
@@ -276,27 +261,16 @@ class AllRounderStatsFilter implements PlayerFilter<int[]> {
 	/************************** Q.7 WRITE CODE FOR THIS METHOD *********************************/
     public List<Player> filter(List<Player> players, int[] criteria) {
         // Question 7: Write code for filtering all-rounders by stats [Total: 5 marks]
+    	
         // criteria[0] = minimum runs, criteria[1] = minimum wickets
         // Step 1: Create an empty list for players matching the criteria. [1 mark]
         // Step 2: Go through each player in the list. [1 mark]
         // Step 3: If the player is an all-rounder and meets the given criteria for both runs and wickets, add them to the list. [2 marks]
         // Step 4: Return the list containing all matching players. [1 mark]
-    	
-    	List<Player> allRounders = new ArrayList<>();
-    	int min_runs = criteria[0];
-    	int min_wickets = criteria[1];
-    	
-    	for (Player p: players){
-    		if ((p.getRunsScored() > min_runs) && (p.getWicketsTaken() > min_wickets)){
-    			allRounders.add(p);
-    		}
-    	}
-    	
-    	return allRounders;	
     }
 }
 
-public class P2023A7PS0561_P1 {
+public class Q1_2022A3PS1206P {
     private static void printPlayers(String header, List<Player> players) {
         System.out.println("\n--- " + header + " ---");
         for (Player player : players) {

@@ -105,9 +105,6 @@ class RunsComparator implements Comparator<Player> {
         // Question 1: Write code for comparing/sorting runs in descending order [Total: 2 marks]
         // Return a negative value if the first player has more runs, 
         // a positive value if the second player has more runs, or zero if they have the same number of runs.
-    	if(p1.getRunsScored()>p2.getRunsScored()) return -1;
-    	if(p1.getRunsScored()<p2.getRunsScored()) return 1;
-    	return 0;
     }
 }
 
@@ -125,30 +122,6 @@ class CricketDataHandler {
         // Step 7: Add the new player to the list. [1 mark]
         // Step 8: Close the file after reading all data. [1 mark]
         // Step 9: Return the complete list of players. [1 mark]
-		List<Player> details = new ArrayList<>();
-		Scanner inputStream = null;
-		try
-		{ 
-			inputStream = new Scanner(new FileInputStream("C:\Users\user\Desktop\SS_24_25_CBT\inputCricketData.csv"))
-		}
-		catch(FileNotFoundException e)
-		{
-			System.out.println("File was not found");
-		}
-		inputStream.nextLine();
-		int i = 0;
-		while(inputStream.hasNext){
-			String playerName = inputStream.nextLine();
-			Role role = inputStream.nextLine();
-			int runsScore = inputStream.nextInt();
-			int wicketsTaken = inputStream.nextInt();
-			String teamName = inputStream.nextLine();
-			Player p = new Player(playerName, role, runsScored,  wicketsTaken,  teamName);
-			details.add(p);
-			inputStream.nextLine();
-		}
-		inputStream.close();
-		return details
     }
 
 	/************************** Q.3 WRITE CODE FOR THIS METHOD *********************************/
@@ -158,12 +131,6 @@ class CricketDataHandler {
         // Step 2: Write the column names as the first line of the file. [1 mark]
         // Step 3: For each player in the list, convert their details to the desired format. [1 mark]
         // Step 4: Write each player's information to the file. [1 mark]
-    	PrintWriter outStream = null;
-    	try{
-    		outStream = new PrintWriter(new FileOutputStream("output.csv"));
-    	}
-    	catch(FileNotFoundException e){}
-    	
     }
     
 	/************************** Q.4 WRITE CODE FOR THIS METHOD *********************************/
@@ -174,19 +141,6 @@ class CricketDataHandler {
         // Step 3: If it matches, update the player's runs with the new value. Updated value will be the sum of the old runs and the argument runs. [1 mark]
         // Step 4: Similarly, update the player's wickets with the new value. Updated value will be the sum of the old wickets and the argument wickets. [1 mark]
         // Step 5: If no player matches the given name, throw an IllegalArgumentException exception. [1 mark]
-    	for(int i=0; i<players.size();i++){
-    		Player player = players.get(i);
-    		if(player.getPlayerName()==playerName){
-    			player.setRunsScored(player.getRunsScored()+runs);
-    			
-    		};
-    		if(player.getPlayerName()==playerName){
-    			player.setWicketsTaken(player.getWicketsTaken()+runs);
-    			
-    			
-    		};
-    		
-    	}
     }
 
 	/************************** Q.5 WRITE CODE FOR THIS METHOD *********************************/
@@ -196,11 +150,6 @@ class CricketDataHandler {
         // Step 2: If no players from the specified team are found, throw an IllegalArgumentException exception. [1 mark]
         // Step 3: Calculate the total runs scored by all players from this team. [1 mark]
         // Step 4: Compute and return the average runs scored. [1 mark]
-    	for (int i = 0; i < players.size(); i++) {
-			for(int j=0;j<players.size();j++){
-				
-			}
-		}
     }
 }
 
@@ -232,9 +181,9 @@ class AllRounderStatsFilter implements PlayerFilter<int[]> {
         // Step 3: If the player is an all-rounder and meets the given criteria for both runs and wickets, add them to the list. [2 marks]
         // Step 4: Return the list containing all matching players. [1 mark]
     }
+}
 
-
-public static class P2022B5A70800P_P1 {
+public class CBT_PART_1_QP {
     private static void printPlayers(String header, List<Player> players) {
         System.out.println("\n--- " + header + " ---");
         for (Player player : players) {
