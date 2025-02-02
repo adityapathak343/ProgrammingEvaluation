@@ -1,0 +1,27 @@
+# cook your dish here
+
+
+
+
+
+
+
+for _ in range(int(input())):
+
+    n = int(input())
+
+    count = 0
+
+    for i in range(1,n):
+
+        count = i*(i+1)//2
+
+        if count > n:
+
+            break
+
+        top = i
+
+        
+
+    print(top)

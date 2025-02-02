@@ -1,0 +1,65 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int main(){
+
+    int t; 
+
+    cin >> t;
+
+    while(t--){
+
+        long long n;
+
+        cin >> n;
+
+
+
+        long long counter = 0;
+
+
+
+        vector<int> nos(n+1), sum(n+1);
+
+        
+
+        for(int i = 1; i <= n; i++){
+
+            nos[i] = i;
+
+        }
+
+
+
+        for(int i = 1; i <= n; i++){
+
+            if(sum[i] < n){
+
+                sum[i] = nos[i] + sum[i-1];
+
+            }
+
+        }
+
+
+
+        for(int i = 1; i <= n; i++){
+
+            if(sum[i] <= n){
+
+                counter++;
+
+            }
+
+        }
+
+
+
+        cout << counter << endl;
+
+    }
+
+}

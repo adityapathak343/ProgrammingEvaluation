@@ -1,0 +1,78 @@
+import java.util.*;
+
+import java.lang.*;
+
+import java.io.*;
+
+
+
+class Codechef
+
+{
+
+	public static int maxHeight(int N) {
+
+        // Use binary search to find the maximum height h such that S(h) <= N
+
+        int low = 1, high = (int) Math.sqrt(2 * N) + 1;  // upper bound estimation
+
+        
+
+        while (low <= high) {
+
+            int mid = (low + high) / 2;
+
+            int coinsNeeded = mid * (mid + 1) / 2;
+
+            
+
+            if (coinsNeeded == N) {
+
+                return mid;  // Exact match
+
+            } else if (coinsNeeded < N) {
+
+                low = mid + 1;  // Search in the higher half
+
+            } else {
+
+                high = mid - 1;  // Search in the lower half
+
+            }
+
+        }
+
+        
+
+        return high;  // Return the maximum height found
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int T = scanner.nextInt();  // Number of test cases
+
+        
+
+        // Process each test case
+
+        for (int i = 0; i < T; i++) {
+
+            int N = scanner.nextInt();  // Number of coins
+
+            System.out.println(maxHeight(N));  // Output the maximum height
+
+        }
+
+        
+
+        scanner.close();
+
+	}
+
+}
+

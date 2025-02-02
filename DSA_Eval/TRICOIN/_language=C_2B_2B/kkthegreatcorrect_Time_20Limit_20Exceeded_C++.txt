@@ -1,0 +1,81 @@
+#include <bits/stdc++.h>
+
+
+
+using namespace std;
+
+
+
+int calculate(int n, int u, int l) {
+
+    int h = ((u + l) / 2) + 1;
+
+    int sum = (h * (h + 1)) / 2;
+
+    if (u - l == 1) {
+
+        if (u * (u + 1) / 2 <= n) {
+
+            return u;
+
+        }
+
+        else if (l * (l + 1) / 2 <= n) {
+
+            return l;
+
+        }
+
+    }
+
+    else {
+
+        if (sum == n) {
+
+            return h;
+
+        }
+
+        else if (sum < n) {
+
+            l = h;
+
+            return calculate(n, u, l);
+
+        }
+
+        else if (sum > n) {
+
+            u = h - 1;
+
+            return calculate(n, u, l);
+
+        }
+
+    }
+
+}
+
+
+
+int main() {
+
+    int t;
+
+    cin >> t;
+
+    while (t--) {
+
+        int n, u, l;
+
+        l = 1;
+
+        cin >> n;
+
+        u = n;
+
+        cout << calculate(n, u, l) << endl;
+
+    }
+
+}

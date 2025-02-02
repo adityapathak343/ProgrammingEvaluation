@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int main() {
+
+int t;
+
+cin>>t;
+
+for(int i=1;i<=t;i++){
+
+    int n;
+
+    cin>>n;
+
+    int sum=0;
+
+    for(int i=1;i<n;i++){
+
+        sum+=i;
+
+        if(sum>n){
+
+            cout<<i-1<<"\n";
+
+            break;
+
+        }
+
+        if(sum==n){
+
+            cout<<i<<"\n";
+
+            break;
+
+        }
+
+    }
+
+}
+
+
+
+}
+

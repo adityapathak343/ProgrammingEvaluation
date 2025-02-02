@@ -1,0 +1,54 @@
+import java.util.*;
+
+import java.lang.*;
+
+import java.io.*;
+
+
+
+class Codechef
+
+{
+
+	public static void main (String[] args) throws java.lang.Exception
+
+	{
+
+		// your code goes here
+
+        Scanner sc=new Scanner(System.in);
+
+        int a=sc.nextInt();
+
+        while(a-->0){
+
+            int x=sc.nextInt();
+
+            int i=1;
+
+            int s=0;
+
+            if(x==3) System.out.println("2");
+
+            else{
+
+                while(x>0){
+
+                    x=x-i;
+
+                    i++;
+
+                    if(x>0) s++;
+
+                } 
+
+                System.out.println(s);
+
+            }
+
+        }
+
+	}
+
+}
+

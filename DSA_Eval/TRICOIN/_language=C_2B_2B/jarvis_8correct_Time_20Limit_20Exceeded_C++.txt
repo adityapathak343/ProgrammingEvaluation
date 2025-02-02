@@ -1,0 +1,64 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+
+{   int t;
+
+    cin>> t;
+
+    while(t--)
+
+    { int n;
+
+      cin>> n;
+
+      int s= 1;
+
+      int e= n;
+
+      int mid, res, ans;
+
+      while(s<=e)
+
+      { 
+
+          mid=s+e/2;
+
+          res=mid*(mid+1)/2;
+
+          if (res<=n)
+
+          {
+
+              s=mid+1;
+
+              ans=mid;
+
+          }
+
+          else 
+
+          {
+
+              e=mid-1;
+
+          }
+
+        
+
+    
+
+          
+
+      }
+
+        cout<<ans<<endl;
+
+    }
+
+    return 0;
+
+}
+

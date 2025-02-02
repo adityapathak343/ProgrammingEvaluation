@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+
+
+public class CoinsAndTriangle {
+
+    
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        
+
+        // Read number of test cases
+
+        int T = scanner.nextInt();
+
+        
+
+        // Process each test case
+
+        for (int t = 0; t < T; t++) {
+
+            // Read the number of coins N
+
+            int N = scanner.nextInt();
+
+            
+
+            // Perform binary search to find the maximum height
+
+            int low = 1, high = N;
+
+            int maxHeight = 0;
+
+            
+
+            while (low <= high) {
+
+                int mid = (low + high) / 2;
+
+                long coinsRequired = (long) mid * (mid + 1) / 2;
+
+                
+
+                if (coinsRequired <= N) {
+
+                    maxHeight = mid;  // This height is valid, try to go higher
+
+                    low = mid + 1;
+
+                } else {
+
+                    high = mid - 1;  // This height is too high, try lower
+
+                }
+
+            }
+
+            
+
+            // Output the result for this test case
+
+            System.out.println(maxHeight);
+
+        }
+
+        
+
+        scanner.close();
+
+    }
+
+}
+

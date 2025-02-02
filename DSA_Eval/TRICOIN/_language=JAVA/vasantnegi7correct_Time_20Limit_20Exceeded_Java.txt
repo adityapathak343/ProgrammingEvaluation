@@ -1,0 +1,120 @@
+/* package codechef; // don't place package name! */
+
+
+
+import java.util.*;
+
+import java.lang.*;
+
+import java.io.*;
+
+
+
+/* Name of the class has to be "Main" only if the class is public. */
+
+class Codechef
+
+{
+
+    //function 2
+
+    public static int getCoins(int height){
+
+        
+
+     int coins=0;
+
+     
+
+     coins=height*(height+1)/2;
+
+        
+
+     return coins;
+
+    }
+
+    
+
+    //function 1
+
+    public static int heightOfTraingle(int coins){
+
+        
+
+        int start=0;
+
+        int end= coins/2;
+
+        
+
+        int mid=start+(end-start)/2;
+
+        
+
+        int ans=-1;
+
+        
+
+        while(start<end){
+
+            
+
+            // getCoins fn that takes height param
+
+            if(getCoins(mid)== coins){
+
+                ans=mid;
+
+                return ans;
+
+            }
+
+            
+
+            if(getCoins(mid) >coins){
+
+                end=mid-1;
+
+            }else{
+
+                ans=mid;
+
+                start=mid+1;
+
+            }
+
+        }
+
+        
+
+        return ans;
+
+    }
+
+	public static void main (String[] args) throws java.lang.Exception
+
+	{
+
+		// your code goes here
+
+		Scanner sc = new Scanner(System.in);
+
+		
+
+		//taking input
+
+		int coins= sc.nextInt();
+
+	
+
+		//giving output
+
+		heightOfTraingle(coins);
+
+		
+
+	}
+
+}
+
