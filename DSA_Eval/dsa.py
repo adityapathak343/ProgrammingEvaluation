@@ -32,7 +32,7 @@ class DSAGrader:
         
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4o-mini",
+                model="gpt-4",  # Changed from gpt-4o-mini to gpt-4
                 messages=[
                     {"role": "system", "content": "You are an expert programming evaluator. Your responses must be valid JSON objects. For each category, explain point allocations clearly but concisely. Show how points were awarded or deducted for specific aspects. Limit each feedback point to one sentence."},
                     {"role": "user", "content": prompt}
@@ -54,10 +54,11 @@ class DSAGrader:
             
             validated_evaluation = self._validate_evaluation(evaluation, test_case_ratio)
             
+            # Debug the validated evaluation
             print("Validated evaluation:", json.dumps(validated_evaluation, indent=2))
             
             if not hasattr(self, '_generate_grade_report'):
-                return validated_evaluation
+                return validated_evaluation  # Return validated evaluation if _generate_grade_report doesn't exist
                 
             grade_report = self._generate_grade_report(validated_evaluation, test_case_ratio)
             
@@ -295,7 +296,7 @@ class DSAGrader:
 
 def main(folder_name: str, use_test_case_ratio: bool = False):
     rubric_path = "dsa_rubric.yaml"
-    api_key = "your_api_key"
+    api_key = "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"
     grader = DSAGrader(api_key, rubric_path)
     
     question_path = os.path.join(folder_name, "question.txt")

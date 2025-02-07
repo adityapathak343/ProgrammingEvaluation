@@ -1,0 +1,4 @@
+[console_scripts]
+evaluate = scripts.evaluate:main
+re-evaluate = scripts.re_evaluate:main
+redesign-rubric = scripts.redesign_rubric:main

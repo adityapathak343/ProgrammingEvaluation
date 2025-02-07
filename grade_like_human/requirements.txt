@@ -1,0 +1,31 @@
+# Core dependencies
+langchain==0.1.9
+langchain-openai==0.0.8
+openai==1.12.0
+
+# Data processing
+pandas==2.2.0
+numpy==1.26.4
+pyyaml==6.0.1
+
+# File handling and paths
+pathlib==1.0.1
+python-dotenv==1.0.1
+
+# Logging and timing
+logging==0.4.9.6
+
+# Type hints
+typing-extensions==4.9.0
+
+# Progress bars and CLI
+tqdm==4.66.2
+colorama==0.4.6
+
+# Testing (optional)
+pytest==8.0.1
+pytest-cov==4.1.0
+
+# Documentation (optional)
+sphinx==7.2.6
+sphinx-rtd-theme==2.0.0
