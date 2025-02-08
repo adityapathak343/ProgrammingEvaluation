@@ -1,0 +1,64 @@
+import java.util.*;
+
+import java.lang.*;
+
+import java.io.*;
+
+
+
+class Codechef
+
+{
+
+	public static void main (String[] args) throws java.lang.Exception
+
+	{
+
+		Scanner scanner = new Scanner(System.in);
+
+        int T = scanner.nextInt(); // Number of test cases
+
+
+
+        for (int t = 0; t < T; t++) {
+
+            int N = scanner.nextInt();
+
+            System.out.println(maxHeight(N));
+
+        }
+
+
+
+        scanner.close();
+
+    }
+
+
+
+    public static int maxHeight(int N) {
+
+        int height = 0;
+
+        int coinsUsed = 0;
+
+
+
+        while (coinsUsed <= N) {
+
+            height++;
+
+            coinsUsed += height;
+
+        }
+
+
+
+        return height - 1;
+
+
+
+	}
+
+}
+

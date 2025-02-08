@@ -1,0 +1,55 @@
+rubric_name: "Generic DSA Problem Evaluation"
+version: "1.0"
+total_points: 12
+categories:
+  logical_correctness:
+    name: "Logical Correctness"
+    max_points: 4
+    scale:
+      0: "No implementation or completely incorrect logic"
+      1: "Major logical errors, fundamental misunderstanding of the problem"
+      2: "Partial implementation with some logical errors"
+      3: "Mostly correct with minor logical issues"
+      4: "Perfect implementation with correct logic"
+    weight: 0.4
+
+  time_complexity:
+    name: "Time Complexity"
+    max_points: 1
+    scale:
+      0: "Does not meet expected time complexity"
+      1: "Meets or exceeds expected time complexity"
+    weight: 0.15
+
+  space_complexity:
+    name: "Space Complexity"
+    max_points: 1
+    scale:
+      0: "Does not meet expected space complexity"
+      1: "Meets or exceeds expected space complexity"
+    weight: 0.15
+
+  code_quality:
+    name: "Code Quality"
+    max_points: 2
+    scale:
+      0: "Poor code quality: unclear naming, no comments, poor organization"
+      1: "Acceptable code quality: some documentation, reasonable organization"
+      2: "Excellent code quality: clear naming, well-documented, well-organized"
+    weight: 0.15
+
+  syntactic_correctness:
+    name: "Syntactic Correctness"
+    max_points: 4
+    scale:
+      0: "Code does not compile/run"
+      1: "Major syntax errors requiring significant fixes"
+      2: "Multiple minor syntax issues"
+      3: "Few minor syntax issues"
+      4: "Perfect syntax"
+    weight: 0.15
+
+test_cases:
+  weight_per_test: 0.1
+  minimum_pass_ratio: 0.7
+  impact_on_logical_correctness: true

@@ -1,0 +1,31 @@
+# cook your dish here
+
+import math
+
+t=int(input())
+
+for i in range(t):
+
+    n=int(input())
+
+    low,high=1,int(math.sqrt(2*n))+1
+
+    while low<=high:
+
+        mid=(low+high)//2
+
+        cn=mid*(mid+1)//2
+
+        if cn==n:
+
+            print(mid)
+
+        elif cn<n:
+
+            low=mid+1
+
+        else:
+
+            high=mid-1
+
+    print(high)

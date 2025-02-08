@@ -1,0 +1,45 @@
+timestamp: '2025-02-02T21:47:48.891005'
+total_score: 7
+max_score: 12
+percentage: 58.333333333333336
+categories:
+  logical_correctness:
+    score: 1
+    feedback:
+      strengths:
+      - points: 1
+        comment: The logic is incorrect because the count variable is not reset for each test case and the loop does not break when the count exceeds the number of coins.
+      weaknesses: []
+  time_complexity:
+    score: 0
+    feedback:
+      strengths:
+      - points: 1
+        comment: The time complexity is high due to the use of a nested loop.
+      weaknesses:
+      - points: 1
+        comment: Does not meet the expected time complexity.
+  space_complexity:
+    score: 1
+    feedback:
+      strengths:
+      - points: 1
+        comment: The space complexity is optimal as the program only uses a few integer variables and does not use any data structures.
+      weaknesses: []
+  code_quality:
+    score: 1
+    feedback:
+      strengths:
+      - points: 1
+        comment: The code is reasonably organized.
+      weaknesses:
+      - points: 1
+        comment: Lacks comments and has unclear variable names.
+  syntactic_correctness:
+    score: 4
+    feedback:
+      strengths:
+      - points: 1
+        comment: The syntax of the code is correct and it should compile and run without errors.
+      weaknesses: []
+test_case_ratio: null

@@ -1,0 +1,47 @@
+{
+    "version": "1.0",
+    "one_shot": {
+        "base_prompt": "You are a professional teacher grading a student submission. Based on the rubric provided, evaluate the submission and provide a score. Return your evaluation in the following JSON format:\n\n{\n    \"score\": number,\n    \"feedback\": string,\n    \"criteria\": [{\n        \"description\": string,\n        \"points\": number,\n        \"max_points\": number\n    }]\n}\n\nSubmission: {submission}\n\nRubric: {rubric}",
+        
+        "output_format": {
+            "score": "number (Total points awarded)",
+            "feedback": "string (Detailed feedback)",
+            "confidence": "number (0-100)",
+            "criteria_breakdown": [
+                {
+                    "criterion": "string",
+                    "points_awarded": "number",
+                    "feedback": "string"
+                }
+            ]
+        }
+    },
+    
+    "self_reflection": {
+        "base_prompt": "You previously graded this answer as follows:\n{previous_evaluation}\n\nNow, carefully reflect on your grading. Consider:\n1. Is the score consistent with the rubric?\n2. Are there aspects you might have overlooked?\n3. Is the feedback clear and constructive?\n4. Are there alternative interpretations of the answer?\n\nBased on this reflection, provide a revised evaluation if needed.",
+        
+        "output_format": {
+            "score": "number",
+            "feedback": "string",
+            "confidence": "number",
+            "reflection": "string",
+            "changes": ["string (Explanations of any changes made)"]
+        }
+    },
+    
+    "batching": {
+        "base_prompt": "Grade the following group of student answers for the same question. Consider relative performance and maintain consistency across grades.\n\nQuestion: {question}\n\nRubric: {rubric}\n\nStudent Answers:\n{submissions}\n\nEnsure that:\n1. Similar answers receive similar grades\n2. Point differences reflect genuine quality differences\n3. Feedback is specific and constructive for each answer",
+        
+        "output_format": {
+            "evaluations": [
+                {
+                    "score": "number",
+                    "feedback": "string",
+                    "confidence": "number",
+                    "relative_notes": "string"
+                }
+            ],
+            "batch_consistency_check": "string"
+        }
+    }
+}

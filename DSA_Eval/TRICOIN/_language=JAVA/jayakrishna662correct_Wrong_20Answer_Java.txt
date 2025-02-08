@@ -1,0 +1,48 @@
+import java.util.*;
+
+import java.lang.*;
+
+import java.io.*;
+
+
+
+class Codechef
+
+{
+
+	public static void main (String[] args) throws java.lang.Exception
+
+	{
+
+		Scanner sc=new Scanner(System.in);
+
+		int t=sc.nextInt();
+
+		for(int i=1;i<=t;i++){
+
+		    int n=sc.nextInt();
+
+		    int count=1;
+
+		    int height=1;
+
+		    for(int j=2;j<=n;j++){
+
+		        count+=j;
+
+		        height=j;
+
+		        if(count>n)
+
+		            break;
+
+		    }
+
+		    System.out.println(height-1);
+
+		}
+
+	}
+
+}
+

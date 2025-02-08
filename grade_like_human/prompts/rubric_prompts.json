@@ -1,0 +1,17 @@
+{
+    "version": "1.0",
+    "rubric_generation": {
+        "base_prompt": "You are a professional teacher creating a grading rubric. You will be given a question, an initial grading rubric, and several examples of correctly graded student answers. Based on these, generate an improved rubric that better reflects actual student performance.\n\nQuestion: {question}\n\nInitial rubric: {init_rubric}\n\nSample graded answers: {samples}\n\nThe maximum points possible is {max_points}.\n\nGenerate a comprehensive rubric that includes:\n1. Key points required in the answer\n2. Point allocation for each component\n3. Common variations in student responses and how to grade them\n4. Examples of partial credit scenarios",
+        
+        "output_format": {
+            "rubric_content": "string (The complete rubric text)",
+            "criteria": [
+                {
+                    "description": "string (Description of the criterion)",
+                    "points": "number (Points allocated)",
+                    "examples": ["string (Example responses)"]
+                }
+            ]
+        }
+    }
+}

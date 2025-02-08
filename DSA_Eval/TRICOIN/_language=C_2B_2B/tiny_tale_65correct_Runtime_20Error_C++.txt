@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int main() {
+
+    int T = 0;
+
+    int N[1000000000] = {};
+
+    cin >> T;
+
+    cout << T;
+
+    for (int i = 0; i < T; i++) {
+
+        cin >> N[i];
+
+    }
+
+    
+
+    // for (int i = 0; i < T; i++) {
+
+    //     cout << N[i];
+
+    // }
+
+    return 0;
+
+}
+

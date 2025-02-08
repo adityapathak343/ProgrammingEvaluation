@@ -1,0 +1,52 @@
+import math
+
+
+
+def max_triangle_height(N):
+
+    # Binary search approach to find the maximum height
+
+    low, high = 1, int(math.sqrt(2 * N)) + 1
+
+    result = 0
+
+    
+
+    while low <= high:
+
+        mid = (low + high) // 2
+
+        coins_needed = (mid * (mid + 1)) // 2
+
+        
+
+        if coins_needed == N:
+
+            return mid  # Exact match found
+
+        elif coins_needed < N:
+
+            result = mid  # Update the result and try for larger mid
+
+            low = mid + 1
+
+        else:
+
+            high = mid - 1
+
+    
+
+    return result
+
+
+
+# Input processing
+
+T = int(input())  # Number of test cases
+
+for _ in range(T):
+
+    N = int(input())  # Number of coins for the current test case
+
+    print(max_triangle_height(N))
+

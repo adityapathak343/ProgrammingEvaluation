@@ -1,0 +1,8 @@
+# cook your dish here
+t=long int(input())
+for i in range(t):
+    n=long int(input())
+    for h in range(n+1):
+        if h*(h+1)/2 > n:
+            print(h-1)
+            break
