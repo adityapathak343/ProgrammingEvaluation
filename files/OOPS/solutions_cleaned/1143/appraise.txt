@@ -1,0 +1,15 @@
+1. **RunsComparator**: The implementation of the `compare` method is mostly correct in terms of logic for comparing runs in descending order. However, it could be simplified by returning `Integer.compare(p2.getRunsScored(), p1.getRunsScored())`, which is more concise and avoids potential issues with returning incorrect values. The current implementation also lacks proper handling of the case where runs are equal, which is correctly returning 0.
+
+2. **readPlayersFromFile**: The method is incomplete and does not follow the required steps. It attempts to read from a file but uses `FileInputStream` incorrectly, as it reads bytes instead of lines. The logic for reading lines, splitting them, creating `Player` objects, and adding them to a list is missing. The method should also return the list of players at the end.
+
+3. **writePlayersToFile**: This method is also incomplete. It initializes a `PrintWriter` but does not write player data correctly. The line `String info = Player.get();` is incorrect as `Player` is a class and cannot be called like a method. The method should iterate over the `players` list and write each player's details using `toCsvFormat()`.
+
+4. **updatePlayerStats**: The method is not implemented at all. It should iterate through the `players` list, check for a matching player name, and update the runs and wickets accordingly. If no player is found, it should throw an `IllegalArgumentException`.
+
+5. **calculateTeamAverageRuns**: The implementation is incorrect. The line `String player[]= new List<Player> players;` is invalid syntax. The logic for filtering players by team, calculating total runs, and computing the average is missing. The method should throw an exception if no players are found for the specified team.
+
+6. **TeamFilterStrategy**: The `filter` method is not implemented. It should create a list for matching players, iterate through the `players` list, and add players whose team matches the given name. Finally, it should return the list of matching players.
+
+7. **AllRounderStatsFilter**: The `filter` method is also not implemented. It should create a list for matching all-rounders, check if each player meets the criteria for runs and wickets, and return the list of matching players.
+
+The student's performance shows a lack of understanding of the required implementations for the methods. While some attempts were made, the majority of the methods are incomplete or incorrect, leading to compilation errors. The student needs to focus on understanding file I/O, list manipulation, and method implementations in Java.

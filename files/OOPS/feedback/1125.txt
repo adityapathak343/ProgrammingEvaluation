@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is incorrectly defined. The method should directly return the comparison result instead of defining a new class within it. This leads to a compilation error.
+
+2. In the `readPlayersFromFile` method, the method is defined twice, which is not allowed in Java. This will cause a compilation error. The correct implementation should be provided without the duplicate definition.
+
+3. The `writePlayersToFile` method is not implemented at all, which is a significant omission as it is required by the rubric. This will lead to incomplete functionality.
+
+4. The `updatePlayerStats` method is also defined twice, which is incorrect. The implementation should be provided only once, and the duplicate definition should be removed.
+
+5. The `calculateTeamAverageRuns` method suffers from the same issue as `updatePlayerStats`, where it is defined twice. This will cause a compilation error.
+
+6. In the `TeamFilterStrategy` class, the method `filter` is incorrectly defined with syntax errors, such as `list<player>filteredplayers` and `retrun filteredplayer`. These should be corrected to proper Java syntax.
+
+7. The `AllRounderStatsFilter` class has a similar issue with the method `filter` being defined twice, which is not valid. The implementation should be provided only once.
+
+The student's submission contains multiple critical syntax errors and structural issues that prevent the code from compiling successfully. The student needs to revise their code to ensure that methods are defined correctly without duplication and that all required methods are implemented. Overall, the submission demonstrates a lack of attention to detail in syntax and structure, which is essential for successful Java programming.

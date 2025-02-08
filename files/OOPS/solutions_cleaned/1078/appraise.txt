@@ -1,0 +1,15 @@
+1. The `compare` method in `RunsComparator` is incorrectly implemented. The logic should return a negative value if `p1` has more runs than `p2`, but the current implementation returns a positive value when `p1` has more runs. The correct implementation should simply return `p2.getRunsScored() - p1.getRunsScored()`.
+
+2. In the `readPlayersFromFile` method, the file reading logic is mostly correct, but the `FileInputStream` should be closed in a `finally` block or by using a try-with-resources statement to ensure it closes even if an exception occurs. Additionally, the method does not handle the case where the file might not exist properly.
+
+3. The `writePlayersToFile` method has a critical error in the loop where it attempts to write player data. The loop condition should be `i < players.size()` instead of `i <= players.size()`, as this will cause an `IndexOutOfBoundsException` when trying to access the last element.
+
+4. In the `updatePlayerStats` method, the check for player name equality should use `.equals()` instead of `==`. The current implementation will not correctly identify players with the same name due to reference comparison.
+
+5. The `calculateTeamAverageRuns` method correctly calculates the average runs, but it could be improved by using a more descriptive exception message when throwing the `IllegalArgumentException`.
+
+6. In the `filter` method of `TeamFilterStrategy`, the comparison for team names should also use `.equals()` instead of `==` to ensure proper string comparison.
+
+7. The `filter` method in `AllRounderStatsFilter` has a logical error. It should check if the player is an all-rounder before checking the criteria for runs and wickets. The current implementation does not filter by role.
+
+The student has demonstrated a good understanding of the requirements but has made several critical errors in logic and implementation that need to be addressed for the code to function correctly.

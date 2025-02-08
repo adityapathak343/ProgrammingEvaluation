@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected negative, positive, or zero values based on the comparison. (2/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class has a significant issue. The method uses `scan.next()` instead of `scan.nextLine()`, which will not read the entire line of player data. This will lead to incorrect parsing of player information. Additionally, the exception handling is too broad and does not provide feedback on errors. (5/9 marks)
+
+3. The `writePlayersToFile` method is implemented correctly, writing the player data to the specified file in the required format. However, the exception handling is again too broad and does not provide feedback on errors. (4/4 marks)
+
+4. The `updatePlayerStats` method has a critical flaw in the way it compares player names. The `==` operator is used for string comparison instead of the `.equals()` method, which will lead to incorrect behavior. (3/5 marks)
+
+5. The `calculateTeamAverageRuns` method has a logical error. The check for `count == 0` should be outside the loop, and the return statement should not be inside the loop. This will cause the method to return prematurely. (2/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class uses `==` for string comparison instead of `.equals()`, which will lead to incorrect filtering of players by team. (3/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented, checking both runs and wickets against the criteria and returning the appropriate list of players. (5/5 marks)
+
+The student has demonstrated a good understanding of the required functionalities, but there are critical issues with string comparison and file reading that need to be addressed. Overall, the submission shows promise but requires significant corrections to function as intended.

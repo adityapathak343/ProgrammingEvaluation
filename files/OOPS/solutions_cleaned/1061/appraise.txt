@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is not implemented, which is essential for sorting players based on their runs. This is a critical omission and results in a lack of functionality for sorting players, which is a key requirement of the assignment. (2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is also not implemented. This method is crucial for reading player data from a file and creating a list of `Player` objects. Without this implementation, the application cannot function as intended. (9 marks)
+
+3. The `writePlayersToFile` method is not implemented. This method is necessary for writing the updated list of players back to a file, which is another essential part of the application. (4 marks)
+
+4. The `updatePlayerStats` method is not implemented. This method is important for updating the statistics of players, and its absence means that player stats cannot be modified as required. (5 marks)
+
+5. The `calculateTeamAverageRuns` method is not implemented. This method is needed to calculate the average runs scored by players of a specific team, which is a key functionality of the application. (5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented. This method is necessary for filtering players by their team, which is a required feature of the application. (5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is not implemented. This method is essential for filtering all-rounders based on their statistics, which is another important requirement of the assignment. (5 marks)
+
+The student's performance is unsatisfactory as none of the required methods were implemented, resulting in a non-functional application. The student needs to complete all the methods to meet the assignment requirements.

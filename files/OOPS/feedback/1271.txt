@@ -1,0 +1,42 @@
+1. The `compare` method in the `RunsComparator` class has syntax errors. The correct syntax for the `if` statement should include parentheses around the condition, and the method should return a negative value for more runs, not a positive one. The correct implementation should be:
+   ```java
+   public int compare(Player p1, Player p2) {
+       if (p1.getRunsScored() > p2.getRunsScored()) {
+           return -1;
+       } else if (p1.getRunsScored() < p2.getRunsScored()) {
+           return 1;
+       } else {
+           return 0;
+       }
+   }
+   ```
+
+2. In the `readPlayersFromFile` method, the `Player` constructor is missing a semicolon at the end of the line where the player is created. Additionally, the `Role` should be parsed correctly from the string. The correct line should be:
+   ```java
+   Player p1 = new Player(parts[0], Role.fromString(parts[1]), Integer.parseInt(parts[2]), Integer.parseInt(parts[3]), parts[4]);
+   ```
+
+3. The `writePlayersToFile` method has a syntax error in the `try` block where the `FileOutputStream` is created. The `catch` statement is missing parentheses. It should be:
+   ```java
+   catch (IOException e) {
+       System.out.println("File opening error");
+   }
+   ```
+
+4. In the `updatePlayerStats` method, the way to access players in the list is incorrect. Instead of using `players(i)`, it should be `players.get(i)`. Also, the `IllegalArgumentException` should be thrown with the `new` keyword:
+   ```java
+   if (i == 0) {
+       throw new IllegalArgumentException("Player not found");
+   }
+   ```
+
+5. The `calculateTeamAverageRuns` method incorrectly uses `filter(players, teamName)` without defining the `filter` method in the `CricketDataHandler` class. This should call the `filter` method from the `TeamFilterStrategy` class instead.
+
+6. In the `filter` method of `TeamFilterStrategy`, the same issue with accessing players exists. It should use `players.get(i)` instead of `players(i)`. Also, the `i` variable is unnecessary since you can directly use the iterator.
+
+7. In the `filter` method of `AllRounderStatsFilter`, the role comparison should use the `equals` method on the `Role` enum, not a string comparison. The correct check should be:
+   ```java
+   if (players.get(i).getRole() == Role.ALL_ROUNDER) {
+   ```
+
+Overall, the student has made several syntax errors and logical mistakes in their implementation, which would prevent the code from compiling and running correctly. They need to pay closer attention to Java syntax and ensure they are using the correct methods and data types.

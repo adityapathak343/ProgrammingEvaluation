@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is not implemented. This is essential for sorting players based on their runs, and without it, the sorting functionality will not work. (2 marks)
+
+2. In the `readPlayersFromFile` method, the list `PlayersFILE` is declared but never used to store player details. Instead, the method attempts to read from the file without properly handling the input stream, leading to potential errors. The logic for reading lines and creating `Player` objects is missing. (9 marks)
+
+3. The `writePlayersToFile` method is incomplete. It initializes a `PrintWriter` but does not write the column names or player details to the file. This method needs to be fully implemented to fulfill its purpose. (4 marks)
+
+4. The `updatePlayerStats` method is not implemented at all. This method is crucial for updating player statistics and must be completed to ensure the application functions correctly. (5 marks)
+
+5. The `calculateTeamAverageRuns` method is also not implemented. This method is necessary for calculating the average runs of players in a specific team and needs to be completed. (5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented. This method is essential for filtering players by their team and must be completed. (5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is not implemented. This method is necessary for filtering all-rounders based on their statistics and must be completed. (5 marks)
+
+The student's submission is incomplete, with all required methods either not implemented or lacking essential logic. This significantly impacts the functionality of the application, resulting in a poor performance overall.

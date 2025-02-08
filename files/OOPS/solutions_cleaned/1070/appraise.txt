@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. The logic is sound, and it returns the expected values based on the comparison.
+
+2. The `readPlayersFromFile` method is overly complex and contains several issues. It attempts to read the file character by character, which is inefficient. Additionally, it does not handle the parsing of player details correctly, particularly with respect to splitting the data into the correct fields. The method should utilize a `BufferedReader` for better performance and clarity.
+
+3. The `writePlayersToFile` method is not implemented at all, which is a significant omission. This method is crucial for the functionality of the application, and its absence would prevent the program from saving player data.
+
+4. The `updatePlayerStats` method has a logical flaw in the exception handling. The way the `IllegalArgumentException` is thrown is incorrect; it should be instantiated properly. Additionally, the method could be simplified by using a boolean flag instead of an integer to check if a player was found.
+
+5. The `calculateTeamAverageRuns` method has multiple issues. It unnecessarily creates separate lists for each team, which is inefficient. The logic for calculating the average runs is also incorrect, as it uses an uninitialized variable `avg` in the return statement. The method should filter players based on the team name directly and calculate the average accordingly.
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented, which is another critical omission. This method is essential for filtering players by their team, and without it, the functionality of the application is incomplete.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented, which means the application cannot filter all-rounders based on their statistics. This is a significant oversight, as it directly impacts the functionality expected from the application.
+
+The student's performance shows a mix of correct implementations and significant omissions. While some methods are correctly implemented, others are either incomplete or contain logical errors that would prevent the application from functioning as intended. The student needs to focus on simplifying their code and ensuring all required methods are fully implemented.

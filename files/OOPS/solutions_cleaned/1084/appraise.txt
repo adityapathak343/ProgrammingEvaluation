@@ -1,0 +1,15 @@
+1. The `compare` method in `RunsComparator` is partially correct but does not handle the case where both players have the same runs. It should return `0` in that case. Additionally, the method should return a positive value if `p1` has fewer runs than `p2`, which is not implemented correctly.
+
+2. The `readPlayersFromFile` method has multiple issues. The method signature is incorrect as it should not take a string literal as a parameter. The variable `fd` is not defined, and the method attempts to use `data` without proper initialization. The loop logic is flawed, particularly with the use of `if(i=0)` which should be `if(i==0)`. The player creation logic is hardcoded and does not utilize the data read from the file.
+
+3. The `writePlayersToFile` method is incomplete and contains syntax errors. The use of `fd` is incorrect and undefined. The method does not implement any of the required steps for writing player data to a file.
+
+4. The `updatePlayerStats` method has several issues. The condition `if(Player(i).getPlayerName() != playerName)` is incorrect; it should be `if(players.get(i).getPlayerName().equals(playerName))`. The exception throwing syntax is incorrect; it should be `throw new IllegalArgumentException()`. The way to update runs and wickets is also incorrect; it should use the setter methods.
+
+5. The `calculateTeamAverageRuns` method has a logical error in checking the team name. The condition `if(players.getTeamName() != teamName && n==0)` is incorrect; it should iterate through each player. The average calculation logic is flawed, particularly the handling of the case when no players are found.
+
+6. The `filter` method in `TeamFilterStrategy` has incorrect logic. The condition `if(players.getTeamName() == teamName1)` is incorrect; it should compare with `teamName`. The way to add players to the list is also incorrect.
+
+7. The `filter` method in `AllRounderStatsFilter` is incomplete and contains logical errors. The checks for role and criteria are not implemented correctly, and the method does not return the expected list of players.
+
+The student's performance shows a lack of understanding of Java syntax and logic, resulting in numerous compilation errors and incomplete implementations. Significant improvements are needed in both coding skills and understanding of object-oriented principles.

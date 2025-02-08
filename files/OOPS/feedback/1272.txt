@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is well-structured and follows the steps outlined in the question. It correctly creates a list, reads from the file, splits the data, creates `Player` objects, and adds them to the list. However, it lacks error handling for file not found or parsing issues, which could lead to runtime exceptions. This could be improved for robustness, but overall, it meets the requirements.
+
+3. The `writePlayersToFile` method is partially implemented. While it prepares to write data and writes the column names, it does not handle the case where the `PrintWriter` might not be successfully created (it should close the writer in a `finally` block or use a try-with-resources statement). Additionally, it does not close the `PrintWriter` after writing, which can lead to resource leaks. This method needs improvement in error handling and resource management.
+
+4. The `updatePlayerStats` method is correctly implemented. It iterates through the list of players, checks for a matching name, and updates the runs and wickets accordingly. It also throws an `IllegalArgumentException` if no player matches, which is appropriate. This part is well done.
+
+5. The `calculateTeamAverageRuns` method is mostly correct, but it incorrectly checks for the number of players in the `avplay` list. The check should be for `avplay.size() == 0` instead of using `isEmpty()`, which is a minor oversight. The calculation of the average runs is correctly implemented.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates a list for players matching the team name and returns it. However, it unnecessarily throws an exception if no players are found, which is not required by the question. This could be improved by simply returning an empty list instead.
+
+7. The `filter` method in the `AllRounderStatsFilter` class has a significant issue. It attempts to iterate over an empty list (`All_rounders`) instead of the `players` list. This will lead to a `ConcurrentModificationException` or simply not filter any players. The logic for checking if a player is an all-rounder and meets the criteria is also incorrect; it should check for `p.getRole() == Role.ALL_ROUNDER` instead of just adding players based on runs and wickets.
+
+Overall, the student has demonstrated a good understanding of the requirements and has implemented most methods correctly. However, there are critical issues in the `writePlayersToFile` and `AllRounderStatsFilter` methods that need to be addressed for full functionality. The student should focus on improving error handling and ensuring that all logic paths are correctly implemented.

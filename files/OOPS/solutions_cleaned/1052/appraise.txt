@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method has several issues. The method does not correctly read the first line to ignore the column names, and it attempts to read lines in a way that will lead to a `NoSuchElementException`. Additionally, the way the player details are being added to the list is incorrect; it tries to add a `String` instead of a `Player` object. This part does not meet the requirements and should be significantly revised.
+
+3. The `writePlayersToFile` method is incomplete. It initializes a `PrintWriter` and writes the header, but it does not iterate through the `players` list to write each player's details to the file. This part is not functional and needs to be fully implemented.
+
+4. The `updatePlayerStats` method is not implemented at all. There is no code to iterate through the players, check for a match, or update the stats. This part is missing and requires complete implementation.
+
+5. The `calculateTeamAverageRuns` method has a logical error. It uses `==` to compare strings, which should be replaced with `.equals()`. Additionally, it does not handle the case where `count` is zero, which would lead to a division by zero error. This part needs correction and proper exception handling.
+
+6. The `filter` method in the `TeamFilterStrategy` class correctly creates a list of players matching the team name. However, it also uses `==` for string comparison instead of `.equals()`, which is incorrect. This part needs to be fixed for proper functionality.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented to filter players based on the criteria for runs and wickets. It successfully adds matching players to the list and returns it, earning full marks for this part.
+
+The student's performance shows a mix of strengths and weaknesses. While the implementation of the `compare` method and the filtering for all-rounders is correct, significant issues exist in file reading, writing, updating player stats, and calculating averages. The student needs to focus on proper string comparisons and ensure that all methods are fully implemented and functional. Overall, the submission requires substantial revisions to meet the assignment's requirements.

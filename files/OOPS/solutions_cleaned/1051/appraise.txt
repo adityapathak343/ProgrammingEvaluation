@@ -1,0 +1,19 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method has several issues:
+   - The method does not handle the `FileNotFoundException` properly, as it assumes the file will always be found.
+   - The splitting of the line uses a space as a delimiter, which may not work correctly if the CSV format uses commas. This could lead to incorrect parsing of player data.
+   - The method does not check if the role string is valid before converting it to a `Role` enum, which could lead to an `IllegalArgumentException` if the role is not recognized.
+   - The method does not handle potential exceptions that could arise from parsing integers or reading from the file. This part does not meet the requirements and thus loses marks.
+
+3. The `writePlayersToFile` method has a similar issue with the format of the output. It uses spaces instead of commas to separate values, which does not match the expected CSV format. Additionally, it does not handle exceptions that may occur during file writing. This part also does not meet the requirements and loses marks.
+
+4. The `updatePlayerStats` method has a critical flaw in the way it checks for player names. It uses `==` for string comparison instead of `.equals()`, which will not work correctly for string content comparison. This could lead to incorrect behavior if the player names are not the same object in memory. This part does not meet the requirements and loses marks.
+
+5. The `calculateTeamAverageRuns` method has a similar issue with string comparison using `==` instead of `.equals()`. Additionally, it does not correctly check if any players from the specified team were found, as the `flag` variable is never set to 1 when a player is found. This could lead to an `IllegalArgumentException` being thrown incorrectly. This part does not meet the requirements and loses marks.
+
+6. The `filter` method in the `TeamFilterStrategy` class also uses `==` for string comparison, which is incorrect. This could lead to incorrect filtering of players by team. This part does not meet the requirements and loses marks.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented and checks for both runs and wickets against the criteria. It correctly identifies all-rounders and adds them to the list, earning full marks for this part.
+
+Overall, the student has demonstrated a good understanding of the requirements for some parts of the code, particularly in the `RunsComparator` and `AllRounderStatsFilter` classes. However, there are significant issues in the file handling methods and string comparisons that need to be addressed. The student should focus on proper exception handling, correct string comparison, and adhering to the expected CSV format for input and output.

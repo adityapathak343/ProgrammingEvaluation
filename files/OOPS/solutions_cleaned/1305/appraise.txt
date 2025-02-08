@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is incorrectly implemented. The use of `Comparable` and `CompareTo` is unnecessary and incorrect. The method should directly compare the `runsScored` of the two `Player` objects. The structure of the if-else statements is also incorrect, leading to syntax errors.
+
+2. In the `readPlayersFromFile` method, the implementation does not follow the required steps. Instead of reading from a file, it creates a list of player names manually, which does not fulfill the task requirements. Additionally, the method does not return a list of `Player` objects as expected.
+
+3. The `writePlayersToFile` method is not implemented at all, which is a significant omission since it is required to write player data back to a file.
+
+4. The `updatePlayerStats` method is not implemented, which is critical for updating player statistics. This method is essential for the functionality of the application.
+
+5. The `calculateTeamAverageRuns` method is incomplete and does not follow the required steps. It uses a `HashMap` to store teams but does not calculate the average runs as specified. The logic for calculating averages is missing.
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented, which is necessary for filtering players by their team. This method is crucial for the functionality of the application.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented, which is required to filter all-rounders based on their statistics. This is another critical functionality that is missing.
+
+The student's performance is significantly below expectations, with multiple critical methods either incorrectly implemented or completely missing. The code contains syntax errors and does not fulfill the requirements of the assignment.

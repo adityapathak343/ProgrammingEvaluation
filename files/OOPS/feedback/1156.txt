@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. In the `readPlayersFromFile` method, the student has started to implement the logic but has not completed it. The method lacks the necessary code to split the player data into individual attributes and create `Player` objects. This results in an incomplete implementation, leading to a loss of marks.
+
+3. The `writePlayersToFile` method is not implemented at all. The student has only set up a `PrintWriter` but has not written any logic to write player data to the file. This results in a significant loss of marks for this part.
+
+4. The `updatePlayerStats` method has a critical flaw. The use of `==` for string comparison (`p1.getPlayerName() == playerName`) is incorrect; it should use `.equals()`. Additionally, the method throws an `IllegalArgumentException` for every player that does not match, which is not the intended behavior. This results in a loss of marks.
+
+5. The `calculateTeamAverageRuns` method does not handle the case where no players are found for the specified team, which should throw an `IllegalArgumentException`. The calculation of the average runs is also done without checking if `teamno` is zero, which could lead to a division by zero error. This results in a loss of marks.
+
+6. The `filter` method in the `TeamFilterStrategy` class uses `==` for string comparison, which is incorrect. It should use `.equals()`. This mistake leads to incorrect filtering of players and results in a loss of marks.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented, checking both the role and the criteria for runs and wickets. It earns full marks for this part.
+
+The student's performance shows a mix of correct implementations and critical errors. While some methods are correctly implemented, others are incomplete or contain significant logical flaws, leading to a substantial loss of marks overall.

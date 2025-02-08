@@ -1,0 +1,23 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, which is correct. (2/2 marks)
+
+2. The `readPlayersFromFile` method has several issues:
+   - The method attempts to use `player.addAll(Double.parseDouble(line.trim()));`, which is incorrect as it tries to add a double value to a list of `Player` objects. This will cause a compilation error.
+   - The logic for reading and parsing the player data from the file is incomplete and does not follow the steps outlined in the question. (0/9 marks)
+
+3. The `writePlayersToFile` method is not implemented at all, which means it does not fulfill any of the requirements specified in the question. (0/4 marks)
+
+4. The `updatePlayerStats` method has several issues:
+   - The method attempts to use `if (p1.getTeamName() == teamName)`, which should be `if (p1.getPlayerName().equals(playerName))` to check for the player's name.
+   - The variables `totalruns` and `totalplayers` are used without being declared or initialized, leading to potential compilation errors. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method has a logical error:
+   - The method uses `if (p1.getTeamName() == teamName)`, which should be corrected to `if (p1.getTeamName().equals(teamName))`.
+   - The average calculation should handle the case where `totalplayers` is zero to avoid division by zero. (2/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented to filter players by their team name. It creates a new list and adds players that match the criteria. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class has issues:
+   - The condition `player.getClass() >= criteria[0]` is incorrect; it should be `player.getRunsScored() >= criteria[0]` to check the runs.
+   - The method does not handle the case where the player is not an all-rounder correctly, as it relies on the `isAllRounder` method, which is not implemented. (1/5 marks)
+
+Overall, the student has demonstrated some understanding of the requirements, particularly in the `RunsComparator` and `TeamFilterStrategy` classes. However, significant issues in the `readPlayersFromFile`, `writePlayersToFile`, `updatePlayerStats`, and `calculateTeamAverageRuns` methods indicate a lack of comprehension in file handling and data manipulation. The student needs to focus on correctly implementing the required functionalities and handling edge cases.

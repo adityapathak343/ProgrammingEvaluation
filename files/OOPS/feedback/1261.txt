@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class has a syntax error. The method is incorrectly defined with an `@Override` annotation inside the method body, which is not valid. The correct implementation should simply return the comparison result without the `@Override` inside the method.
+
+2. In the `readPlayersFromFile` method, the line that attempts to split the input line into tokens is incorrect. The use of `new Scanner(line).tokens().useDelimiter("").collect(Collectors.toList())` is not appropriate for splitting a CSV line. Instead, it should use `String.split(",")` to correctly parse the CSV format.
+
+3. The `readPlayersFromFile` method also incorrectly uses `inputStream.next()` and `inputStream.nextInt()` to read player data. It should be using the `result` list created from splitting the line to extract the player attributes.
+
+4. In the `writePlayersToFile` method, there is a missing semicolon after the `BufferedWriter` declaration. This will cause a compilation error.
+
+5. The `filter` method in the `TeamFilterStrategy` class does not initialize the `filteredPlayers` list before using it. This will lead to a `NullPointerException`. The list should be instantiated at the beginning of the method.
+
+6. The `filter` method in the `AllRounderStatsFilter` class is completely unimplemented. It needs to be filled out according to the requirements specified in the question.
+
+7. The class name `2022B4A70804P_P1` is not a valid Java class name due to starting with a number. Class names should start with a letter or underscore.
+
+The student has made several critical errors in their code submission, particularly with syntax and logic in the methods. They need to address these issues to ensure the code compiles and functions as intended. Overall, the submission shows an understanding of the requirements but lacks proper implementation and attention to detail.

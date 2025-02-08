@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. This part is correct and meets the requirements.
+
+2. In the `readPlayersFromFile` method, the logic for reading the file and creating `Player` objects is mostly correct. However, the use of `addLast` is incorrect as `ArrayList` does not have this method; it should be `add`. Additionally, the splitting of the line into details should not be done in a loop. Instead, it should be done once per line read.
+
+3. The `writePlayersToFile` method has a few issues. The file is being created as "Output.txt" instead of the specified `fileName`. Also, the method should use `pw.println()` instead of `pw.append()` to ensure each player's data is written on a new line.
+
+4. The `updatePlayerStats` method is correctly implemented. It successfully updates the player's runs and wickets and throws an exception if no player is found. This part meets the requirements.
+
+5. The `calculateTeamAverageRuns` method is correctly implemented. It calculates the average runs for players of a specified team and throws an exception if no players are found. This part is correct.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It successfully filters players based on the team name and returns the matching players. This part meets the requirements.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented. It filters all-rounders based on the provided criteria for runs and wickets. This part is correct.
+
+The student's performance shows a good understanding of the requirements, with correct implementations for most methods. However, there are minor issues in the `readPlayersFromFile` and `writePlayersToFile` methods that need to be addressed for full correctness. Overall, the student demonstrates a solid grasp of Java and object-oriented programming principles.

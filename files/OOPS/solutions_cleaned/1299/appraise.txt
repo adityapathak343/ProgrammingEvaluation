@@ -1,0 +1,15 @@
+1. The `compare` method in `RunsComparator` has multiple syntax errors, including incorrect method calls (e.g., `p1.getRunScored` should be `p1.getRunsScored()`) and improper use of control flow statements (e.g., missing braces and incorrect return values). This results in compilation errors.
+
+2. In the `readPlayersFromFile` method, there are several issues such as incorrect variable declarations (e.g., `list<player>` should be `List<Player>`), incorrect method calls (e.g., `new Arraylist<>()` should be `new ArrayList<>()`), and improper handling of file reading (e.g., missing `BufferedReader` and incorrect loop structure). These mistakes prevent the method from functioning as intended.
+
+3. The `writePlayersToFile` method is incomplete and contains invalid syntax (e.g., `FileinputStream new = new (playerName, Role role, int runsScored, int wicketsTaken, String teamName)`), which does not conform to Java standards. This will lead to compilation errors.
+
+4. In the `updatePlayerStats` method, the syntax for the loop and conditionals is incorrect (e.g., `file(Player p: players){` should be `for (Player p : players) {`), and the logic for updating runs and wickets is flawed (e.g., `p.getRunsScored(runs + p.getWicketsTaken());` is not a valid method call). This will cause the method to fail.
+
+5. The `calculateTeamAverageRuns` method has incorrect logic and syntax, such as using `if (p.getPlayerName().equals(team)` without proper closing brackets and missing the logic to calculate the average runs. This will lead to compilation errors.
+
+6. The `filter` method in `TeamFilterStrategy` has similar issues with syntax and logic, including incorrect variable declarations and missing control flow structures. This will prevent the method from compiling.
+
+7. The `filter` method in `AllRounderStatsFilter` is incomplete and contains syntax errors, such as incorrect use of brackets and missing logic to filter players based on criteria.
+
+The student's submission contains numerous syntax and logical errors that prevent the code from compiling and functioning correctly. Significant revisions are needed to meet the requirements of the assignment.

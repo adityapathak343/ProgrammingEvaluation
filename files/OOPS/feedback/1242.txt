@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is incorrectly implemented. The line `return (r2).compareTo(r1);` is incorrect because `int` cannot be dereferenced. Instead, it should use a simple comparison: `return Integer.compare(r2, r1);`. The subsequent if-else statements are unreachable due to the return statement above them.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is not implemented. This method is crucial for reading player data from a file, and its absence will lead to runtime errors when the program attempts to read player data.
+
+3. The `writePlayersToFile` method is also not implemented. This method is necessary for writing the updated player data back to a file, and without it, the program will not function as intended.
+
+4. The `updatePlayerStats` method is not implemented. This method is essential for updating player statistics, and its absence will prevent the program from modifying player data as required.
+
+5. The `calculateTeamAverageRuns` method is not implemented. This method is important for calculating the average runs of players in a specific team, and without it, the program will not be able to provide team statistics.
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented. This method is necessary for filtering players by their team, and its absence will lead to issues when trying to display players from specific teams.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is not implemented. This method is required for filtering all-rounders based on their statistics, and without it, the program will not be able to identify players who meet the specified criteria.
+
+The student's performance is lacking as they have not implemented the majority of the required methods, which are essential for the functionality of the Cricket Analytics application. The only partially implemented method contains a critical error that prevents it from functioning correctly. Overall, the submission does not meet the expectations for this assignment.

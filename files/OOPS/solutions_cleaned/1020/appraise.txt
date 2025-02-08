@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method has several issues. The method reads a line twice, which will cause it to skip every other line after the first. Additionally, the player role is not being set correctly, as it is currently set to `null`. The method should also handle the case where the file does not exist or is empty more gracefully. This implementation does not meet the requirements, resulting in a significant loss of marks.
+
+3. The `writePlayersToFile` method has a critical error in the file writing process. The `Filewrite` class does not exist; it should be `FileWriter`. Furthermore, the `writer.close()` statement is incorrectly placed inside the loop, which will close the writer after the first player is written, leading to an incomplete file. This method does not fulfill the requirements, resulting in a loss of marks.
+
+4. The `updatePlayerStats` method has a logical error in checking for player names. The comparison should use `.equals()` instead of `==` for string comparison. Additionally, the method does not throw an exception if no player matches the given name, which is a requirement. This results in a loss of marks.
+
+5. The `calculateTeamAverageRuns` method also uses `==` for string comparison instead of `.equals()`, which can lead to incorrect behavior. The method does not handle the case where the team has no players correctly, which is a requirement. This results in a loss of marks.
+
+6. The `filter` method in the `TeamFilterStrategy` class has the same issue with string comparison as the previous methods. It should use `.equals()` instead of `==`. This oversight results in a loss of marks.
+
+7. The `filter` method in the `AllRounderStatsFilter` class also incorrectly uses `==` for string comparison when checking the player's role. It should use `.equals()`. This results in a loss of marks.
+
+Overall, the student has demonstrated some understanding of the requirements but has made several critical errors, particularly with string comparisons and file handling. The implementation of the `readPlayersFromFile` and `writePlayersToFile` methods is particularly problematic, leading to significant deductions in marks. The student should focus on correctly implementing file I/O and string comparison in Java.

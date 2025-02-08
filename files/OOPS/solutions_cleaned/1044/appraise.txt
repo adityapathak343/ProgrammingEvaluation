@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, thus earning full marks for this part.
+
+2. In the `readPlayersFromFile` method, the student attempts to create a list of players but incorrectly uses `ArrayList<String,Role,Integer,Integer,String> Player` which is not valid Java syntax. The correct approach would be to declare a `List<Player> players = new ArrayList<>();`. Additionally, the splitting of the line into player attributes is done incorrectly with `String str[]=line.split("");`, which should use a delimiter like `","`. The method lacks proper implementation for creating `Player` objects and adding them to the list, resulting in a significant loss of marks.
+
+3. The `writePlayersToFile` method is incomplete and contains syntax errors such as `iterator itr=players.iterate();` which should be `Iterator<Player> itr = players.iterator();`. The method does not implement any of the required steps for writing player data to a file, leading to a failure in fulfilling the task requirements.
+
+4. The `updatePlayerStats` method has multiple issues. The use of `itr=players.iterate();` is incorrect; it should be `Iterator<Player> itr = players.iterator();`. The method also incorrectly uses `if(p1.getPlayerName.equals(playerName))` instead of `if(p1.getPlayerName().equals(playerName))`. The exception handling is also incorrectly structured, which would lead to compilation errors. Overall, this method does not meet the requirements.
+
+5. In the `calculateTeamAverageRuns` method, the student attempts to iterate through players but does not filter them by team name as required. The method also has syntax errors, such as missing semicolons and incorrect exception handling. The logic for calculating the average runs is not implemented correctly, resulting in a failure to meet the task requirements.
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented at all. There is no code provided to create a list of players matching the team name, which means this part of the task is incomplete.
+
+7. Similarly, the `filter` method in the `AllRounderStatsFilter` class is also not implemented. The student has not provided any logic to filter all-rounders based on the given criteria, resulting in a complete lack of functionality for this requirement.
+
+The student's performance shows a fundamental misunderstanding of Java syntax and object-oriented principles. While some parts of the code are correctly implemented, the majority of the required methods are incomplete or contain critical errors that prevent the code from compiling and functioning as intended. Overall, the submission lacks the necessary implementations to meet the assignment's requirements effectively.

@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. This part is correct and earns full marks.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is incomplete. The code does not include the necessary file reading logic, such as opening the file, reading lines, and parsing player data. This results in a significant loss of marks for this question.
+
+3. The `writePlayersToFile` method is correctly implemented. It prepares to write data to a file, writes the column names, and iterates through the player list to write each player's information. This part is correct and earns full marks.
+
+4. The `updatePlayerStats` method is mostly correct, but there is a misplaced comment that disrupts the flow of the code. The logic for updating player stats is correct, and the exception handling for a player not found is also correctly implemented. However, the misplaced comment could lead to confusion. This part earns partial marks.
+
+5. The `calculateTeamAverageRuns` method has a syntax error in the return statement where it incorrectly uses `double` instead of casting the result. Additionally, it incorrectly accesses `teamPlayers.size` instead of `teamPlayers.size()`. These issues prevent the method from compiling correctly, resulting in a loss of marks.
+
+6. The `filter` method in the `TeamFilterStrategy` class has a syntax error in the for-loop declaration (`for (Player player = players)` should be `for (Player player : players)`). This mistake will prevent the code from compiling, resulting in a loss of marks.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented. It checks for the role of the player and compares their stats against the criteria. This part is correct and earns full marks.
+
+Overall, the student demonstrated a good understanding of the requirements for some methods, particularly in the `RunsComparator`, `writePlayersToFile`, and `AllRounderStatsFilter` classes. However, significant issues in the `readPlayersFromFile`, `calculateTeamAverageRuns`, and `TeamFilterStrategy` methods, along with some minor errors, hindered the overall performance. The student should focus on ensuring complete implementations and correct syntax to improve their coding skills.

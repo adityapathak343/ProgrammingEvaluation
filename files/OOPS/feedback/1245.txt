@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class contains multiple syntax errors, such as using `=` instead of `==` for comparisons, incorrect use of `elseif`, and the incorrect method signature. This method is not functional and will not compile. (0/2 marks)
+
+2. The `readPlayersFromFile` method has several issues, including incorrect variable declarations (e.g., `List1=[];`), improper handling of file streams, and missing logic to read and parse player data. The method is incomplete and will not compile. (0/9 marks)
+
+3. The `writePlayersToFile` method has a syntax error in the variable declaration (`PrintWriter outStreamName;` should not have a semicolon after the variable name) and lacks the implementation to write player data to the file. This method is incomplete and will not compile. (0/4 marks)
+
+4. The `updatePlayerStats` method has multiple syntax errors, including incorrect use of `if` statements, missing logic to update player statistics, and improper handling of exceptions. The method is incomplete and will not compile. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method is not implemented at all, and thus cannot be evaluated. (0/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented, and thus cannot be evaluated. (0/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented, and thus cannot be evaluated. (0/5 marks)
+
+Overall, the student's submission is incomplete and contains numerous syntax errors that prevent the code from compiling. None of the required methods are correctly implemented, resulting in a total score of 0 out of 35 marks. The student needs to review Java syntax and the requirements for each method to improve their understanding and implementation skills.

@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is not implemented, which is essential for sorting players based on their runs. This is a critical omission and results in a lack of functionality for sorting players. (2 marks)
+
+2. In the `readPlayersFromFile` method, the code attempts to ignore the first line containing column names but does not implement this correctly. The commented-out line `playerArray.remove(0);` is ineffective and should be removed. Instead, the first line should be read and discarded properly. (1 mark)
+
+3. The `writePlayersToFile` method does not close the `PrintWriter` after writing to the file, which can lead to resource leaks. It is important to ensure that resources are properly managed. (1 mark)
+
+4. In the `updatePlayerStats` method, the comparison of player names uses `==` instead of `.equals()`, which can lead to incorrect behavior when comparing strings. This is a common mistake in Java and should be corrected. (1 mark)
+
+5. The `calculateTeamAverageRuns` method correctly filters players by team and calculates the average runs, but it does not handle the case where the team name might not exist in the list of players before filtering. This could lead to a misleading average calculation. (1 mark)
+
+6. In the `filter` method of the `TeamFilterStrategy` class, the comparison of team names also uses `==` instead of `.equals()`, which is incorrect for string comparison in Java. This will lead to incorrect filtering results. (1 mark)
+
+7. The `filter` method in the `AllRounderStatsFilter` class checks for equality using `==` for both runs and wickets, which should be `>=` instead to meet the criteria of filtering all-rounders with at least the specified runs and wickets. This is a logical error in the implementation. (1 mark)
+
+The student has made several critical mistakes in their code submission, particularly in string comparisons and resource management. The lack of implementation in key methods significantly impacts the functionality of the application. Overall, the submission requires substantial corrections to meet the requirements of the assignment.

@@ -1,0 +1,15 @@
+1. The `compare` method in `RunsComparator` is incomplete. It only checks if `p1` has more runs than `p2` and returns -1, but it does not handle the case where `p2` has more runs or when both have the same runs. This results in incorrect sorting behavior. (1/2 marks)
+
+2. The `readPlayersFromFile` method has multiple syntax errors, including incorrect method calls and missing parts. The use of `fileinputstream` is incorrect, and the `catch` block is malformed. The logic for reading the file and creating `Player` objects is not implemented correctly. (0/9 marks)
+
+3. The `writePlayersToFile` method is not implemented at all. There is an attempt to create a `PrintWriter`, but the syntax is incorrect, and the method lacks the necessary logic to write player data to a file. (0/4 marks)
+
+4. The `updatePlayerStats` method is incomplete and contains syntax errors. The method does not iterate through the players list or update the stats as required. The `equal` method is incorrectly defined and does not serve the intended purpose. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method is not implemented. There is an incomplete `try` block with no logic to filter players or calculate averages. (0/5 marks)
+
+6. The `filter` method in `TeamFilterStrategy` is not implemented. There is no logic to create a list of players matching the team name. (0/5 marks)
+
+7. The `filter` method in `AllRounderStatsFilter` is not implemented. There is no logic to filter players based on the criteria provided. (0/5 marks)
+
+The student's performance is significantly below expectations, with most methods either incomplete or containing critical syntax errors. The student needs to focus on understanding Java syntax and the implementation of methods to meet the requirements of the assignment.

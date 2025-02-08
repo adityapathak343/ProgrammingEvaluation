@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is mostly correct, but it does not handle the case where both players have the same number of runs. It should return `0` in that case. The current implementation will always return `1` for the second player, which is incorrect.
+
+2. In the `readPlayersFromFile` method, the logic for reading and parsing the player data is flawed. The method attempts to read the entire file into a single list of strings, but it does not correctly handle the CSV format. The use of `src.useDelimiter(",")` is incorrect for reading lines, and the logic for creating `Player` objects is not properly structured. The method should read each line, split it by commas, and then create a `Player` object from the resulting array.
+
+3. The `writePlayersToFile` method is incomplete. It does not contain any implementation to write player data to the file. The method should open a file for writing, write the header, and then iterate through the list of players to write their details in the correct format.
+
+4. In the `updatePlayerStats` method, the comparison of player names should use `.equals()` instead of `==` to check for string equality. The current implementation will not correctly identify players based on their names.
+
+5. The `calculateTeamAverageRuns` method does not handle the case where no players from the specified team are found. It should throw an `IllegalArgumentException` if `count` is zero before calculating the average.
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented. It should create a list of players that match the specified team name and return that list.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented. It should filter players based on the criteria for runs and wickets and return the matching players.
+
+The student's performance shows a basic understanding of the requirements but lacks correct implementation in several key areas. The code has multiple logical errors and incomplete methods that need to be addressed for the application to function correctly.

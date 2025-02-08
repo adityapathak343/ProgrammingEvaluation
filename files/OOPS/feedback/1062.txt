@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class does not correctly implement the required functionality for sorting in descending order. It should return a negative value if the first player has more runs, but it currently returns -1 when the first player has fewer runs, which is incorrect. This implementation does not meet the requirements of the question. (1/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is correctly implemented. It creates an empty list, opens the file, ignores the first line, reads each line, splits the data, creates `Player` objects, adds them to the list, and closes the file. This method meets all the specified requirements. (9/9 marks)
+
+3. The `writePlayersToFile` method is also correctly implemented. It prepares to write to the file, writes the column names, converts player details to the desired format, and writes each player's information to the file. This method meets all the specified requirements. (4/4 marks)
+
+4. The `updatePlayerStats` method is correctly implemented. It iterates through the list of players, checks for a matching name, updates the runs and wickets, and throws an exception if no player is found. This method meets all the specified requirements. (5/5 marks)
+
+5. The `calculateTeamAverageRuns` method is correctly implemented. It filters players by team, checks for the existence of players, calculates total runs, and returns the average. This method meets all the specified requirements. (5/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates an empty list, iterates through the players, checks for matching teams, and returns the list of matching players. This method meets all the specified requirements. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is partially correct. It creates an empty list and iterates through the players, but it does not check if the player is an all-rounder before adding them to the list. This is a critical oversight as it does not meet the requirement of filtering only all-rounders. (3/5 marks)
+
+Overall, the student has demonstrated a good understanding of the required functionalities, with most methods implemented correctly. However, the `compare` method in the `RunsComparator` class and the filtering logic in the `AllRounderStatsFilter` class need significant improvements. The student has performed well overall, but attention to detail in the sorting and filtering logic is necessary for full marks.

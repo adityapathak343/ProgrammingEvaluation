@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, which is accurate. (2/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is well-structured and follows the steps outlined in the question. It correctly reads player data from a file, handles the first line appropriately, and creates `Player` objects as expected. (9/9 marks)
+
+3. The `writePlayersToFile` method is mostly correct, but it lacks a newline character after writing each player's information, which would result in all player data being written on a single line in the output file. This is a significant oversight. (3/4 marks)
+
+4. The `updatePlayerStats` method is implemented correctly, but the way it throws an `IllegalArgumentException` is not appropriate. Instead of creating a `Throwable` and catching it, it should directly throw the exception when no player matches the given name. This is a critical error in exception handling. (3/5 marks)
+
+5. The `calculateTeamAverageRuns` method has a logical error in the way it calculates the total runs. It iterates over all players instead of just those belonging to the specified team when summing runs. This will lead to incorrect average calculations. (2/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented and effectively filters players based on the team name. It follows the steps outlined in the question accurately. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also correctly implemented. It checks for both runs and wickets criteria and returns the appropriate list of players. (5/5 marks)
+
+The student has demonstrated a good understanding of the required functionalities, but there are critical issues in the `writePlayersToFile`, `updatePlayerStats`, and `calculateTeamAverageRuns` methods that need to be addressed. Overall, the submission shows promise but requires attention to detail in exception handling and logical correctness in calculations.

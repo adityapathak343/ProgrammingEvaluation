@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, thus fulfilling the requirement. (2/2 marks)
+
+2. The `readPlayersFromFile` method is incomplete and contains several issues. The use of `PrintReader` and `FileOutputStream` is incorrect for reading a file; it should use `BufferedReader` or `FileReader`. Additionally, the method does not implement any of the required steps for reading player data from a file, such as creating a list, reading lines, or parsing player information. (0/9 marks)
+
+3. The `writePlayersToFile` method is incomplete and incorrectly attempts to use an undefined `outstream` variable. It does not implement any of the required steps for writing player data to a file, such as preparing to write, writing column names, or iterating through the player list. (0/4 marks)
+
+4. The `updatePlayerStats` method has several issues. It incorrectly uses `getPlayerNamee()` instead of `getPlayerName()`, and it does not handle the case where no player matches the given name properly. The loop does not terminate correctly, which could lead to an `ArrayIndexOutOfBoundsException`. (1/5 marks)
+
+5. The `calculateTeamAverageRuns` method is incomplete and incorrectly attempts to calculate the average without filtering players by team. It also does not handle the case where no players are found for the specified team. The variable `avg` is used without initialization, which will lead to a compilation error. (0/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented at all, failing to create a list of players matching the specified team name. (0/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is incomplete and incorrectly attempts to declare a list of players using `new <Player>`, which is invalid syntax. The method does not implement any of the required steps for filtering players based on the criteria. (0/5 marks)
+
+The student's performance shows a significant lack of understanding of file handling and method implementation in Java. While the `compare` method is correctly implemented, the other methods are either incomplete or contain critical errors that prevent them from functioning as intended. Overall, the submission requires substantial improvement to meet the assignment's requirements.

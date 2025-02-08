@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class has several issues. The syntax used to access `runsScored` is incorrect; it should be `p1.getRunsScored()` and `p2.getRunsScored()`. Additionally, the logic for returning values is flawed as it does not handle the case where both players have the same runs correctly. The return statements should be structured to ensure that the comparison logic is clear and correct.
+
+2. In the `readPlayersFromFile` method, the variable `List` should not be capitalized as it conflicts with the naming conventions in Java. The method does not implement the required functionality to read player data from the file correctly. The logic for reading lines and creating `Player` objects is missing, and the method does not return the list of players as required.
+
+3. The `writePlayersToFile` method has a significant issue where it attempts to print the entire list of players directly, which will not work as intended. Instead, it should iterate over the `players` list and call `toCsvFormat()` on each `Player` object to write their details to the file. The method also lacks proper exception handling for the `PrintWriter`.
+
+4. The `updatePlayerStats` method has incorrect logic for checking player names. The comparison should be done using `player.getPlayerName().equals(playerName)` instead of `itr.players == playerName`. Additionally, the method does not update the player's runs and wickets correctly, and it lacks the necessary exception handling for when a player is not found.
+
+5. In the `calculateTeamAverageRuns` method, the logic for filtering players by team is not implemented. The method should first filter the players based on the team name and then calculate the average runs. The use of `this.teamName` is incorrect; it should be filtering the `players` list instead.
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented. It should create a new list, iterate through the `players`, and add players whose team matches the given `teamName`. The method currently lacks any logic to perform the filtering.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented. It should check if each player is an all-rounder and meets the criteria for runs and wickets, adding them to a new list. The method currently lacks any logic to perform the filtering.
+
+Overall, the student's submission contains multiple critical errors and incomplete implementations across all required methods. The code does not compile due to syntax errors and logical flaws, indicating a lack of understanding of Java syntax and object-oriented principles. The student needs to revisit the concepts of file handling, collections, and method implementations in Java to improve their performance.

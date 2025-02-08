@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, which is accurate. (2/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is incomplete. The student has not implemented any of the required steps to read player data from a file, which is a significant oversight. (0/9 marks)
+
+3. The `writePlayersToFile` method is also not implemented. The student has not provided any code to write player data back to a file, which is another critical requirement. (0/4 marks)
+
+4. The `updatePlayerStats` method is not implemented. The student has not provided any logic to update player statistics, which is essential for the functionality of the application. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method is partially implemented. The logic to filter players by team and calculate the average runs is present, but it lacks error handling for the case when no players are found for the specified team, which is a requirement. (4/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented to filter players by their team name. It follows the required steps and returns the expected results. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented to filter all-rounders based on the provided criteria. It effectively checks both runs and wickets and returns the appropriate list. (5/5 marks)
+
+The student has demonstrated a good understanding of some aspects of the assignment, particularly in the implementation of the `compare`, `filter` methods, and the calculation of team averages. However, the lack of implementation for several critical methods significantly impacts their overall performance, resulting in a low score. The student should focus on completing all required methods and ensuring proper error handling in future submissions.

@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is not implemented, which is essential for sorting players based on their runs. This is a critical omission and results in a lack of functionality for sorting players by runs.
+
+2. In the `readPlayersFromFile` method, the code attempts to create a `PrintWriter` instead of a `BufferedReader` for reading the file. This is incorrect as it should be reading data, not writing. Additionally, the variable `outStream` is incorrectly declared and used, leading to compilation errors.
+
+3. The `updatePlayerStats` method does not handle the case where no player matches the given name. If no match is found, it should throw an `IllegalArgumentException`, but this is missing. Also, the comparison of player names should use `.equals()` instead of `==` for string comparison.
+
+4. The `calculateTeamAverageRuns` method has multiple issues, including incorrect syntax and logic. The use of `switch` statements is incorrect, and the method does not properly handle the calculation of average runs. The logic for filtering players by team is also flawed, as it does not return the average correctly.
+
+5. In the `filter` method of the `TeamFilterStrategy` class, the comparison of team names should use `.equals()` instead of `==`. This is a common mistake in Java that can lead to incorrect behavior.
+
+6. The `filter` method in the `AllRounderStatsFilter` class is incomplete and contains syntax errors. The method does not properly check if a player is an all-rounder or meets the criteria for runs and wickets.
+
+7. The overall structure of the code submission is disorganized, with many syntax errors and incomplete methods. The student has not followed Java conventions in several places, leading to compilation errors.
+
+The student's performance is significantly below expectations, with critical methods unimplemented and numerous syntax and logical errors throughout the code. Immediate attention to these issues is necessary for successful completion of the assignment.

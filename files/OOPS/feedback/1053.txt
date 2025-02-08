@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is well-structured and follows the steps outlined in the question. It correctly creates a list, reads from the file, splits the data, creates `Player` objects, and returns the list. This implementation meets all the requirements, earning full marks.
+
+3. The `writePlayersToFile` method has a small issue in the way it writes the column names. The column names should be separated by commas, but they are concatenated without any delimiter. This results in an incorrect format for the output file. Therefore, this part loses marks.
+
+4. The `updatePlayerStats` method has a critical flaw in the way it checks for player names. The comparison should use `.equals()` instead of `==` to compare strings. This mistake could lead to incorrect behavior when updating player statistics, resulting in a loss of marks.
+
+5. The `calculateTeamAverageRuns` method is correctly implemented, filtering players by team and calculating the average runs. It handles the case where no players are found appropriately. This implementation meets the requirements, earning full marks.
+
+6. The `filter` method in the `TeamFilterStrategy` class has the same issue as the `updatePlayerStats` method regarding string comparison. It uses `==` instead of `.equals()`, which could lead to incorrect filtering of players by team. This mistake results in a loss of marks.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented, checking for the role and the criteria for runs and wickets. It meets all the requirements, earning full marks.
+
+The student has demonstrated a good understanding of the requirements and implemented most methods correctly. However, there are critical issues with string comparisons and a minor formatting error in the file writing method that affect the overall performance. The student should pay closer attention to string handling and formatting in future submissions.

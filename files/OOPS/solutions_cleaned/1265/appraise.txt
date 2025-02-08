@@ -1,0 +1,29 @@
+1. The `compare` method in `RunsComparator` is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method has several issues:
+   - The condition `while(sc.nextLine()!="")` is incorrect; it should use `sc.hasNextLine()` instead.
+   - The instantiation of `Player` is incorrect; it should use the constructor with parameters instead of trying to assign values to a non-existent object.
+   - The method does not close the `Scanner` object, which can lead to resource leaks.
+   - The method does not return the populated list of players correctly. This part is poorly implemented and does not meet the requirements.
+
+3. The `writePlayersToFile` method is not implemented at all, which is a significant oversight. This part is missing entirely and does not fulfill the requirements.
+
+4. The `updatePlayerStats` method has multiple issues:
+   - The use of `Iterator<Player> t = new players.Iterator();` is incorrect; it should be `Iterator<Player> t = players.iterator();`.
+   - The method attempts to access player properties incorrectly, using `players.runsScored` instead of accessing the player object.
+   - The logic for updating runs and wickets is not correctly implemented, and the exception handling is not properly structured. This part is poorly implemented.
+
+5. The `calculateTeamAverageRuns` method has several issues:
+   - The use of `Iterator<Player> t = new players.iterator();` is incorrect; it should be `Iterator<Player> t = players.iterator();`.
+   - The method attempts to access player properties incorrectly, using `t.getTeamName.equals(teamName)` instead of `t.next().getTeamName().equals(teamName)`.
+   - The calculation of average runs does not handle the case where no players are found correctly. This part is poorly implemented.
+
+6. The `filter` method in `TeamFilterStrategy` has similar issues:
+   - The use of `Iterator<Player> t = new players.iterator();` is incorrect; it should be `Iterator<Player> t = players.iterator();`.
+   - The method attempts to access player properties incorrectly, using `t.getTeamName.equals(teamName)` instead of `t.next().getTeamName().equals(teamName)`. This part is poorly implemented.
+
+7. The `filter` method in `AllRounderStatsFilter` has several issues:
+   - The use of `Iterator<Player> t = new players.iterator();` is incorrect; it should be `Iterator<Player> t = players.iterator();`.
+   - The method attempts to access player properties incorrectly, using `t.role.equals("ALL_ROUNDER")` instead of checking the role of the player object returned by `t.next()`. This part is poorly implemented.
+
+The student's performance shows a fundamental misunderstanding of Java syntax and object-oriented principles. While some parts of the code are correctly implemented, many critical methods are either incomplete or contain significant errors that prevent the code from compiling and functioning as intended. Overall, the submission requires substantial revisions to meet the assignment's requirements.

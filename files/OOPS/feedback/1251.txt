@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is incomplete and incorrectly structured. The logic for comparing runs is placed outside the method body, leading to syntax errors. The correct implementation should compare the runs using `p1.getRunsScored()` and `p2.getRunsScored()`. (0/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is not implemented at all. There is no code to read from a file, parse the data, or create `Player` objects. This is a critical functionality that is missing. (0/9 marks)
+
+3. The `writePlayersToFile` method is also not implemented. There is no code to write player data back to a file, which is essential for the application. (0/4 marks)
+
+4. The `updatePlayerStats` method has several issues. The variable `players` is re-declared inside the method, which causes a compilation error. The condition `if player.equalsTo(playerName)` is incorrectly formatted and should use `if (player.getPlayerName().equals(playerName))`. The logic for updating runs and wickets is also incorrect. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method is incorrectly implemented. It uses a `Scanner` to get input from the user, which is not required. The logic for calculating the average runs is not correctly structured, and it does not handle the case where no players are found for the specified team. (0/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is not correctly implemented. The list of players is incorrectly declared, and the condition to check if the player's team matches the given name is improperly formatted. (0/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is incomplete and incorrectly structured. The logic for checking if a player is an all-rounder and meets the criteria is not properly implemented. The return statement is also incorrectly formatted. (0/5 marks)
+
+The student's submission contains numerous syntax and logical errors, leading to a complete failure to compile. The implementation of all required methods is either missing or incorrect, resulting in a score of 0 out of 40. The student needs to revisit the Java syntax and the logic required for each method to successfully complete the assignment.

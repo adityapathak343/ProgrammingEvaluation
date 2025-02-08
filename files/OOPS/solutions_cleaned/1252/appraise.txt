@@ -1,0 +1,26 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns a negative value if the first player has more runs, which is appropriate. (2/2 marks)
+
+2. The `readPlayersFromFile` method has several issues:
+   - The use of `StringTokenizer` is unnecessary; using `String.split(",")` would be more straightforward.
+   - The method attempts to read player attributes in a loop that is incorrectly structured, leading to potential `ArrayIndexOutOfBoundsException` errors.
+   - The file name is hardcoded instead of using the `fileName` parameter. (4/9 marks)
+
+3. The `writePlayersToFile` method has multiple issues:
+   - The method incorrectly retrieves the player's role and runs/wickets using `getRole()` and `getRunsScored()` which should return an enum and an int respectively, but the code attempts to print them as strings directly.
+   - The format of the output line does not match the expected CSV format (missing commas). (1/4 marks)
+
+4. The `updatePlayerStats` method has a logical error:
+   - The line `int neww = oldw = wickets;` incorrectly assigns `wickets` to `oldw` instead of summing it. It should be `int neww = oldw + wickets;`.
+   - The method does not handle the case where the player is not found correctly, as it only checks after the loop. (3/5 marks)
+
+5. The `calculateTeamAverageRuns` method has several issues:
+   - The variable `sum` is used without initialization, which will lead to a compilation error.
+   - The logic for checking if players exist is convoluted and could be simplified. (2/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented and effectively filters players by team. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class has a syntax error:
+   - The condition `Role.valueOf(players.get(i).getRole()).equals("ALL_ROUNDER")` is incorrect because `getRole()` returns an enum, and you should compare it directly to `Role.ALL_ROUNDER`.
+   - The method also has a missing closing parenthesis for the `if` statement. (1/5 marks)
+
+The student's performance shows a good understanding of some concepts, particularly in the `RunsComparator` and `TeamFilterStrategy` classes. However, there are significant issues in the file handling methods and logical errors in the player statistics update and average calculation methods, which need to be addressed for a better overall implementation.

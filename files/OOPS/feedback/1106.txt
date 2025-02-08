@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is incorrectly implemented. The use of `compare` method is not valid; it should be `Integer.compare(p1.getRunsScored(), p2.getRunsScored())` to compare the runs correctly. The return values are also not correctly structured for the required logic.
+
+2. In the `readPlayersFromFile` method, the file path is incorrectly formatted with backslashes. It should use double backslashes (`\\`) or forward slashes (`/`). Additionally, the method does not implement the logic to read lines, split them, create `Player` objects, and add them to the list.
+
+3. The `writePlayersToFile` method is not implemented at all, which is a significant omission as it is required to write player data back to a file.
+
+4. In the `updatePlayerStats` method, the loop uses `players.length`, which is incorrect since `players` is a `List`. It should use `players.size()`. The comparison for player names should use `.equals()` instead of `==`. The `throw` statement is incorrectly written; it should be `throw new IllegalArgumentException("no change");`.
+
+5. The `calculateTeamAverageRuns` method has several issues: it uses `players.length` instead of `players.size()`, and the `if` statement for checking `num == 0` is incorrectly placed inside the loop. The return statement should also be corrected to return a double value.
+
+6. In the `filter` method of `TeamFilterStrategy`, the same issue with `players.length` exists. The return statement is also incorrectly formatted; it should be `return pl;` instead of `return(pl)`.
+
+7. The `filter` method in `AllRounderStatsFilter` has multiple issues: it incorrectly uses `players.length`, the list type is incorrectly declared as `List<Players>`, and the condition for checking runs and wickets should use `>=` instead of `==` to meet the criteria.
+
+The student's performance shows a lack of understanding of Java syntax and logic, leading to multiple compilation errors and incomplete implementations. Significant improvements are needed in method implementations and adherence to Java conventions.

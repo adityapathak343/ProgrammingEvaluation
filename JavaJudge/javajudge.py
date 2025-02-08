@@ -7,6 +7,7 @@ import os
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import JsonOutputParser
 
+logicalMarks = None
 
 def calculate_score(error_count: int) -> float:
     """Calculates score by deducting 0.75 marks for each error."""
@@ -71,18 +72,27 @@ def check_java_syntax(java_file_path: str) -> tuple[int, float, dict]:
         print(f"An error occurred: {e}")
         return -1, 0.0, {}
 
+class APIKeyMissingException(Exception):
+    """Exception raised when an API key is missing."""
+    def __init__(self, message="API key is missing. Please provide a valid API key."):
+        self.message = message
+        super().__init__(self.message)
 
 class JavaJudge:
-    def __init__(self, model="gpt-4o-mini", baseURL = None) -> None:
+    def __init__(self, model="gpt-4o-mini", baseURL=None, api_key=None) -> None:
         self._loadKeys()
-        if baseURL = None:
-            self.llm = ChatOpenAI(model=model, temperature=0)
+        if baseURL == None:
+            self.llm = ChatOpenAI(model=model, temperature=0).bind(response_format={"type": "json_object"})
         else:
-            self.llm = ChatOpenAI(model=model, temperature=0, base_url=baseURL)
-        self.prompts = self._loadPrompts(promptLocation)
+            if api_key == None:
+                print(f"Please provide an API key for the {baseURL} model.")
+                raise APIKeyMissingException
+                return None
+            self.llm = ChatOpenAI(model=model, temperature=0, base_url=baseURL, api_key=api_key).bind(response_format={"type": "json_object"})
+        self._loadPrompts()
         return None
 
-    def _loadPrompts(self, promptLocation: str) -> list[str]:
+    def _loadPrompts(self) -> list[str]:
         self.oneStepPrompt = '''You are an expert code evaluator, evaluating code submissions for a Java based Object Oriented Programming test at a university level.
 You will be provided with the question and a rubric that describes the criteria for evaluation, with a marking scheme. 
 The question is a code sample that the examiner provides, containing a template wherein the student is required to write the code as well as comments and instructions from the examiner's end.
@@ -112,7 +122,7 @@ Rubric: {}
 Logical Flow and Intention: {}
 '''
     ]
-    return prompts
+        
 
     def _loadKeys(self) -> None:
         if "OPENAI_API_KEY" not in os.environ:
@@ -120,30 +130,48 @@ Logical Flow and Intention: {}
         return None
 
     def _getOneStepResponse(self, question, rubric, code, compilerResponse):
-        prompt = self.oneStepPrompt.format(question, rubric, code, compilerResponse)
-        response = self.llm.get_response(prompt)
+        finalPrompt = self.oneStepPrompt.format(question, rubric, code, compilerResponse)
+        response = json.loads(self.llm.invoke(finalPrompt).content)
         return response
 
-    def _logicalMarks(self, response):
-        finalMarks = 0
+    def _syntaxMarks(self, compilerResponse, syntaxMarks, penalty):
+        errorCount = len(compilerResponse.keys())
+        for key in compilerResponse:
+            if key == '283':
+                errorCount -= 1
+        return max(syntaxMarks - (penalty * errorCount), 0)
+    
+    def _debug(self, compilerResponse=None, response=None, logicalMarks=None, syntaxMarks=None, finalMarks=None):
+        print("Debugging Information:")
+        print("compilerResponse: ", compilerResponse)
+        print("response: ", response)
+        print("logicalMarks: ", logicalMarks)
+        print("syntaxMarks: ", syntaxMarks)
+        print("finalMarks: ", finalMarks)
+        return None
+
+    def evaluateAIO(self, question, rubric, codeFilepath, syntaxMarks=5, penalty=1, debug=False):
+        compilerResponse = check_java_syntax(codeFilepath)[2]
+        global logicalMarks
+        logicalMarks = 0
+        try:
+            solution = open(codeFilepath, "r").read()
+        except Exception as e:
+            print(f"Error reading file {solutionFilepath}\n Error details: {e}")
+
+        response = self._getOneStepResponse(question, rubric, solution, compilerResponse)
+        
         def getMarks(evaluation: dict):
-            global finalMarks
+            global logicalMarks
             for key in evaluation:
                 if type(evaluation[key]) == dict:
                     getMarks(evaluation[key])
                 elif type(evaluation[key]) == int:
-                    finalMarks += evaluation[key]
-        return finalMarks
-
-    def _syntaxMarks(self, compilerResponse, syntaxMarks, penalty):
-        errorCount = len(compilerResponse.keys())
-        return max(marks - (penalty * errorCount), 0)
-
-    def evaluateAIO(self, question, rubric, code, syntaxMarks=5, penalty=5):
-        compilerResponse = check_java_syntax(code)
-        response = self._getResponse(question, rubric, code, compilerResponse)
-        logicalMarks = self._logicalMarks(response)
+                    logicalMarks += evaluation[key]
+        getMarks(response)
         syntaxMarks = self._syntaxMarks(compilerResponse, syntaxMarks, penalty)
         finalMarks = logicalMarks + syntaxMarks
+        if debug:
+            self._debug(compilerResponse, response, logicalMarks, syntaxMarks, finalMarks)
         return logicalMarks, syntaxMarks, finalMarks
 

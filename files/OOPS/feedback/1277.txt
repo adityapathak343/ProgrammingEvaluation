@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is incorrect. It should return a negative value if the first player has more runs, but it currently returns -1 when `p1` has fewer runs. The correct implementation should return `-1` if `p1` has more runs, `1` if `p2` has more runs, and `0` if they are equal. This mistake will lead to incorrect sorting of players.
+
+2. The `readPlayersFromFile` method has a logical flaw. The variable `count` is used to skip the first line, but the implementation is unnecessarily complicated. Instead of using a counter, the method could simply call `inputStream.nextLine()` once before entering the loop. Additionally, the method does not handle the case where the file might not contain the expected number of columns, which could lead to `ArrayIndexOutOfBoundsException`.
+
+3. The `writePlayersToFile` method is correctly implemented, but it lacks error handling for the case where the `players` list is empty. It would be good practice to check if the list is empty before attempting to write to the file.
+
+4. The `updatePlayerStats` method does not throw an `IllegalArgumentException` when no player matches the given name. The commented-out code suggests the intention to throw an exception, but it is not implemented. This is a critical part of the method that needs to be addressed.
+
+5. The `calculateTeamAverageRuns` method does not handle the case where `num_players` is zero, which would lead to a division by zero error. An `IllegalArgumentException` should be thrown if no players from the specified team are found.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented and effectively filters players by team name.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also correctly implemented, filtering all-rounders based on the provided criteria.
+
+Overall, the student has demonstrated a good understanding of the requirements and has implemented most methods correctly. However, there are critical issues in the `compare`, `readPlayersFromFile`, `updatePlayerStats`, and `calculateTeamAverageRuns` methods that need to be addressed for the code to function correctly. The student should focus on error handling and ensuring that the logic aligns with the requirements.

@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method has several issues. The method attempts to read player data but incorrectly uses `StringTokenizer` with a space delimiter instead of a comma, which is likely the format of the CSV file. Additionally, it tries to assign a `String` to a `Player` object directly, which is a type mismatch. This part does not meet the requirements and will not function correctly, resulting in a significant loss of marks.
+
+3. The `writePlayersToFile` method is incomplete. It initializes a `PrintWriter` but does not write any player data to the file. The method lacks the necessary logic to iterate through the `players` list and write each player's details in the correct format. This part also does not meet the requirements, leading to further loss of marks.
+
+4. The `updatePlayerStats` method has a critical flaw in the way it checks for player names. It uses `==` for string comparison, which checks for reference equality instead of value equality. This will lead to incorrect behavior when trying to match player names. The method does not throw an exception if no player matches, which is required by the rubric. This part is not implemented correctly.
+
+5. The `calculateTeamAverageRuns` method has a similar issue with string comparison using `==` instead of `.equals()`. Additionally, the calculation of the average runs is incorrect because it sums all players' runs instead of just those from the specified team. This part does not fulfill the requirements and will lead to incorrect results.
+
+6. The `filter` method in the `TeamFilterStrategy` class also uses `==` for string comparison, which is incorrect. This will prevent the method from functioning as intended. The logic for filtering players is otherwise correct, but the comparison issue significantly impacts its correctness.
+
+7. The `filter` method in the `AllRounderStatsFilter` class has a logical error. It uses a nested loop to iterate over the criteria array, which is unnecessary and incorrect. The condition to check if a player is an all-rounder and meets the criteria is also flawed, as it should use `>=` instead of `>`. This part does not meet the requirements.
+
+The student's performance shows a mix of correct implementations and significant misunderstandings of Java's string handling and file I/O operations. While some methods are partially correct, the overall submission lacks the necessary functionality and correctness in several key areas, leading to a low score.

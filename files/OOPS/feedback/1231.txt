@@ -1,0 +1,15 @@
+1. **RunsComparator**: The implementation of the `compare` method is incorrect. The logic should return `1` when `p1` has more runs than `p2`, `-1` when `p2` has more runs, and `0` when they are equal. The current implementation incorrectly returns `-1` for both cases where `p1` has more runs and where `p1` has fewer runs.
+
+2. **readPlayersFromFile**: The code attempts to create a list of players using `(List<Player>) new Player();`, which is incorrect. Instead, it should initialize an empty `ArrayList<Player>`. Additionally, the method lacks the implementation for reading from the file, processing the data, and returning the list of players.
+
+3. **writePlayersToFile**: This method is not implemented at all. It should include logic to write player data to a file, including opening the file, writing headers, and iterating through the player list to write each player's details.
+
+4. **updatePlayerStats**: This method is not implemented. It should iterate through the list of players, check for a matching player name, and update the runs and wickets accordingly. If no player matches, it should throw an `IllegalArgumentException`.
+
+5. **calculateTeamAverageRuns**: This method is not implemented. It should filter players by the specified team, calculate the total runs, and return the average. It also needs to handle the case where no players are found for the team.
+
+6. **TeamFilterStrategy**: The `filter` method is not implemented. It should create a list of players that match the specified team name and return that list.
+
+7. **AllRounderStatsFilter**: The `filter` method is not implemented. It should check if players are all-rounders and meet the criteria for runs and wickets, adding them to a list to be returned.
+
+The student's performance shows a lack of implementation across all required methods, with only the `compare` method partially written but incorrect. The submission does not meet the expectations of the assignment, resulting in significant errors and incomplete functionality.

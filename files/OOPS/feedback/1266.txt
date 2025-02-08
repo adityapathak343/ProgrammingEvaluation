@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is mostly correct, but it incorrectly returns `+1` instead of `1` when the second player has more runs. The return values should be `-1`, `1`, or `0` for descending order comparison. This is a critical error in the logic.
+
+2. The `readPlayersFromFile` method has several issues. It incorrectly uses `ArrayList<List>` instead of `List<Player>`, which leads to a type mismatch. Additionally, it does not implement the required steps for reading from a file, such as ignoring the first line, splitting the line into player details, and adding players to the list. The file handling is also incorrect as it uses a hardcoded filename instead of the parameter.
+
+3. The `writePlayersToFile` method does not implement the required functionality to write player data to a file. It only writes the column names and does not iterate through the `players` list to write each player's details. The method also uses a hardcoded filename instead of the provided parameter.
+
+4. The `updatePlayerStats` method has multiple issues. It attempts to read player data from a file instead of updating the stats of players in the provided list. The logic for checking player names and updating runs and wickets is incorrect and incomplete. Additionally, it does not throw an `IllegalArgumentException` if no player matches the given name.
+
+5. The `calculateTeamAverageRuns` method is not implemented at all. It lacks the necessary logic to filter players by team, calculate total runs, and compute the average. This is a significant omission.
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented. It should create a list of players matching the specified team name, but it currently lacks any logic to do so.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented. It should filter players based on the criteria for runs and wickets but does not contain any logic.
+
+The student's performance shows a lack of understanding of the required implementations for the methods. There are critical errors in logic, type handling, and file operations, leading to compilation issues and incomplete functionality. Overall, the submission requires significant improvement to meet the assignment's requirements.

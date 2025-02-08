@@ -1,0 +1,15 @@
+1. The `compare` method in `RunsComparator` is mostly correct, but it has a typo in the condition `if(o1.getRunsScored()==o22.getRunsScored())`, where `o22` should be `o2`. This will cause a compilation error. The logic for comparing runs is correct, returning the appropriate values based on the comparison.
+
+2. In the `readPlayersFromFile` method, the line `List<Player> players=new List<player>();` is incorrect because `List` is an interface and cannot be instantiated directly. It should be `List<Player> players = new ArrayList<>();`. Additionally, the `Player` constructor is not being used correctly; it should be instantiated with parameters instead of using setters.
+
+3. The `setRole` method is being called with a `String` in `readPlayersFromFile`, but it expects a `Role` type. You should use `Role.fromString(s2)` to convert the string to the appropriate enum type.
+
+4. In the `writePlayersToFile` method, the line `pw = new PrintWriter(new fileOutputstream("data.csv"));` has a typo; it should be `new FileOutputStream("data.csv")`. Also, the `println` method is incorrectly used with multiple string arguments; it should be a single formatted string.
+
+5. The `calculateTeamAverageRuns` method has several issues, including incorrect instantiation of `List<Player>` and using `it.getTeamName` which should be `((Player) it.next()).getTeamName()`. The logic for calculating the average runs is also incomplete and needs to be properly implemented.
+
+6. In the `TeamFilterStrategy` class, the line `this.players = new List<Player>( readPlayersFromFile("InputCricketData.csv"));` is incorrect for the same reason as mentioned before regarding instantiation. The filtering logic is also incorrect; you need to iterate through the players and check their team names properly.
+
+7. The `AllRounderStatsFilter` class is incomplete and does not implement the filtering logic as required. The method should create a list of players that meet the criteria based on runs and wickets.
+
+The student's performance shows a fundamental understanding of the requirements but suffers from multiple syntax and logical errors that prevent the code from compiling and functioning correctly. Significant revisions are needed to meet the assignment's expectations.

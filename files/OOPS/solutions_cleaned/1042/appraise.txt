@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is mostly correct, but it does not handle the case where both players have the same number of runs. It should return `0` in that case. The current implementation will incorrectly return `1` for equal runs, which is not the desired behavior.
+
+2. In the `readPlayersFromFile` method, the logic for reading player data is incomplete and contains errors. The `Role` variable `role` is never assigned a value, which will lead to a `NullPointerException` when creating a `Player` object. Additionally, the method does not correctly handle the reading of lines and splitting them into player attributes.
+
+3. The `writePlayersToFile` method has several issues. The `PrintWriter` is incorrectly set to append to the input file instead of writing to the output file. The method also contains a typo in `prinltn`, which should be `println`. Furthermore, the way player details are accessed is incorrect; it should use the getter methods instead of trying to access fields directly.
+
+4. The `updatePlayerStats` method has a logical error. The comparison `if(i.equals(playerName))` is incorrect because it compares a `Player` object to a `String`. Instead, it should compare `i.getPlayerName()` with `playerName`. Additionally, the way to update runs and wickets is incorrect; it should use the setter methods or directly modify the fields of the `Player` object.
+
+5. The `calculateTeamAverageRuns` method is not implemented at all. This method needs to filter players by team, calculate total runs, and return the average, which is a significant omission.
+
+6. The `filter` method in the `TeamFilterStrategy` class is incomplete and contains syntax errors. The condition to check if the player's team matches the given name is incorrectly structured, and the method does not return the list of filtered players.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented. This method needs to filter players based on the criteria provided, which is another significant omission.
+
+The student's performance shows a basic understanding of the requirements but lacks the necessary implementation details and correctness in several areas. There are multiple logical errors and incomplete methods that need to be addressed for the code to function as intended.

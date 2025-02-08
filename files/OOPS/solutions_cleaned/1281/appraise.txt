@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns a negative value if the first player has more runs, a positive value if the second player has more runs, and zero if they have the same number of runs. (2/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is well-structured and follows the steps outlined in the question. It correctly creates a list, reads from the file, splits the data, creates `Player` objects, and adds them to the list. The method also handles file not found exceptions appropriately. (9/9 marks)
+
+3. The `writePlayersToFile` method is correctly implemented. It prepares to write to the specified file, writes the column names, and iterates through the list of players to write their details in the correct format. The method handles file opening exceptions well. (4/4 marks)
+
+4. The `updatePlayerStats` method is correctly implemented. It iterates through the list of players, checks for a matching name, and updates the runs and wickets accordingly. It also throws an `IllegalArgumentException` if no player matches the given name. (5/5 marks)
+
+5. The `calculateTeamAverageRuns` method is implemented correctly. It filters players by team, checks for an empty list, calculates total runs, and computes the average. The method handles the case where no players are found for the specified team appropriately. (5/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates a list for players matching the team name and returns that list. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented. It checks if players are all-rounders and if they meet the criteria for runs and wickets, adding them to the list. (5/5 marks)
+
+The student has demonstrated a strong understanding of the requirements and has implemented all methods correctly according to the specifications provided in the question. Overall, the performance is excellent, with all functionalities implemented as required.

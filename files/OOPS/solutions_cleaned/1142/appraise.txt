@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method has several issues. The loop that reads player data is incorrect; it attempts to read five pieces of information in a single iteration, which is not aligned with the expected CSV format. The player should be created after splitting the line into parts, and the `Scanner` should use `nextLine()` to read the entire line. This part does not meet the requirements and should be revised.
+
+3. The `writePlayersToFile` method is incomplete. It initializes the `PrintWriter` but does not properly write the column names or player details to the file. The method lacks the necessary logic to format the output correctly, which results in a failure to meet the requirements.
+
+4. The `updatePlayerStats` method is not implemented at all. There is commented-out code that suggests an attempt to read players from a file, but the actual logic to update player statistics is missing. This part needs to be fully implemented to meet the requirements.
+
+5. The `calculateTeamAverageRuns` method has logical errors. The variable `plys` is not initialized, leading to potential runtime exceptions. Additionally, the method does not correctly handle the case where no players are found for the specified team, which is a requirement. This part needs significant revision.
+
+6. The `filter` method in the `TeamFilterStrategy` class is mostly correct, but it lacks proper closing braces. The method should return the list of players after the loop, which is missing. This part needs to be fixed to ensure it compiles and runs correctly.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented. It successfully filters players based on the criteria provided, earning full marks for this part.
+
+Overall, the student has demonstrated some understanding of the requirements, particularly in the `RunsComparator` and `AllRounderStatsFilter` classes. However, significant issues in the `CricketDataHandler` methods, especially in reading and writing files, updating player stats, and calculating averages, indicate a lack of complete implementation and understanding of file handling in Java. The student needs to focus on correctly implementing the required functionalities and ensuring that all methods are complete and logically sound.

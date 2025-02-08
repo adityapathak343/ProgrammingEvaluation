@@ -1,0 +1,26 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method has several issues:
+   - The method does not close the `Scanner` object, which can lead to resource leaks.
+   - The method attempts to read integers using `scanner.nextInt()` without checking if there are more tokens available, which can cause `NoSuchElementException`.
+   - The method uses `fromString(type)` without qualifying it with the `Role` class, which will lead to a compilation error.
+   - The file name used in `FileInputStream` is hardcoded as "inputCricketData.txt" instead of using the `fileName` parameter.
+   - The method does not return the list of players at the end, which is a critical omission.
+
+3. The `writePlayersToFile` method has similar issues:
+   - The method does not close the `PrintWriter` object, which can also lead to resource leaks.
+   - The method uses `new FileOutputStream(fileName, true)` which appends to the file instead of overwriting it. This is not specified in the requirements.
+   - The column names are not written correctly as per the expected format.
+
+4. The `updatePlayerStats` method has a critical issue with string comparison. It uses `==` to compare `playerName` with `temp.getPlayerName()`, which should use `.equals()` for string comparison in Java. This will lead to incorrect behavior.
+
+5. The `calculateTeamAverageRuns` method has multiple issues:
+   - The variable `total` is used without initialization, which will lead to a compilation error.
+   - The method uses `==` for string comparison when checking the team name, which should also use `.equals()`.
+   - The method does not handle the case where no players are found correctly, as it will throw an exception without proper handling.
+
+6. The `filter` method in `TeamFilterStrategy` has the same issue with string comparison using `==` instead of `.equals()`. This will lead to incorrect filtering of players.
+
+7. The `filter` method in `AllRounderStatsFilter` correctly checks the role of the player and compares the runs and wickets against the criteria. However, it also uses `fromString("ALL_ROUNDER")` without qualifying it with the `Role` class, which will lead to a compilation error.
+
+The student's performance shows a good understanding of the requirements but suffers from critical issues in resource management, string comparison, and method return values. The code requires significant corrections to compile and function as intended.
