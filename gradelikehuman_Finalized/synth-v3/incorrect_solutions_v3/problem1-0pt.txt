@@ -1,0 +1,24 @@
+
+
+def main():
+
+    assignment_scores = [85, 90, 78, 92, 88]
+    quiz_scores = [80, 85, 90]
+    midterm_score = 75
+    final_exam_score = 85
+
+
+
+    final_percentage = sum(assignment_scores + quiz_scores + [midterm_score, final_exam_score])
+
+
+    letter_grade = 'A'
+
+
+    print(f"Your final grade is: {final_percentage}%")
+    print(f"Your letter grade is: {letter_grade}")
+
+
+main()
+
+

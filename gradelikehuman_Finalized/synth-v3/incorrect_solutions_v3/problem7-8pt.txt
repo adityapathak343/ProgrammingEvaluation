@@ -1,0 +1,59 @@
+
+
+def get_student_data():
+    students = []
+    try:
+        num_students = int(input("Enter the number of students: "))
+    except ValueError:
+        print("Invalid input. Defaulting to 1 student.")
+        num_students = 1
+
+    for i in range(num_students):
+        name = input(f"Enter student {i + 1} name: ")
+        while True:
+            grade = input(f"Enter student {i + 1} grade: ")
+            if grade.isdigit() and 0 <= int(grade) <= 100:
+                grade = int(grade)
+                break
+            else:
+                print("Invalid grade. Please enter a number between 0 and 100.")
+        students.append((name, grade))
+
+    return students
+
+
+def write_to_file(students, filename):
+    with open(filename, 'w') as file:
+        for name, grade in students:
+            file.write(f"{name}, {grade}\n")
+    print(f"Data saved to {filename}.")
+
+
+def read_from_file_and_display(filename):
+    try:
+        with open(filename, 'r') as file:
+            lines = file.readlines()
+
+        print("\nReading from file and displaying data:")
+        print("-------------------------")
+        print("| Student Name | Grade |")
+        print("-------------------------")
+        for line in lines:
+            name, grade = line.strip().split(', ')
+            print(f"| {name:<12} | {grade:<5} |")
+        print("-------------------------")
+    except IOError:
+        print("Error reading the file.")
+
+
+def main():
+    filename = 'student_grades.txt'
+    students = get_student_data()
+    write_to_file(students, filename)
+    read_from_file_and_display(filename)
+
+
+if __name__ == "__main__":
+    main()
+
+

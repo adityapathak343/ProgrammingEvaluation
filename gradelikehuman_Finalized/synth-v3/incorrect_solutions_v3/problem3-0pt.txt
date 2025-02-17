@@ -1,0 +1,37 @@
+
+
+
+
+
+product_name = 123
+product_price = "25.99"
+product_quantity = "fifty"
+product_on_sale = "False"
+
+
+
+print("Product Name:" + product_name)
+print("Product Price: $" + product_price)
+print("Product Quantity: " + product_quantity)
+print("Product On Sale: " + product_on_sale)
+
+
+
+total_inventory_value = product_price * product_quantity
+print("Total Inventory Value: " + total_inventory_value)
+
+
+
+product_quantity -= "5"
+
+
+
+if product_on_sale:
+    print("This product is on sale.")
+else:
+    print("This product is not on sale.")
+
+
+
+
+

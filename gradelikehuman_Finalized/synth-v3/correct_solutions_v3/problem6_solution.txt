@@ -1,0 +1,87 @@
+
+
+class Book:
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
+
+    def __str__(self):
+        return f"Title: {self.title}, Author: {self.author}, Year: {self.year}"
+
+class Library:
+    def __init__(self):
+        # Using a list to store the collection of books.
+        # Justification: Lists are dynamic and can grow as needed, unlike arrays which have a fixed size.
+        # This makes lists more suitable for managing collections where the size is not known in advance.
+        self.books = []
+
+    def addBook(self, title, author, year):
+        # Add a new book to the collection.
+        new_book = Book(title, author, year)
+        self.books.append(new_book)
+        print("Book added successfully!")
+
+    def removeBook(self, title):
+        # Remove a book from the collection by title.
+        for book in self.books:
+            if book.title == title:
+                self.books.remove(book)
+                print("Book removed successfully!")
+                return
+        print("Book not found!")
+
+    def searchBook(self, title):
+        # Search for a book by title and display its details.
+        for book in self.books:
+            if book.title == title:
+                print("Book found:")
+                print(book)
+                return
+        print("Book not found!")
+
+    def displayBooks(self):
+        # Display all books currently in the collection.
+        if not self.books:
+            print("No books in the collection.")
+        else:
+            print("Displaying all books:")
+            for book in self.books:
+                print(book)
+
+def main():
+    library = Library()
+    while True:
+        print("\nWelcome to the Library Management System!")
+        print("Please choose an option:")
+        print("1. Add a Book")
+        print("2. Remove a Book")
+        print("3. Search for a Book")
+        print("4. Display All Books")
+        print("5. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            title = input("Enter the title of the book: ")
+            author = input("Enter the author of the book: ")
+            year = int(input("Enter the year of publication: "))
+            library.addBook(title, author, year)
+        elif choice == '2':
+            title = input("Enter the title of the book to remove: ")
+            library.removeBook(title)
+        elif choice == '3':
+            title = input("Enter the title of the book to search: ")
+            library.searchBook(title)
+        elif choice == '4':
+            library.displayBooks()
+        elif choice == '5':
+            print("Exiting the system. Goodbye!")
+            break
+        else:
+            print("Invalid choice! Please try again.")
+
+if __name__ == "__main__":
+    main()
+
+

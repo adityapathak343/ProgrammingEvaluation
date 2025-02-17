@@ -1,0 +1,59 @@
+**Problem Statement: Simple Student Grade Tracker**
+
+**Objective:**
+Create a simple console-based program that allows a user (a teacher) to input student names and their grades, store this data in a file, and then read from the file to display the stored data in a formatted manner.
+
+**Requirements:**
+
+1. **Console Input:**
+   - Prompt the user to enter the number of students.
+   - For each student, ask the user to input the student's name and grade. Assume the grade is a numerical value between 0 and 100.
+
+2. **File I/O:**
+   - Store the student names and their corresponding grades in a text file called `student_grades.txt`. Each line in the file should contain one student's name followed by their grade, separated by a comma (e.g., `John Doe, 85`).
+
+3. **Console Output:**
+   - After saving the data, read the contents of `student_grades.txt` and display the data in a formatted table with columns for "Student Name" and "Grade".
+   - Ensure the data is displayed in a neat, easy-to-read format.
+
+4. **Error Handling:**
+   - Validate user input to ensure that grades are within the valid range (0 to 100).
+   - Handle any potential file I/O errors (e.g., if the file cannot be created or read).
+
+5. **Program Flow:**
+   - The program should first collect the input data and write it to the file.
+   - After writing the data, it should read from the file and display the output.
+   - Provide appropriate messages to guide the user through the input process and inform them of any errors that occur.
+
+**Example Execution:**
+
+
+Enter the number of students: 3
+
+Enter student 1 name: Alice Smith
+Enter student 1 grade: 92
+
+Enter student 2 name: Bob Johnson
+Enter student 2 grade: 85
+
+Enter student 3 name: Charlie Brown
+Enter student 3 grade: 78
+
+Data saved to student_grades.txt.
+Reading from file and displaying data:
+
+------------------------------
+| Student Name     | Grade   |
+------------------------------
+| Alice Smith      | 92      |
+| Bob Johnson      | 85      |
+| Charlie Brown    | 78      |
+------------------------------
+
+
+**Additional Notes:**
+- Consider using functions to break down the task into smaller, more manageable parts (e.g., a function for input, a function for writing to a file, and a function for reading and displaying data).
+- Use appropriate data structures to store the input data temporarily before writing it to the file.
+- Encourage writing clean, readable code with comments explaining the functionality of different sections of the code.
+
+This project will provide hands-on experience with basic input and output operations, both through the console and with file handling, laying the foundation for more advanced programming topics.

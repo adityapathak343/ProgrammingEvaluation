@@ -1,0 +1,53 @@
+Here's a 10-point grading rubric for the library management system problem statement:
+
+1. **Data Structure Choice and Justification (1 point)**
+   - **1 point**: The code includes a clear and well-reasoned comment justifying the choice of using either an array or a list, considering factors like ease of use, flexibility, and performance.
+   - **0.5 points**: The code includes a comment justifying the choice, but the reasoning is unclear or lacks depth.
+   - **0 points**: No justification is provided, or the justification is incorrect.
+
+2. **Add a Book Functionality (1 point)**
+   - **1 point**: The `addBook` function correctly adds a book to the collection, handles input parameters properly, and updates the data structure.
+   - **0.5 points**: The function adds a book but has minor issues, such as not handling input correctly or not updating the data structure properly.
+   - **0 points**: The function does not add a book correctly or is missing.
+
+3. **Remove a Book Functionality (1 point)**
+   - **1 point**: The `removeBook` function correctly removes a book by title, handles cases where the book is not found, and updates the data structure.
+   - **0.5 points**: The function removes a book but has minor issues, such as not handling the "book not found" case properly.
+   - **0 points**: The function does not remove a book correctly or is missing.
+
+4. **Search for a Book Functionality (1 point)**
+   - **1 point**: The `searchBook` function correctly searches for a book by title and displays its details if found, handling the "book not found" case appropriately.
+   - **0.5 points**: The function searches for a book but has minor issues, such as incorrect display of details or not handling the "book not found" case properly.
+   - **0 points**: The function does not search for a book correctly or is missing.
+
+5. **Display All Books Functionality (1 point)**
+   - **1 point**: The `displayBooks` function correctly displays all books in the collection with appropriate formatting.
+   - **0.5 points**: The function displays books but has minor issues, such as incorrect formatting or missing details.
+   - **0 points**: The function does not display books correctly or is missing.
+
+6. **User Interaction and Menu System (2 points)**
+   - **2 points**: The program includes a fully functional text-based menu that allows users to choose operations and interact with the system seamlessly.
+   - **1 point**: The menu system is present but has usability issues, such as unclear instructions or minor bugs.
+   - **0 points**: The menu system is missing or non-functional.
+
+7. **Code Quality and Comments (1 point)**
+   - **1 point**: The code is well-organized, readable, and includes comments explaining the logic and functionality of each part.
+   - **0.5 points**: The code is mostly organized and readable but lacks sufficient comments or has minor readability issues.
+   - **0 points**: The code is poorly organized, difficult to read, and lacks comments.
+
+8. **Handling of Assumptions and Constraints (1 point)**
+   - **1 point**: The program correctly handles the assumption that book titles are unique and respects the maximum capacity constraint if using an array.
+   - **0.5 points**: The program handles assumptions and constraints but has minor issues, such as not enforcing the maximum capacity.
+   - **0 points**: The program does not handle assumptions or constraints correctly.
+
+9. **Advantages and Limitations Discussion (1 point)**
+   - **1 point**: The submission includes a thoughtful discussion of the advantages and limitations of using an array versus a list for this problem.
+   - **0.5 points**: The discussion is present but lacks depth or clarity.
+   - **0 points**: The discussion is missing or incorrect.
+
+10. **Overall Functionality and Correctness (1 point)**
+    - **1 point**: The program functions correctly, meeting all specified requirements and handling edge cases appropriately.
+    - **0.5 points**: The program functions but has minor issues or bugs that affect its correctness.
+    - **0 points**: The program does not function correctly or fails to meet the requirements.
+
+This rubric ensures that all aspects of the problem statement are evaluated, from technical implementation to user interaction and code quality.

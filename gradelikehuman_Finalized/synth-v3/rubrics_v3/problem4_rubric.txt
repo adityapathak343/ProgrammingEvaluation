@@ -1,0 +1,53 @@
+Creating a grading rubric for the "Adventure in the Enchanted Forest" problem statement involves breaking down the task into specific, measurable criteria. Here's a 10-point rubric that evaluates the key components of the task:
+
+1. **Grid Initialization (1 point)**
+   - **1 point**: The program correctly initializes a 5x5 grid with predefined positions for treasures, traps, and the exit.
+   - **0.5 points**: The grid is initialized but contains errors in the placement of treasures, traps, or the exit.
+   - **0 points**: The grid is not initialized or is completely incorrect.
+
+2. **User Input Handling (1 point)**
+   - **1 point**: The program correctly prompts the user for input and handles all four movement directions.
+   - **0.5 points**: The program prompts for input but does not handle all movement directions correctly.
+   - **0 points**: The program does not prompt for user input or fails to handle input correctly.
+
+3. **Boundary Conditions (1 point)**
+   - **1 point**: The program prevents the player from moving outside the grid boundaries.
+   - **0.5 points**: The program partially prevents boundary violations but has some errors.
+   - **0 points**: The program allows the player to move outside the grid boundaries.
+
+4. **Conditional Statements (1 point)**
+   - **1 point**: The program uses `if` and `else` statements effectively to check grid positions after each move.
+   - **0.5 points**: The program uses conditional statements but with some logical errors.
+   - **0 points**: The program does not use conditional statements correctly.
+
+5. **Switch Statement or Equivalent (1 point)**
+   - **1 point**: The program uses a `switch` statement or equivalent `if-else if` structure to handle different grid elements (`T`, `X`, `E`, `O`).
+   - **0.5 points**: The program uses a `switch` or equivalent structure but with errors.
+   - **0 points**: The program does not use a `switch` or equivalent structure.
+
+6. **Looping Structure (1 point)**
+   - **1 point**: The program uses a `while` loop to keep the game running until all treasures are collected and the exit is found.
+   - **0.5 points**: The program uses a loop but does not correctly implement the stopping condition.
+   - **0 points**: The program does not use a loop or uses it incorrectly.
+
+7. **Treasure Collection Logic (1 point)**
+   - **1 point**: The program correctly tracks and updates the number of treasures collected.
+   - **0.5 points**: The program tracks treasures but with some errors in updating.
+   - **0 points**: The program does not track treasure collection.
+
+8. **Trap Encounter Handling (1 point)**
+   - **1 point**: The program ends the game with a message if the player steps on a trap.
+   - **0.5 points**: The program detects traps but does not end the game correctly.
+   - **0 points**: The program does not handle trap encounters.
+
+9. **Exit Condition (1 point)**
+   - **1 point**: The program correctly identifies when the player finds the exit after collecting all treasures and ends the game with a congratulatory message.
+   - **0.5 points**: The program identifies the exit but does not check for all treasures collected.
+   - **0 points**: The program does not correctly handle the exit condition.
+
+10. **User Feedback and Messaging (1 point)**
+    - **1 point**: The program provides clear and accurate messages to the user for each action (e.g., moving, collecting treasures, encountering traps).
+    - **0.5 points**: The program provides messages but with some inaccuracies or omissions.
+    - **0 points**: The program does not provide user feedback or messages.
+
+This rubric ensures that each aspect of the problem statement is evaluated, providing a comprehensive assessment of the student's ability to implement control structures, loops, and user interaction in a programming context.

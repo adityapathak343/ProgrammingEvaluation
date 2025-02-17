@@ -1,0 +1,58 @@
+
+def enchanted_forest_adventure():
+
+    forest_grid = [
+        ['E', 'E', 'T', 'X', 'E'],
+        ['E', 'X', 'E', 'E', 'E'],
+        ['E', 'T', 'X', 'E', 'E'],
+        ['E', 'E', 'E', 'T', 'E'],
+        ['E', 'E', 'E', 'X', 'O']
+    ]
+
+
+    player_position = (0, 0)
+    treasures_collected = 0
+    total_treasures = 3
+    directions = {'Up': (-1, 0), 'Down': (1, 0), 'Left': (0, -1), 'Right': (0, 1)}
+
+    print("Welcome to the Enchanted Forest Adventure!")
+    print("You are currently at position (0, 0).")
+
+
+    while treasures_collected < total_treasures or forest_grid[player_position[0]][player_position[1]] != 'O':
+
+        move = input("Choose your move (Up, Down, Left, Right): ").strip()
+
+
+        if move in directions:
+
+            new_position = (player_position[0] + directions[move][0], player_position[1] + directions[move][1])
+
+
+            if 0 <= new_position[0] < 5 and 0 <= new_position[1] < 5:
+                player_position = new_position
+                current_location = forest_grid[player_position[0]][player_position[1]]
+
+
+                if current_location == 'T':
+                    treasures_collected += 1
+                    print(f"You found a treasure! Total treasures collected: {treasures_collected}")
+                elif current_location == 'X':
+                    print("You stepped on a trap! Game over.")
+                    return
+                elif current_location == 'O':
+                    if treasures_collected == total_treasures:
+                        print("Congratulations! You have collected all treasures and found the exit!")
+                        return
+                    else:
+                        print("You found the exit, but you need to collect all treasures first.")
+                else:
+                    print(f"You moved to position {player_position}. It's an empty space.")
+            else:
+                print("Invalid move. You cannot move outside the boundaries.")
+        else:
+            print("Invalid input. Please enter Up, Down, Left, or Right.")
+
+enchanted_forest_adventure()
+
+

@@ -1,0 +1,34 @@
+
+from typing import List, Tuple
+
+def find_and_sort_treasures(grid: List[List[int]]) -> Tuple[int, List[int]]:
+
+    treasures = []
+
+
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if grid[i][j] > 0:
+                treasures.append(grid[i][j])
+
+
+    treasures.sort(reverse=True)
+
+
+    return len(treasures), treasures
+
+
+grid = [
+    [0, 5, 0, 0],
+    [4, 0, 0, 3],
+    [0, 0, 1, 0]
+]
+
+
+num_treasures, sorted_treasures = find_and_sort_treasures(grid)
+
+
+print(num_treasures)
+print(' '.join(map(str, sorted_treasures)))
+
+

@@ -1,0 +1,68 @@
+## Problem Statement: Understanding Syntax, Semantics, and Basic Constructs
+
+### Background
+
+As an introduction to programming languages, understanding syntax, semantics, and basic constructs is fundamental. Syntax refers to the set of rules that defines the combinations of symbols that are considered valid in a programming language. Semantics, on the other hand, refers to the meaning of these syntactical elements and how they produce effects during execution. Basic constructs are the building blocks of programming, such as variables, control structures, data types, and functions.
+
+### Learning Objectives
+
+1. Understand the syntax and semantics of a chosen programming language (Python, Java, or C++).
+2. Implement basic constructs including variables, data types, conditional statements, loops, and simple functions.
+3. Write, compile (if necessary), and execute a simple program that demonstrates these concepts.
+
+### Task
+
+You are required to write a simple program in **one** of the following programming languages: Python, Java, or C++. Your program should simulate a basic calculator that can perform simple arithmetic operations: addition, subtraction, multiplication, and division. The program should follow the specific syntax and semantics of the chosen language and utilize basic constructs appropriately.
+
+#### Requirements
+
+1. **Variables and Data Types:**
+   - Declare variables to store user input and the results of arithmetic operations.
+   - Use appropriate data types for storing numerical values (e.g., `int`, `float`, or `double`).
+
+2. **User Input:**
+   - Prompt the user to input two numbers and an arithmetic operator (+, -, *, /).
+
+3. **Conditional Statements:**
+   - Use if-else or switch-case (in Java/C++) to determine which arithmetic operation to perform based on the user's input.
+
+4. **Loops (optional but encouraged for extra practice):**
+   - Implement a loop that allows the user to perform multiple calculations without restarting the program. The loop should terminate when the user chooses to exit.
+
+5. **Functions (optional but encouraged for extra practice):**
+   - Define separate functions for each arithmetic operation (e.g., `add`, `subtract`, `multiply`, `divide`).
+
+6. **Error Handling:**
+   - Include basic error handling to manage division by zero and invalid operator inputs.
+
+7. **Output:**
+   - Display the result of the arithmetic operation in a user-friendly manner.
+
+#### Example Interaction
+
+
+Welcome to the Simple Calculator!
+
+Enter the first number: 10
+Enter an operator (+, -, *, /): *
+Enter the second number: 5
+
+Result: 10 * 5 = 50
+
+Do you want to perform another calculation? (yes/no): no
+
+Thank you for using the Simple Calculator!
+
+
+### Submission
+
+1. **Code File**: Submit the source code file(s) for your program.
+2. **Documentation**: Provide a short document explaining the syntax and semantics of the constructs you used, along with any challenges faced during implementation and how you resolved them.
+
+### Evaluation Criteria
+
+- Correctness: The program should correctly perform the arithmetic operations based on user input.
+- Syntax and Semantics: Proper use of syntax and understanding of semantics in the chosen language.
+- Code Structure: Clarity, organization, and use of basic constructs.
+- User Interaction: User-friendly prompts and outputs.
+- Error Handling: Appropriately managing potential errors such as division by zero and invalid input.

@@ -1,0 +1,26 @@
+
+
+
+
+students = []
+
+
+name = input("Enter student name: ")
+grade = input("Enter student grade: ")
+
+
+students.append((name, grade))
+
+
+with open('student_grades.txt', 'w') as file:
+    file.write(f"{name}, {grade}\n")
+
+
+with open('student_grades.txt', 'r') as file:
+    lines = file.readlines()
+    for line in lines:
+        print(line)
+
+
+
+

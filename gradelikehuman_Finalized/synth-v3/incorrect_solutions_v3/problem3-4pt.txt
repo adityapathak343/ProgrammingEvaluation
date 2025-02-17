@@ -1,0 +1,45 @@
+
+
+
+
+
+product_name = "Wireless Mouse"
+product_price = 25.99
+product_quantity = '50'
+product_on_sale = "False"
+
+
+
+print("Product Name:", product_name)
+print("Product Price:", product_price)
+print("Product Quantity:", product_quantity)
+print("Product On Sale:", product_on_sale)
+
+
+
+try:
+    total_inventory_value = product_price * int(product_quantity)
+    print("Total Inventory Value:", total_inventory_value)
+except ValueError:
+    print("Error calculating total inventory value due to incorrect data type.")
+
+
+
+try:
+    units_sold = 5
+    product_quantity = int(product_quantity) - units_sold
+    print("Updated Product Quantity:", product_quantity)
+except ValueError:
+    print("Error updating product quantity due to incorrect data type.")
+
+
+
+if product_on_sale == "True":
+    print("This product is currently on sale! Enjoy the discount.")
+else:
+    print("This product is sold at regular price.")
+
+
+
+
+

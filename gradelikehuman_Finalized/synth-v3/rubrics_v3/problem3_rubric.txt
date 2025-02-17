@@ -1,0 +1,50 @@
+Here's a 10-point rubric designed to evaluate the assignment based on the problem statement provided. Each criterion is clearly defined to ensure consistent and objective grading.
+
+### Grading Rubric for "Exploring the Basics of Variables and Data Types in Python"
+
+1. **Variable Declaration and Initialization (2 points)**
+   - **2 points:** All variables are declared and initialized correctly with appropriate data types (string for product name, float for product price, integer for product quantity, and boolean for product on sale).
+   - **1 point:** Most variables are declared and initialized correctly, but there are minor issues with data types or initialization.
+   - **0 points:** Variables are not declared or initialized correctly, or there are significant issues with data types.
+
+2. **Display Product Information (1 point)**
+   - **1 point:** Product information is displayed in a clear and user-friendly format, matching the example provided.
+   - **0.5 points:** Product information is displayed but lacks clarity or does not fully match the example format.
+   - **0 points:** Product information is not displayed or is displayed in a confusing manner.
+
+3. **Calculate Total Value of Inventory (2 points)**
+   - **2 points:** The total value of the inventory is calculated correctly and displayed with a descriptive message.
+   - **1 point:** The total value is calculated but with minor errors or the message is not descriptive.
+   - **0 points:** The total value is not calculated or is calculated incorrectly.
+
+4. **Update Inventory (1 point)**
+   - **1 point:** The product quantity is updated correctly after simulating a sale, and the new quantity is displayed.
+   - **0.5 points:** The product quantity is updated but with minor errors or the new quantity is not displayed.
+   - **0 points:** The product quantity is not updated or is updated incorrectly.
+
+5. **Check Sale Status (1 point)**
+   - **1 point:** A conditional statement correctly checks the sale status and displays the appropriate message.
+   - **0.5 points:** The conditional statement is present but contains minor errors or the message is not appropriate.
+   - **0 points:** The conditional statement is missing or incorrect.
+
+6. **Code Readability and Comments (1 point)**
+   - **1 point:** Code is well-organized with descriptive variable names and comments explaining each step.
+   - **0.5 points:** Code is somewhat organized with some descriptive names and comments, but improvements are needed.
+   - **0 points:** Code lacks organization, descriptive names, or comments.
+
+7. **Output Formatting (1 point)**
+   - **1 point:** Output is well-formatted and easy to read, enhancing user understanding.
+   - **0.5 points:** Output is somewhat formatted but could be improved for better readability.
+   - **0 points:** Output is poorly formatted and difficult to read.
+
+8. **Error-Free Execution (1 point)**
+   - **1 point:** The script runs without any errors.
+   - **0.5 points:** The script runs but with minor warnings or non-critical errors.
+   - **0 points:** The script contains errors that prevent it from running.
+
+9. **Optional Challenge: User Input (1 point)**
+   - **1 point:** The program is successfully modified to allow user input for product information using the `input()` function.
+   - **0.5 points:** The program is modified for user input but contains minor issues.
+   - **0 points:** The program is not modified for user input or contains significant issues.
+
+This rubric provides a comprehensive evaluation of the assignment, ensuring that students are assessed on their understanding and application of variables and data types in Python, as well as their ability to write clear and functional code.

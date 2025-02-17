@@ -1,0 +1,44 @@
+
+
+class Book:
+
+    title = ""
+    author = ""
+    isbn = ""
+    available_copies = 0
+
+
+
+
+
+
+    def borrow_book(self):
+        self.available_copies -= 1
+        print("Book borrowed.")
+
+
+    def return_book(self):
+        self.available_copies += 1
+
+
+    def display_details(self):
+        print("Book Details")
+
+
+def main():
+
+    book1 = Book()
+    book2 = Book()
+    book3 = Book()
+
+
+    book1.borrow_book()
+
+
+    book1.return_book()
+
+
+if __name__ == "__main__":
+    main()
+
+

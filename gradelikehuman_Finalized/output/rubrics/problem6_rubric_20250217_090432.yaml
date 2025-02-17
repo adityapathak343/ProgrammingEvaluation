@@ -1,0 +1,109 @@
+criteria:
+- descriptions:
+  - description: The code includes a clear and well-reasoned comment justifying the
+      choice of using either an array or a list, considering factors like ease of
+      use, flexibility, and performance.
+    score: 2
+  - description: The code includes a comment justifying the choice, but the reasoning
+      is unclear or lacks depth.
+    score: 1
+  - description: No justification is provided, or the justification is incorrect.
+    score: 0
+  name: Data Structure Choice and Justification
+  points: 2
+- descriptions:
+  - description: The addBook function correctly adds a book to the collection, handles
+      input parameters properly, and updates the data structure.
+    score: 2
+  - description: The function adds a book but has minor issues, such as not handling
+      input correctly or not updating the data structure properly.
+    score: 1
+  - description: The function does not add a book correctly or is missing.
+    score: 0
+  name: Add a Book Functionality
+  points: 2
+- descriptions:
+  - description: The removeBook function correctly removes a book by title, handles
+      cases where the book is not found, and updates the data structure.
+    score: 2
+  - description: The function removes a book but has minor issues, such as not handling
+      the 'book not found' case properly.
+    score: 1
+  - description: The function does not remove a book correctly or is missing.
+    score: 0
+  name: Remove a Book Functionality
+  points: 2
+- descriptions:
+  - description: The searchBook function correctly searches for a book by title and
+      displays its details if found, handling the 'book not found' case appropriately.
+    score: 2
+  - description: The function searches for a book but has minor issues, such as incorrect
+      display of details or not handling the 'book not found' case properly.
+    score: 1
+  - description: The function does not search for a book correctly or is missing.
+    score: 0
+  name: Search for a Book Functionality
+  points: 2
+- descriptions:
+  - description: The displayBooks function correctly displays all books in the collection
+      with appropriate formatting.
+    score: 2
+  - description: The function displays books but has minor issues, such as incorrect
+      formatting or missing details.
+    score: 1
+  - description: The function does not display books correctly or is missing.
+    score: 0
+  name: Display All Books Functionality
+  points: 2
+- descriptions:
+  - description: The program includes a fully functional text-based menu that allows
+      users to choose operations and interact with the system seamlessly.
+    score: 3
+  - description: The menu system is present but has usability issues, such as unclear
+      instructions or minor bugs.
+    score: 2
+  - description: The menu system is partially functional but has major usability issues.
+    score: 1
+  - description: The menu system is missing or non-functional.
+    score: 0
+  name: User Interaction and Menu System
+  points: 3
+- descriptions:
+  - description: The code is well-organized, readable, and includes comments explaining
+      the logic and functionality of each part.
+    score: 2
+  - description: The code is mostly organized and readable but lacks sufficient comments
+      or has minor readability issues.
+    score: 1
+  - description: The code is poorly organized, difficult to read, and lacks comments.
+    score: 0
+  name: Code Quality and Comments
+  points: 2
+- descriptions:
+  - description: The program correctly handles the assumption that book titles are
+      unique and respects the maximum capacity constraint if using an array.
+    score: 1
+  - description: The program does not handle assumptions or constraints correctly.
+    score: 0
+  name: Handling of Assumptions and Constraints
+  points: 1
+- descriptions:
+  - description: The submission includes a thoughtful discussion of the advantages
+      and limitations of using an array versus a list for this problem.
+    score: 1
+  - description: The discussion is missing or incorrect.
+    score: 0
+  name: Advantages and Limitations Discussion
+  points: 1
+- descriptions:
+  - description: The program functions correctly, meeting all specified requirements
+      and handling edge cases appropriately.
+    score: 2
+  - description: The program functions but has minor issues or bugs that affect its
+      correctness.
+    score: 1
+  - description: The program does not function correctly or fails to meet the requirements.
+    score: 0
+  name: Overall Functionality and Correctness
+  points: 2
+total_points: 20
