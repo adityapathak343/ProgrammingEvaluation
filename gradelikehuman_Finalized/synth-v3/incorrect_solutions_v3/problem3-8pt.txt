@@ -1,0 +1,33 @@
+
+
+
+
+product_name = "Wireless Mouse"
+product_price = 25.99
+product_quantity = 50
+product_on_sale = True
+
+
+print("Product Name:", product_name)
+print("Product Price: $", product_price)
+print("Product Quantity:", product_quantity)
+print("Product On Sale:", "Yes" if product_on_sale else "No")
+
+
+total_inventory_value = product_price * product_quantity
+print("Total Inventory Value: $", total_inventory_value)
+
+
+units_sold = 5
+product_quantity -= units_sold
+print("Updated Product Quantity:", product_quantity)
+
+
+if product_on_sale:
+    print("This product is currently on sale! Enjoy the discount.")
+else:
+    print("This product is sold at regular price.")
+
+
+
+

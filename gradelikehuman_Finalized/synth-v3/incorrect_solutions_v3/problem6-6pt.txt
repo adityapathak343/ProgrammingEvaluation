@@ -1,0 +1,76 @@
+
+class Book:
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
+
+    def __str__(self):
+        return f"Title: {self.title}, Author: {self.author}, Year: {self.year}"
+
+class Library:
+    def __init__(self):
+
+        self.books = []
+
+    def addBook(self, title, author, year):
+        new_book = Book(title, author, year)
+        self.books.append(new_book)
+        print("Book added!")
+
+    def removeBook(self, title):
+        for book in self.books:
+            if book.title == title:
+                self.books.remove(book)
+                print("Book removed!")
+                return
+        print("Book not found!")
+
+    def searchBook(self, title):
+        for book in self.books:
+            if book.title == title:
+                print("Book found:", book)
+                return
+        print("Book not found!")
+
+    def displayBooks(self):
+        if not self.books:
+            print("No books to display.")
+        else:
+            for book in self.books:
+                print(book)
+
+def main():
+    library = Library()
+    while True:
+        print("\nLibrary Menu")
+        print("1. Add Book")
+        print("2. Remove Book")
+        print("3. Search Book")
+        print("4. Display Books")
+        print("5. Exit")
+        choice = input("Choose an option: ")
+
+        if choice == '1':
+            title = input("Title: ")
+            author = input("Author: ")
+            year = int(input("Year: "))
+            library.addBook(title, author, year)
+        elif choice == '2':
+            title = input("Title to remove: ")
+            library.removeBook(title)
+        elif choice == '3':
+            title = input("Title to search: ")
+            library.searchBook(title)
+        elif choice == '4':
+            library.displayBooks()
+        elif choice == '5':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid option!")
+
+if __name__ == "__main__":
+    main()
+
+

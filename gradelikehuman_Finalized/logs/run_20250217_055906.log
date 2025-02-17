@@ -1,0 +1,9 @@
+2025-02-17 05:59:06,668 - __main__ - INFO - Starting rubric generation phase
+2025-02-17 05:59:22,842 - __main__ - INFO - Starting rubric generation process
+2025-02-17 06:00:40,368 - __main__ - INFO - Saved final rubric to /home/krishna/projects/ProgrammingEvaluation/gradelikehuman_Finalized/output/problem1_rubric_20250217_055906.yaml
+2025-02-17 06:00:40,368 - __main__ - INFO - Saved initial rubric to /home/krishna/projects/ProgrammingEvaluation/gradelikehuman_Finalized/output/problem1_initial_rubric_20250217_055906.yaml
+2025-02-17 06:00:40,368 - __main__ - INFO - Starting grading phase
+2025-02-17 06:00:40,368 - __main__ - INFO - Starting grading process using batch strategy
+2025-02-17 06:00:56,950 - __main__ - INFO - Grading complete
+2025-02-17 06:00:56,950 - __main__ - INFO - Graded 6 solutions
+2025-02-17 06:00:56,950 - __main__ - INFO - Process completed successfully

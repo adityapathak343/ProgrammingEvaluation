@@ -1,0 +1,5 @@
+2025-02-17 06:02:23,305 - __main__ - INFO - Starting grading phase
+2025-02-17 06:02:23,313 - __main__ - INFO - Starting grading process using batch strategy
+2025-02-17 06:03:03,285 - __main__ - INFO - Grading complete
+2025-02-17 06:03:03,285 - __main__ - INFO - Graded 6 solutions
+2025-02-17 06:03:03,285 - __main__ - INFO - Process completed successfully

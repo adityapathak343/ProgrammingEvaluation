@@ -1,0 +1,48 @@
+Below is a complete solution to the problem statement provided. The script declares variables with appropriate data types, performs operations to update and calculate inventory values, and includes optional user input functionality.
+
+
+# inventory_manager.py
+
+# Step 1: Declare Variables
+# Declaring a variable for each piece of product information
+product_name = "Wireless Mouse"  # String to store the product's name
+product_price = 25.99            # Float to store the product's price
+product_quantity = 50            # Integer to store the product's quantity
+product_on_sale = False          # Boolean to indicate if the product is on sale
+
+# Step 2: Display Product Information
+# Printing product information in a user-friendly format
+print("Product Name:", product_name)
+print("Product Price: ${:.2f}".format(product_price))
+print("Product Quantity:", product_quantity)
+print("Product On Sale:", "Yes" if product_on_sale else "No")
+
+# Step 3: Calculate Total Value of Inventory
+# Calculating the total inventory value and storing it in a variable
+total_inventory_value = product_price * product_quantity
+# Printing the total inventory value with a descriptive message
+print("Total Inventory Value: ${:.2f}".format(total_inventory_value))
+
+# Step 4: Update Inventory
+# Simulating a sale where 5 units are sold and updating the quantity
+units_sold = 5
+product_quantity -= units_sold  # Updating the product quantity
+# Printing the new quantity after the sale
+print("Updated Product Quantity:", product_quantity)
+
+# Step 5: Check Sale Status
+# Checking if the product is on sale and printing an appropriate message
+if product_on_sale:
+    print("This product is currently on sale! Enjoy the discount.")
+else:
+    print("This product is sold at regular price.")
+
+# Additional Challenge: Allow user input for product information
+# Uncomment the lines below to get user input instead of using hardcoded values
+# product_name = input("Enter the product name: ")
+# product_price = float(input("Enter the product price: "))
+# product_quantity = int(input("Enter the product quantity: "))
+# product_on_sale = input("Is the product on sale (yes/no)? ").strip().lower() == 'yes'
+
+
+

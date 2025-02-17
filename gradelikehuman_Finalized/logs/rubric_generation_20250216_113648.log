@@ -1,0 +1,5 @@
+2025-02-16 11:37:07,688 - __main__ - INFO - Loaded 6 solutions for problem 1
+2025-02-16 11:37:07,688 - __main__ - INFO - Using distribution sampling method
+2025-02-16 11:37:07,688 - __main__ - INFO - Starting rubric generation process
+2025-02-16 11:38:25,809 - __main__ - INFO - Saved final rubric to /home/krishna/projects/ProgrammingEvaluation/gradelikehuman_Finalized/output/problem1_rubric_20250216_113648.yaml
+2025-02-16 11:38:25,812 - __main__ - INFO - Saved initial rubric to /home/krishna/projects/ProgrammingEvaluation/gradelikehuman_Finalized/output/problem1_initial_rubric_20250216_113648.yaml

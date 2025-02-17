@@ -1,0 +1,7 @@
+2025-02-17 05:51:16,289 - __main__ - INFO - Starting grading phase
+2025-02-17 05:51:16,290 - __main__ - ERROR - Error during execution: [Errno 2] No such file or directory: 'outputproblem1_rubric_20250216_113648.yaml'
+Traceback (most recent call last):
+  File "/home/krishna/projects/ProgrammingEvaluation/gradelikehuman_Finalized/main.py", line 260, in main
+    with open(args.existing_rubric, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'outputproblem1_rubric_20250216_113648.yaml'

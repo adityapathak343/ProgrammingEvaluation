@@ -1,0 +1,40 @@
+
+
+def get_student_data():
+    students = []
+    num_students = input("Enter the number of students: ")
+
+    for i in range(int(num_students)):
+        name = input(f"Enter student {i + 1} name: ")
+        grade = input(f"Enter student {i + 1} grade: ")
+        students.append((name, grade))
+
+    return students
+
+
+def write_to_file(students, filename):
+    with open(filename, 'w') as file:
+        for name, grade in students:
+            file.write(f"{name}, {grade}\n")
+
+
+def read_from_file_and_display(filename):
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+
+    print("\nReading from file and displaying data:")
+    for line in lines:
+        print(line.strip())
+
+
+def main():
+    filename = 'student_grades.txt'
+    students = get_student_data()
+    write_to_file(students, filename)
+    read_from_file_and_display(filename)
+
+
+if __name__ == "__main__":
+    main()
+
+

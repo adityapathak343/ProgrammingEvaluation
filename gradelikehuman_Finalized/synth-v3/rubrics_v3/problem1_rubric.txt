@@ -1,0 +1,53 @@
+Creating a detailed grading rubric for the "Student Grade Calculator" problem statement involves breaking down the task into specific components and assigning points based on the successful completion of each component. Here's a 10-point rubric designed to evaluate the solution:
+
+1. **Input Handling (1 point)**
+   - **1 point**: The program correctly prompts the user for all required inputs (five assignment scores, three quiz scores, one midterm score, and one final exam score) and stores them appropriately.
+   - **0.5 points**: The program prompts for most inputs but misses one or two.
+   - **0 points**: The program fails to prompt for inputs or incorrectly handles input storage.
+
+2. **Data Storage (1 point)**
+   - **1 point**: Uses lists to store assignment and quiz scores effectively.
+   - **0.5 points**: Uses lists but with incorrect implementation or uses another data structure that complicates the solution.
+   - **0 points**: Does not use lists or any appropriate data structure for storing scores.
+
+3. **Average Calculation (1 point)**
+   - **1 point**: Correctly calculates the average for assignments and quizzes.
+   - **0.5 points**: Calculates averages but with minor errors in logic or implementation.
+   - **0 points**: Fails to calculate averages or makes significant errors.
+
+4. **Weighted Contribution Calculation (2 points)**
+   - **2 points**: Accurately computes the weighted contribution of assignments, quizzes, midterm, and final exam to the final grade.
+   - **1 point**: Computes weighted contributions but with minor errors in one or two components.
+   - **0 points**: Incorrectly computes weighted contributions or omits components.
+
+5. **Final Grade Calculation (1 point)**
+   - **1 point**: Correctly sums the weighted contributions to determine the final grade.
+   - **0.5 points**: Sums contributions but with minor calculation errors.
+   - **0 points**: Fails to sum contributions correctly.
+
+6. **Letter Grade Assignment (1 point)**
+   - **1 point**: Accurately assigns a letter grade based on the final percentage.
+   - **0.5 points**: Assigns a letter grade but with minor errors in the logic.
+   - **0 points**: Incorrectly assigns letter grades or fails to implement this feature.
+
+7. **Output Formatting (1 point)**
+   - **1 point**: Displays the final grade and letter grade clearly and in a user-friendly manner.
+   - **0.5 points**: Displays output but with formatting issues or lack of clarity.
+   - **0 points**: Output is unclear or missing.
+
+8. **Code Readability and Comments (1 point)**
+   - **1 point**: Code is well-organized, with appropriate variable names and comments explaining key sections.
+   - **0.5 points**: Code is somewhat organized, with some comments or unclear variable names.
+   - **0 points**: Code lacks organization, comments, or uses confusing variable names.
+
+9. **Use of Functions (1 point)**
+   - **1 point**: Effectively uses functions to encapsulate repetitive tasks like average and weighted score calculations.
+   - **0.5 points**: Uses functions but with limited scope or incorrect implementation.
+   - **0 points**: Does not use functions where appropriate.
+
+10. **Error Handling and Assumptions (1 point)**
+    - **1 point**: Assumes valid input as per constraints and handles any potential errors gracefully.
+    - **0.5 points**: Assumes valid input but lacks clarity in handling potential errors.
+    - **0 points**: Fails to assume valid input or handle errors, leading to potential program crashes.
+
+This rubric ensures that students are evaluated on both the correctness and quality of their code, encouraging good programming practices and clear communication of their solutions.

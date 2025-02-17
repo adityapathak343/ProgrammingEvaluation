@@ -1,0 +1,41 @@
+
+def library_system():
+    collection = []
+    while True:
+        print("\nLibrary System")
+        print("1. Add book")
+        print("2. Remove book")
+        print("3. Search book")
+        print("4. List books")
+        print("5. Exit")
+        choice = input("Option: ")
+
+        if choice == '1':
+            book = {}
+            book['title'] = input("Title: ")
+            book['author'] = input("Author: ")
+            book['year'] = input("Year: ")
+            collection.append(book)
+
+        elif choice == '2':
+            title = input("Title to remove: ")
+            for book in collection:
+                if book['title'] == title:
+                    collection.remove(book)
+
+        elif choice == '3':
+            title = input("Title to search: ")
+            for book in collection:
+                if book['title'] == title:
+                    print(f"Found: {book['title']} by {book['author']}")
+
+        elif choice == '4':
+            for book in collection:
+                print(f"{book['title']} by {book['author']}, {book['year']}")
+
+        elif choice == '5':
+            break
+
+library_system()
+
+

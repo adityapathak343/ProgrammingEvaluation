@@ -1,0 +1,80 @@
+
+
+def add_book(collection, title, author, year):
+    """Adds a new book to the collection."""
+    book = {'title': title, 'author': author, 'year': year}
+    collection.append(book)
+    return collection
+
+def remove_book(collection, title):
+    """Removes a book by its title."""
+    for book in collection:
+        if book['title'].lower() == title.lower():
+            collection.remove(book)
+            return True
+    return False
+
+def search_book(collection, title):
+    """Searches for a book by its title."""
+    for book in collection:
+        if book['title'].lower() == title.lower():
+            return book
+    return None
+
+def list_books(collection):
+    """Prints out all the books in the collection."""
+    if collection:
+        for idx, book in enumerate(collection, start=1):
+            print(f"{idx}. {book['title']} by {book['author']}, {book['year']}")
+    else:
+        print("No books in the library.")
+
+def main():
+    """Main function to interact with the user."""
+    collection = []
+    while True:
+        print("\nWelcome to the Library Management System")
+        print("1. Add a new book")
+        print("2. Remove a book")
+        print("3. Search for a book")
+        print("4. List all books")
+        print("5. Exit")
+        choice = input("Choose an option: ")
+
+        if choice == '1':
+            title = input("Enter book title: ")
+            author = input("Enter author: ")
+            year = input("Enter publication year: ")
+            collection = add_book(collection, title, author, year)
+            print("Book added successfully!")
+
+        elif choice == '2':
+            title = input("Enter book title to remove: ")
+            if remove_book(collection, title):
+                print("Book removed successfully!")
+            else:
+                print("Book not found.")
+
+        elif choice == '3':
+            title = input("Enter book title to search: ")
+            book = search_book(collection, title)
+            if book:
+                print(f"Found: {book['title']} by {book['author']}, {book['year']}")
+            else:
+                print("Book not found.")
+
+        elif choice == '4':
+            print("Listing all books:")
+            list_books(collection)
+
+        elif choice == '5':
+            print("Goodbye!")
+            break
+
+        else:
+            print("Invalid option, please try again.")
+
+if __name__ == "__main__":
+    main()
+
+
