@@ -1,4 +1,8 @@
 .venv
 CodeJudge.zip
 .env
+<<<<<<< HEAD
 .openai
+=======
+/gradelikehuman_Finalized/.env
+>>>>>>> 11cd6cee6548cd49f64e7738a063d2b1fb50d845

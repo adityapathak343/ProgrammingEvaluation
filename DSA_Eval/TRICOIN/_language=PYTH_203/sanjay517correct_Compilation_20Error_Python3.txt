@@ -1,0 +1,15 @@
+n=int(input())
+for_in range(n):
+    x=int(input())
+    j=1
+    sum=0
+    height=0
+    while(sum<n):
+        sum=sum+j
+        if sum<=n:
+            height+=1
+            j+=1 
+            
+    print(height)
+        
+

@@ -1,0 +1,70 @@
+### Problem Statement: Library Management System
+
+**Objective:**  
+Design a simple Library Management System using the basic concepts of Object-Oriented Programming (OOP) including classes, objects, and encapsulation. This task will help you understand how to create and manipulate basic classes and objects.
+
+**Problem Description:**  
+You are tasked with creating a basic version of a Library Management System. The system should be able to manage books in a library. Each book in the library has the following attributes:
+
+- **Title** (String)
+- **Author** (String)
+- **ISBN** (String)
+- **Available Copies** (Integer)
+
+Your main goal is to create a class `Book` that encapsulates these attributes and provides the necessary functionality to interact with them.
+
+**Requirements:**
+
+1. **Class Design:**
+   - Create a class called `Book` with the attributes mentioned above. These attributes should be private to ensure encapsulation.
+   - Implement a constructor to initialize the `Book` object with the given title, author, ISBN, and available copies.
+
+2. **Encapsulation:**
+   - Implement public getter and setter methods for each attribute (except for the ISBN, which should not be changed once set) to allow controlled access and modification of the book details.
+   - Implement a method `borrowBook()` that reduces the number of available copies by 1 if there are copies available. If no copies are available, print a message indicating that the book is not available for borrowing.
+   - Implement a method `returnBook()` that increases the number of available copies by 1.
+
+3. **Additional Functionality:**
+   - Implement a method `displayDetails()` that prints the book's title, author, ISBN, and the number of available copies.
+
+4. **Testing:**
+   - In the `main` method (or equivalent), create at least three `Book` objects with different attributes.
+   - Demonstrate the functionality by displaying the details of each book, borrowing one book, and then displaying its details again. Also, test returning a book and display the updated details.
+
+**Sample Output:**
+
+plaintext
+Book Details:
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+ISBN: 9780743273565
+Available Copies: 3
+
+Borrowing The Great Gatsby...
+Book borrowed successfully.
+
+Updated Book Details:
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+ISBN: 9780743273565
+Available Copies: 2
+
+Returning The Great Gatsby...
+Book returned successfully.
+
+Updated Book Details:
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+ISBN: 9780743273565
+Available Copies: 3
+
+
+**Guidelines:**
+
+- Ensure that your code is well-organized and commented.
+- Focus on using proper naming conventions for classes, methods, and variables.
+- Test your program thoroughly to handle different scenarios, such as trying to borrow a book with zero available copies.
+
+**Submission:**
+
+Submit your code file along with a brief report (one page) explaining your class design choices and any challenges you faced while implementing the solution.

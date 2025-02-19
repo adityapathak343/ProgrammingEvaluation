@@ -1,0 +1,45 @@
+Creating a detailed grading rubric for the "Treasure Hunt" problem statement involves breaking down the task into specific criteria that reflect the learning objectives and expected outcomes. Here's a 10-point rubric designed to evaluate the solution:
+
+1. **Correctness of Treasure Identification (2 points)**
+   - **2 points**: The program correctly identifies all treasure locations on the map.
+   - **1 point**: The program identifies some but not all treasures, or includes incorrect locations.
+   - **0 points**: The program fails to identify any treasures or produces incorrect results.
+
+2. **Correctness of Treasure Sorting (2 points)**
+   - **2 points**: The program correctly sorts all identified treasure values in ascending order.
+   - **1 point**: The program sorts some treasures correctly but not all, or the order is partially incorrect.
+   - **0 points**: The program fails to sort the treasures or produces an incorrect order.
+
+3. **Efficiency of Search Algorithm (1 point)**
+   - **1 point**: The search algorithm is efficient and appropriate for the problem size (e.g., linear traversal of the grid).
+   - **0 points**: The search algorithm is inefficient or inappropriate, leading to unnecessary complexity or performance issues.
+
+4. **Efficiency of Sorting Algorithm (1 point)**
+   - **1 point**: The sorting algorithm is efficient and appropriate for the problem size (e.g., using Python's built-in sort).
+   - **0 points**: The sorting algorithm is inefficient or inappropriate, leading to unnecessary complexity or performance issues.
+
+5. **Handling of Edge Cases (1 point)**
+   - **1 point**: The program correctly handles edge cases, such as maps with no treasures or maps where all cells contain treasures.
+   - **0 points**: The program fails to handle edge cases, resulting in errors or incorrect outputs.
+
+6. **Code Quality and Organization (1 point)**
+   - **1 point**: The code is well-organized, with clear structure and logical flow.
+   - **0 points**: The code is poorly organized, making it difficult to follow or understand.
+
+7. **Variable Naming and Readability (1 point)**
+   - **1 point**: Variables are named clearly and descriptively, enhancing code readability.
+   - **0 points**: Variables are poorly named, making the code difficult to read and understand.
+
+8. **Documentation and Comments (1 point)**
+   - **1 point**: The code is well-documented with comments explaining the logic and flow.
+   - **0 points**: The code lacks sufficient comments, making it difficult to understand the logic.
+
+9. **Input and Output Handling (1 point)**
+   - **1 point**: The program correctly handles input and output as specified, including formatting.
+   - **0 points**: The program fails to handle input or output correctly, or the format is incorrect.
+
+10. **Testing and Validation (1 point)**
+    - **1 point**: The solution includes tests with various grid configurations to ensure correctness.
+    - **0 points**: The solution lacks testing, or tests are insufficient to validate correctness.
+
+This rubric ensures that the evaluation is comprehensive, covering all aspects of the problem statement, from algorithmic correctness and efficiency to code quality and robustness.

@@ -1,0 +1,38 @@
+Creating a grading rubric for the "Simple Student Grade Tracker" project involves breaking down the requirements into specific, measurable criteria. Here's a 10-point rubric that aligns with the problem statement and expected learning outcomes:
+
+1. **Console Input Handling (2 points)**
+   - **2 points:** The program correctly prompts the user for the number of students and iteratively collects each student's name and grade. It validates that grades are numerical and within the range of 0 to 100.
+   - **1 point:** The program collects input but has minor issues, such as not validating the grade range or not handling non-numeric input gracefully.
+   - **0 points:** The program fails to collect input correctly or does not validate input at all.
+
+2. **File Writing (1 point)**
+   - **1 point:** The program successfully writes the student names and grades to `student_grades.txt` in the correct format (name, grade).
+   - **0 points:** The program fails to write the data to the file or writes it in an incorrect format.
+
+3. **File Reading (1 point)**
+   - **1 point:** The program reads the data from `student_grades.txt` correctly and prepares it for display.
+   - **0 points:** The program fails to read the data from the file or encounters errors that prevent reading.
+
+4. **Console Output Formatting (2 points)**
+   - **2 points:** The program displays the data in a neatly formatted table with clear column headers for "Student Name" and "Grade".
+   - **1 point:** The program displays the data but with minor formatting issues, such as misaligned columns or missing headers.
+   - **0 points:** The program fails to display the data in a readable format.
+
+5. **Error Handling (2 points)**
+   - **2 points:** The program includes robust error handling for both user input and file I/O operations, providing clear error messages and guidance to the user.
+   - **1 point:** The program includes some error handling but may miss certain edge cases or provide unclear error messages.
+   - **0 points:** The program lacks error handling, leading to crashes or undefined behavior in case of invalid input or file errors.
+
+6. **Program Flow and User Guidance (1 point)**
+   - **1 point:** The program follows a logical flow, guiding the user through the input, saving, and displaying processes with clear messages.
+   - **0 points:** The program's flow is confusing or lacks sufficient user guidance, making it difficult to use.
+
+7. **Code Structure and Modularity (1 point)**
+   - **1 point:** The program is well-structured, with functions used to separate different tasks (e.g., input collection, file writing, file reading, and display).
+   - **0 points:** The program lacks modularity, with all logic contained in a single block of code, making it difficult to read and maintain.
+
+8. **Code Readability and Comments (1 point)**
+   - **1 point:** The code is clean and readable, with appropriate comments explaining the functionality of different sections.
+   - **0 points:** The code is difficult to read due to poor formatting or lacks comments, making it hard to understand the logic.
+
+This rubric provides a clear and structured way to evaluate the project, ensuring that all key aspects of the problem statement are addressed and that students are encouraged to write clean, functional, and user-friendly code.

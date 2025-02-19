@@ -1,0 +1,45 @@
+timestamp: '2025-02-02T21:43:30.826975'
+total_score: 0
+max_score: 12
+percentage: 0.0
+categories:
+  logical_correctness:
+    score: 0
+    feedback:
+      strengths:
+      - points: 1
+        comment: The student's submission does not contain any implementation of the problem's logic.
+      weaknesses: []
+  time_complexity:
+    score: 0
+    feedback:
+      strengths:
+      - points: 1
+        comment: Without any implementation, the time complexity cannot be evaluated.
+      weaknesses: []
+  space_complexity:
+    score: 0
+    feedback:
+      strengths:
+      - points: 1
+        comment: Without any implementation, the space complexity cannot be evaluated.
+      weaknesses: []
+  code_quality:
+    score: 0
+    feedback:
+      strengths:
+      - points: 1
+        comment: So code quality cannot be evaluated.
+      weaknesses:
+      - points: 1
+        comment: The submission does not contain any code.
+  syntactic_correctness:
+    score: 0
+    feedback:
+      strengths:
+      - points: 1
+        comment: So syntactic correctness cannot be evaluated.
+      weaknesses:
+      - points: 1
+        comment: The submission does not contain any code.
+test_case_ratio: null

@@ -1,0 +1,88 @@
+## Problem Statement: Library Management System
+
+### Objective
+
+You are tasked with developing a simple Library Management System using functions to demonstrate the principles of modular programming. The goal is to write reusable code that efficiently manages a collection of books, allowing users to perform basic operations such as adding, removing, and searching for books in the library. This exercise will help you understand the use of functions, parameters, return values, and variable scope.
+
+### Problem Description
+
+Your task is to implement a command-line based Library Management System in Python. The system should allow users to:
+
+1. **Add a new book**: Add a book to the library collection with details such as title, author, and publication year.
+2. **Remove a book**: Remove a book from the collection by its title.
+3. **Search for a book**: Search for a book by title and display its details if found.
+4. **List all books**: Display a list of all books currently in the library.
+
+### Requirements
+
+1. **Main Functionality**: 
+    - Implement a main menu that allows users to select different operations.
+    - Use functions to encapsulate each operation (add, remove, search, list).
+
+2. **Functions**:
+    - `add_book(collection, title, author, year)`: Adds a new book to the collection. Returns the updated collection.
+    - `remove_book(collection, title)`: Removes a book by its title. Returns `True` if the book was removed successfully, or `False` if the book was not found.
+    - `search_book(collection, title)`: Searches for a book by its title. Returns the book details if found, otherwise returns `None`.
+    - `list_books(collection)`: Prints out all the books in the collection.
+
+3. **Data Structure**:
+    - Use a list of dictionaries to store books. Each book should be represented as a dictionary with keys: `title`, `author`, and `year`.
+
+4. **User Input**:
+    - Implement input handling in the main menu to interact with the user. Use appropriate prompts to navigate different operations.
+
+5. **Scope and Reusability**:
+    - Ensure variables are properly scoped. Global variables should be avoided unless necessary.
+    - Functions should be reusable and handle errors gracefully.
+
+6. **Return Values**:
+    - Each function should return appropriate values based on its operation (e.g., updated collection, boolean status, book details).
+
+### Example
+
+Here is an example of how the system might work:
+
+
+Welcome to the Library Management System
+1. Add a new book
+2. Remove a book
+3. Search for a book
+4. List all books
+5. Exit
+Choose an option: 1
+
+Enter book title: The Great Gatsby
+Enter author: F. Scott Fitzgerald
+Enter publication year: 1925
+Book added successfully!
+
+Choose an option: 4
+Listing all books:
+1. The Great Gatsby by F. Scott Fitzgerald, 1925
+
+Choose an option: 2
+Enter book title to remove: The Great Gatsby
+Book removed successfully!
+
+Choose an option: 3
+Enter book title to search: The Great Gatsby
+Book not found.
+
+Choose an option: 5
+Goodbye!
+
+
+### Constraints
+
+- The system should be robust against invalid inputs (e.g., non-integer menu choices, searching for non-existent books).
+- Assume a small number of books (e.g., less than 100) for simplicity.
+
+### Evaluation Criteria
+
+- Correct implementation of each function.
+- Proper use of parameters and return values.
+- Effective use of variable scope.
+- Clarity and organization of code.
+- User-friendly interaction and error handling.
+
+By completing this exercise, you will gain a deeper understanding of functions and modular programming, essential skills for writing clean, efficient, and reusable code.

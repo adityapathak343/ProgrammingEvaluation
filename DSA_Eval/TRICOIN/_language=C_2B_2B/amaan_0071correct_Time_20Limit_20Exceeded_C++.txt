@@ -1,0 +1,66 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int N = 1e5;
+
+int main() {
+
+	// your code goes here
+
+	
+
+	long long arr[N];
+
+	for ( int i=1; i<N; i++ ) {
+
+	    arr[i] = arr[i-1] + i;
+
+	    if ( arr[i] > 1e9) {
+
+	        break;
+
+	    }
+
+	}
+
+    int t; cin >> t; while ( t-- ) {
+
+        int n; cin >> n;
+
+        int s = 0, e = N, m = s + ( e-s )/2; int ans = 0;
+
+        while ( s <= e ){
+
+             if ( n == arr[m] ) {
+
+                 ans = m;
+
+             }
+
+             else if ( n > arr[m] ){
+
+                 s = m;
+
+                 ans = m;
+
+             }
+
+             else {
+
+                 e = m;
+
+                 ans = m-1;
+
+             }
+
+             m = s + ( e-s )/2;
+
+        }
+
+        cout << ans<<endl;
+
+    }
+
+}
+

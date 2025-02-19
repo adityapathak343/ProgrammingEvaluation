@@ -1,0 +1,74 @@
+## Problem Statement: Manage a Library Collection Using Arrays and Lists
+
+### Background
+In this exercise, you will explore the use of arrays and lists, which are fundamental data structures in computer science for storing collections of elements. Arrays and lists allow you to store multiple items of the same type, access them efficiently, and perform various operations such as adding, removing, and searching for elements.
+
+### Problem Description
+You have been tasked with developing a simple library management system to keep track of books in a small library. Each book in the library is characterized by the following attributes:
+
+- **Title** (a string)
+- **Author** (a string)
+- **Year of Publication** (an integer)
+
+Your task is to implement a program that manages the library collection using either an array or a list. The program should provide the following functionalities:
+
+1. **Add a book** to the collection.
+2. **Remove a book** from the collection by title.
+3. **Search for a book** by title and display its details.
+4. **Display all books** currently in the collection.
+
+### Requirements
+1. **Data Structure Choice**:
+   - Use either an array or a list to store the collection of books. Justify your choice in comments within your code.
+
+2. **Implementation Details**:
+   - **Add a Book**: Implement a function `addBook(title, author, year)` that adds a new book with the given title, author, and year to the collection.
+   - **Remove a Book**: Implement a function `removeBook(title)` that removes the book with the specified title from the collection. If the book is not found, print an appropriate message.
+   - **Search for a Book**: Implement a function `searchBook(title)` that searches for a book by its title and prints its details if found. If not found, print an appropriate message.
+   - **Display All Books**: Implement a function `displayBooks()` that prints the details of all books currently in the collection.
+
+3. **User Interaction**:
+   - The program should allow users to interact with it through a simple text-based menu. Users should be able to choose operations such as adding, removing, searching for, and displaying books.
+
+4. **Assumptions**:
+   - You can assume that book titles are unique within the collection.
+   - You can store a maximum of 100 books in the array if using an array.
+
+### Example Interaction
+plaintext
+Welcome to the Library Management System!
+
+Please choose an option:
+1. Add a Book
+2. Remove a Book
+3. Search for a Book
+4. Display All Books
+5. Exit
+
+Enter your choice: 1
+Enter the title of the book: The Great Gatsby
+Enter the author of the book: F. Scott Fitzgerald
+Enter the year of publication: 1925
+Book added successfully!
+
+Enter your choice: 4
+Displaying all books:
+1. The Great Gatsby by F. Scott Fitzgerald (1925)
+
+Enter your choice: 3
+Enter the title of the book to search: The Great Gatsby
+Book found:
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+Year: 1925
+
+Enter your choice: 2
+Enter the title of the book to remove: The Great Gatsby
+Book removed successfully!
+
+Enter your choice: 5
+Exiting the system. Goodbye!
+
+
+### Submission
+Submit your program code with comments explaining your choice of data structure and how each function operates. Include a brief write-up discussing the advantages and limitations of using an array versus a list for this problem.

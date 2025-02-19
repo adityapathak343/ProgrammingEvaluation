@@ -1,0 +1,89 @@
+### Problem Statement: Debugging and Error Handling
+
+#### Introduction
+
+In the world of programming, encountering errors and exceptions is a common occurrence. As a developer, one of your key skills will be identifying, understanding, and resolving these issues effectively. In this exercise, you will practice debugging and error handling by working with a simple Python program. The goal is to identify errors, understand their causes, and implement solutions to make the code robust and error-free.
+
+#### Scenario
+
+You are provided with a Python script that simulates a simple banking application. The program allows users to create an account, deposit money, withdraw money, and check their balance. However, the script has several bugs and lacks proper error handling. Your task is to debug the script and add appropriate error handling to ensure it runs smoothly and handles unexpected inputs or situations gracefully.
+
+#### Given Code
+
+
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposit successful! New balance: {self.balance}")
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Error: Insufficient funds!")
+        else:
+            self.balance -= amount
+            print(f"Withdrawal successful! New balance: {self.balance}")
+
+    def check_balance(self):
+        print(f"Account balance: {self.balance}")
+
+def main():
+    print("Welcome to the Bank Application")
+    owner = input("Enter account owner's name: ")
+    account = BankAccount(owner)
+
+    while True:
+        print("\nChoose an option:")
+        print("1. Deposit")
+        print("2. Withdraw")
+        print("3. Check Balance")
+        print("4. Exit")
+
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            amount = float(input("Enter amount to deposit: "))
+            account.deposit(amount)
+        elif choice == 2:
+            amount = float(input("Enter amount to withdraw: "))
+            account.withdraw(amount)
+        elif choice == 3:
+            account.check_balance()
+        elif choice == 4:
+            print("Thank you for using the Bank Application!")
+            break
+        else:
+            print("Invalid choice! Please try again.")
+
+if __name__ == "__main__":
+    main()
+
+
+#### Tasks
+
+1. **Identify Errors and Bugs:**
+   - Review the given code and identify any syntax errors, logical errors, or runtime errors. Consider edge cases and typical user input scenarios.
+
+2. **Implement Error Handling:**
+   - Add error handling to manage exceptions such as invalid input types (e.g., entering text instead of numbers) and negative deposit or withdrawal amounts. Use try-except blocks where necessary.
+
+3. **Enhance Code Robustness:**
+   - Ensure that negative or zero values cannot be deposited or withdrawn.
+   - Add input validation to handle non-numeric inputs for the menu and transaction amounts.
+
+4. **Testing:**
+   - Test the revised program thoroughly. Consider various scenarios like invalid inputs, large transactions, and proper exit functionality.
+
+5. **Documentation:**
+   - Comment your code to explain the changes made and the purpose of each error handling block.
+
+#### Expected Output
+
+- The program should run without crashing due to unhandled exceptions.
+- It should display appropriate error messages for invalid inputs or operations.
+- Users should be able to perform all banking operations smoothly and exit the program gracefully.
+
+This exercise will help you gain confidence in identifying typical programming errors and implementing effective solutions to create reliable software. Happy debugging!

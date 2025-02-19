@@ -1,0 +1,92 @@
+
+class Book:
+    def __init__(self, title, author, isbn, available_copies):
+
+        self.__title = title
+        self.__author = author
+        self.__isbn = isbn
+        self.__available_copies = available_copies
+
+
+    def get_title(self):
+        return self.__title
+
+
+    def set_title(self, title):
+        self.__title = title
+
+
+    def get_author(self):
+        return self.__author
+
+
+    def set_author(self, author):
+        self.__author = author
+
+
+    def get_isbn(self):
+        return self.__isbn
+
+
+    def get_available_copies(self):
+        return self.__available_copies
+
+
+    def set_available_copies(self, copies):
+        self.__available_copies = copies
+
+
+    def borrow_book(self):
+        if self.__available_copies > 0:
+            self.__available_copies -= 1
+            print("Book borrowed successfully.")
+        else:
+            print("Sorry, this book is not available for borrowing.")
+
+
+    def return_book(self):
+        self.__available_copies += 1
+        print("Book returned successfully.")
+
+
+    def display_details(self):
+        print(f"Title: {self.__title}")
+        print(f"Author: {self.__author}")
+        print(f"ISBN: {self.__isbn}")
+        print(f"Available Copies: {self.__available_copies}")
+        print()
+
+
+def main():
+
+    book1 = Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565", 3)
+    book2 = Book("1984", "George Orwell", "9780451524935", 5)
+    book3 = Book("To Kill a Mockingbird", "Harper Lee", "9780061120084", 2)
+
+
+    print("Initial Book Details:")
+    book1.display_details()
+    book2.display_details()
+    book3.display_details()
+
+
+    print("Borrowing The Great Gatsby...")
+    book1.borrow_book()
+
+
+    print("\nUpdated Book Details after Borrowing:")
+    book1.display_details()
+
+
+    print("Returning The Great Gatsby...")
+    book1.return_book()
+
+
+    print("\nUpdated Book Details after Returning:")
+    book1.display_details()
+
+
+if __name__ == "__main__":
+    main()
+
+

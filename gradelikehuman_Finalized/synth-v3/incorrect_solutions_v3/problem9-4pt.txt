@@ -1,0 +1,76 @@
+
+class Book:
+    def __init__(self, title, author, isbn, available_copies):
+
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+        self.available_copies = available_copies
+
+
+    def get_title(self):
+        return self.title
+
+    def set_title(self, title):
+        self.title = title
+
+
+    def get_author(self):
+        return self.author
+
+    def set_author(self, author):
+        self.author = author
+
+
+    def get_isbn(self):
+        return self.isbn
+
+    def set_isbn(self, isbn):
+        self.isbn = isbn
+
+
+    def get_available_copies(self):
+        return self.available_copies
+
+    def set_available_copies(self, copies):
+        self.available_copies = copies
+
+
+    def borrow_book(self):
+        if self.available_copies > 0:
+            self.available_copies -= 1
+            print("Book borrowed successfully.")
+        else:
+            print("Sorry, this book is not available for borrowing.")
+
+
+
+
+    def display_details(self):
+        print(f"Title: {self.title}")
+        print(f"Author: {self.author}")
+        print(f"ISBN: {self.isbn}")
+        print(f"Available Copies: {self.available_copies}")
+
+
+def main():
+
+    book1 = Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565", 3)
+
+
+    print("Initial Book Details:")
+    book1.display_details()
+
+
+    print("Borrowing The Great Gatsby...")
+    book1.borrow_book()
+
+
+    print("\nUpdated Book Details after Borrowing:")
+    book1.display_details()
+
+
+if __name__ == "__main__":
+    main()
+
+

@@ -1,0 +1,42 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(System.out);
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        
+        int N = Integer.parseInt(st.nextToken());
+        int Q = Integer.parseInt(st.nextToken());
+        
+        int[] roots = new int[N];
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < N; i++) {
+            roots[i] = Integer.parseInt(st.nextToken());
+        }
+        
+        Arrays.sort(roots);
+        
+        for (int i = 0; i < Q; i++) {
+            int x = Integer.parseInt(br.readLine());
+            if (Arrays.binarySearch(roots, x) >= 0) {
+                pw.println(0);
+            } else {
+                int pos = Arrays.binarySearch(roots, x);
+                if (pos < 0) {
+                    pos = -pos - 1;
+                }
+                int numNegatives = N - pos;
+                if (numNegatives % 2 == 0) {
+                    pw.println("POSITIVE");
+                } else {
+                    pw.println("NEGATIVE");
+                }
+            }
+        }
+        
+        pw.flush();
+        pw.close();
+        br.close();
+    }
+}

@@ -1,0 +1,28 @@
+timestamp: '2025-02-02T12:13:27.136010'
+categories:
+  logical_correctness:
+    score: 0
+    feedback: The student's code does not implement the logic to solve the problem.
+      The code only reads the number of test cases and the number of coins for each
+      test case, but does not calculate the maximum possible height of the triangle.
+  time_complexity:
+    score: 0
+    feedback: The code does not implement the logic to solve the problem, so it does
+      not meet the expected time complexity.
+  space_complexity:
+    score: 0
+    feedback: The code attempts to declare an array of size 1 billion, which is not
+      feasible in most systems and leads to excessive space complexity.
+  code_quality:
+    score: 1
+    feedback: The code is organized and uses clear naming conventions. However, it
+      lacks comments and does not implement the logic to solve the problem.
+  syntactic_correctness:
+    score: 1
+    feedback: The code has a major syntax error. It attempts to declare an array of
+      size 1 billion, which is not feasible in most systems and will cause the code
+      to fail to compile or run.
+test_case_ratio: null
+total_score: 2
+max_score: 12
+percentage: 16.666666666666664

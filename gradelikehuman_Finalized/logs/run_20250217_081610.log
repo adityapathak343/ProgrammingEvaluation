@@ -1,0 +1,5 @@
+2025-02-17 08:16:10,908 - __main__ - INFO - Starting rubric generation stage
+2025-02-17 08:20:06,005 - __main__ - INFO - Saved generated rubric to /home/krishna/projects/ProgrammingEvaluation/gradelikehuman_Finalized/output/rubrics/problem3_rubric_20250217_081610.yaml
+2025-02-17 08:20:06,005 - __main__ - INFO - Starting grading stage
+2025-02-17 08:21:12,911 - __main__ - INFO - Starting re-evaluation stage
+2025-02-17 08:21:56,447 - __main__ - INFO - Pipeline completed successfully

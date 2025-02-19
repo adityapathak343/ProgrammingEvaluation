@@ -1,0 +1,54 @@
+**Problem Statement: Exploring the Basics of Variables and Data Types in Python**
+
+**Objective:**
+The purpose of this assignment is to help you understand and practice using different data types in Python, such as integers, floats, strings, and booleans. You will learn how to declare and manipulate variables of these types to perform basic operations.
+
+**Problem Description:**
+
+Imagine you are developing a simple program for a small retail store to manage inventory and sales. The program needs to keep track of the following information for a single product:
+
+1. **Product Name:** The name of the product (e.g., "Wireless Mouse").
+2. **Product Price:** The price of the product (e.g., 25.99).
+3. **Product Quantity:** The quantity of the product available in stock (e.g., 50).
+4. **Product On Sale:** A boolean indicating whether the product is currently on sale (e.g., True or False).
+
+Your task is to write a Python script that performs the following steps:
+
+1. **Declare Variables:**
+   - Declare a variable for each of the four pieces of information mentioned above and initialize them with appropriate values.
+
+2. **Display Product Information:**
+   - Print the product information in a user-friendly format. For example:
+     
+     Product Name: Wireless Mouse
+     Product Price: $25.99
+     Product Quantity: 50
+     Product On Sale: Yes
+     
+
+3. **Calculate Total Value of Inventory:**
+   - Calculate the total value of the inventory for this product (i.e., Product Price * Product Quantity) and store it in a variable. Print this value with a descriptive message.
+
+4. **Update Inventory:**
+   - Simulate a sale where 5 units of the product are sold. Update the product quantity accordingly and print the new quantity.
+
+5. **Check Sale Status:**
+   - Write a conditional statement to check if the product is on sale. If it is, print a message indicating that customers can enjoy a discount. If not, print a message that the product is sold at regular price.
+
+**Requirements:**
+
+- Use appropriate data types for each variable.
+- Ensure the output is well-formatted and easy to read.
+- Use comments in your code to describe each step and the purpose of your variables.
+- Use descriptive variable names to enhance code readability.
+
+**Additional Challenge (Optional):**
+
+- Modify your program to allow the user to input the product information instead of hardcoding the values. Use the `input()` function to gather data from the user.
+
+**Submission Guidelines:**
+
+- Submit your Python script file named `inventory_manager.py`.
+- Ensure your code runs without errors and meets all the requirements stated above.
+
+By completing this assignment, you will gain a foundational understanding of how variables and different data types are used in programming, setting the stage for more complex operations and data manipulations.

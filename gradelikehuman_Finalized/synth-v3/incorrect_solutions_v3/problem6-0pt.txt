@@ -1,0 +1,39 @@
+
+
+class Book:
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
+
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def addBook(self, title, author, year):
+
+        self.books.append(title)
+
+    def removeBook(self, title):
+
+        self.books.remove(title)
+
+    def searchBook(self, title):
+
+        if title in self.books:
+            print("Book found")
+        else:
+            print("Not found")
+
+    def displayBooks(self):
+
+        for book in self.books:
+            print(book)
+
+def menu():
+
+    pass
+
+
+
+

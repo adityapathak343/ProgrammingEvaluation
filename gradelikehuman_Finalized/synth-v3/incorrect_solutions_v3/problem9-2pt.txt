@@ -1,0 +1,25 @@
+
+class Book:
+    def __init__(self, title, author, isbn, available_copies):
+
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+        self.available_copies = available_copies
+
+
+def main():
+
+    book1 = Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565", 3)
+
+
+    print(f"Title: {book1.title}")
+    print(f"Author: {book1.author}")
+    print(f"ISBN: {book1.isbn}")
+    print(f"Available Copies: {book1.available_copies}")
+
+
+if __name__ == "__main__":
+    main()
+
+

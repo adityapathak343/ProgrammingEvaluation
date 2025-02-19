@@ -1,0 +1,62 @@
+
+
+def calculate_average(scores):
+    """Calculate the average of a list of scores."""
+    total = sum(scores)
+    return total / len(scores)
+
+def determine_letter_grade(percentage):
+    """Determine the letter grade based on the final percentage."""
+    if percentage >= 90:
+        return 'A'
+    elif percentage >= 80:
+        return 'B'
+    elif percentage >= 70:
+        return 'C'
+    elif percentage >= 60:
+        return 'D'
+    else:
+        return 'F'
+
+def main():
+
+    print("Enter your five assignment scores:")
+    assignment_scores = [int(input()) for _ in range(5)]
+
+    print("Enter your three quiz scores:")
+    quiz_scores = [int(input()) for _ in range(3)]
+
+    print("Enter your midterm exam score:")
+    midterm_score = int(input())
+
+    print("Enter your final exam score:")
+    final_exam_score = int(input())
+
+
+    average_assignments = calculate_average(assignment_scores)
+    average_quizzes = calculate_average(quiz_scores)
+
+
+    weighted_assignments = average_assignments * 0.30
+    weighted_quizzes = average_quizzes * 0.20
+    weighted_midterm = midterm_score * 0.25
+    weighted_final = final_exam_score * 0.25
+
+
+    final_percentage = (weighted_assignments +
+                        weighted_quizzes +
+                        weighted_midterm +
+                        weighted_final)
+
+
+    letter_grade = determine_letter_grade(final_percentage)
+
+
+    print(f"Your final grade is: {final_percentage:.2f}%")
+    print(f"Your letter grade is: {letter_grade}")
+
+
+if __name__ == "__main__":
+    main()
+
+

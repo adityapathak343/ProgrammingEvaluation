@@ -1,0 +1,31 @@
+# cook your dish here
+
+n=int(input())
+
+for i in range(n):
+
+    x=int(input())
+
+    c=1
+
+    for i in range(2,x):
+
+        c=c+i
+
+        h+=1
+
+        if(c>x):
+
+            print(i-1)
+
+            break
+
+        elif(c==x):
+
+            print(i)
+
+            break
+
+    
+
+    

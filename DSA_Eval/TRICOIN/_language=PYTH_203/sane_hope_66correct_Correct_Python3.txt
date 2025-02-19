@@ -1,0 +1,20 @@
+import math
+
+
+
+def max_triangle_height(n):
+
+    return int((-1 + math.sqrt(1 + 8 * n)) // 2)
+
+
+
+# Reading input
+
+t = int(input())
+
+for _ in range(t):
+
+    n = int(input())
+
+    print(max_triangle_height(n))
+

@@ -1,0 +1,17 @@
+t = int(input())
+
+for i in range(t):
+
+    n=int(input())
+
+    count=0
+
+    for i in range(1,n):
+
+        if n>0 and n>=i:
+
+            n=n-i
+
+            count=i
+
+    print(count)

@@ -1,0 +1,76 @@
+import java.util.*;
+
+import java.lang.*;
+
+import java.io.*;
+
+
+
+class Codechef
+
+{
+
+	public static void main (String[] args) throws java.lang.Exception
+
+	{
+
+		// your code goes here
+
+public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int T = sc.nextInt(); // Number of test cases
+
+        while (T-- > 0) {
+
+            long N = sc.nextLong(); // Number of coins for the test case
+
+            System.out.println(maximumHeight(N));
+
+        }
+
+    }
+
+
+
+    // Function to calculate the maximum possible height of the triangle
+
+    public static int maximumHeight(long N) {
+
+        int low = 1, high = (int) Math.sqrt(2 * N); // sqrt(2 * N) is a safe upper bound
+
+        int maxH = 0;
+
+
+
+        while (low <= high) {
+
+            int mid = low + (high - low) / 2;
+
+            long coinsNeeded = (long) mid * (mid + 1) / 2;
+
+
+
+            if (coinsNeeded <= N) {
+
+                maxH = mid; // mid is a valid height, so store it and look for higher heights
+
+                low = mid + 1;
+
+            } else {
+
+                high = mid - 1; // Reduce the search space
+
+            }
+
+        }
+
+        return maxH;
+
+
+
+	}
+
+}
+

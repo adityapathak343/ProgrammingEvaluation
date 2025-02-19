@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int main() {
+
+	// your code goes here
+
+    int t; cin>>t;
+
+    while(t--){
+
+        int n; cin>>n;
+
+        int cnt=0,i=0;
+
+        vector<int> v(n,0);
+
+        v[1]=1;
+
+        for(i=2;i<n;i++){
+
+            v[i]=i+v[i-1];
+
+        }
+
+        for(int i=1;i<n;i++){
+
+            if(v[i]==n) {
+
+                cout<<i<<endl;
+
+                break;}
+
+            else{
+
+                if(v[i]>n){
+
+                    cout<<i-1<<endl;
+
+                break;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    return 0;
+
+}
+
