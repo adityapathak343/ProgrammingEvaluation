@@ -1,0 +1,44 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0.2
+    compare: 0
+    readPlayersFromFile: 0.2
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.3
+function_scores:
+  allRounderFilter:
+    feedback: Not implemented.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: Partially implemented; issues with team name comparison.
+    max_score: 5
+    score: 3
+  compare:
+    feedback: Correctly compares runs in descending order.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: Partially implemented; issues with reading and parsing player data.
+    max_score: 9
+    score: 5
+  teamFilter:
+    feedback: Not implemented.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: Partially implemented; does not correctly update runs and wickets.
+    max_score: 5
+    score: 2
+  writePlayersToFile:
+    feedback: Not implemented.
+    max_score: 4
+    score: 0
+overall_feedback: The implementation shows some understanding of the requirements,
+  but several methods are incomplete or incorrect. Focus on implementing the missing
+  methods and fixing the logic in the existing ones.
+total_score: 12

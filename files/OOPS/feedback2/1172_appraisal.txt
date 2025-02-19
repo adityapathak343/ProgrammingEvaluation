@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is not implemented, which is essential for sorting players based on their runs. This is a critical omission and results in a lack of functionality for sorting players. (2 marks)
+
+2. In the `readPlayersFromFile` method, the list is incorrectly declared as `List<Players> new_list` instead of `List<Player> new_list`. Additionally, the method lacks the implementation to read from the file, parse the data, and create `Player` objects. The logic for reading lines and splitting them is incomplete and contains errors, such as using `Player.setRunsScored` instead of calling the instance method on a `Player` object. (9 marks)
+
+3. The `writePlayersToFile` method is not implemented correctly. The `PrintWriter` is incorrectly instantiated with `"fileName"` as a string instead of using the `fileName` variable. The method also lacks the logic to write player data to the file. (4 marks)
+
+4. The `updatePlayerStats` method has a logical error in the way it checks for player names. The comparison should use `.equals()` instead of `==` for string comparison. Additionally, the error handling for when no player is found is not implemented correctly; it should throw an `IllegalArgumentException` instead of printing a message. (5 marks)
+
+5. The `calculateTeamAverageRuns` method is incomplete. It does not implement the logic to filter players by team, calculate total runs, or compute the average. The variable `teamname` is incorrectly referenced, and the method lacks proper exception handling for when no players are found. (5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is incomplete. It does not create a list for matching players or implement the logic to check if a player's team matches the given name. (5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also incomplete. It lacks the logic to check if a player is an all-rounder and to compare their runs and wickets against the criteria. (5 marks)
+
+8. There are small syntax errors throughout the code that prevent it from compiling, such as using `system.println` instead of `System.out.println` and inconsistent capitalization in method names. Additionally, some variables are not properly initialized before use. These issues indicate a lack of attention to detail. (General)
+
+The student's submission contains numerous critical errors and incomplete implementations across all required methods. The code fails to compile due to structural issues and logical errors, indicating a lack of understanding of Java syntax and object-oriented principles. Overall, the student needs significant improvement in their coding skills and understanding of the assignment requirements.

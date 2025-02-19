@@ -1,0 +1,47 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0.2
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0.2
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.3
+function_scores:
+  allRounderFilter:
+    feedback: The filter method for all-rounders is correctly implemented.
+    max_score: 5
+    score: 5
+  calculateTeamAverageRuns:
+    feedback: The calculateTeamAverageRuns method is not implemented.
+    max_score: 5
+    score: 0
+  compare:
+    feedback: The compare method is not implemented.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The method attempts to read from a file but has issues with file handling
+      and player creation logic.
+    max_score: 9
+    score: 3
+  teamFilter:
+    feedback: The filter method does not correctly filter players by team and modifies
+      the original list.
+    max_score: 5
+    score: 2
+  updatePlayerStats:
+    feedback: The method updates player stats but does not throw an exception if the
+      player is not found.
+    max_score: 5
+    score: 3
+  writePlayersToFile:
+    feedback: The writePlayersToFile method is not implemented.
+    max_score: 4
+    score: 0
+overall_feedback: The implementation has several incomplete methods and issues with
+  logic and error handling. Focus on completing the missing methods and ensuring proper
+  functionality.
+total_score: 13

@@ -1,0 +1,20 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method has several issues:
+   - The method assumes the CSV file will always be present without proper exception handling, especially for `FileNotFoundException`.
+   - The splitting of the line uses a space as a delimiter, which may lead to incorrect parsing in a case where the CSV format uses commas.
+   - The `Role.valueOf(role)` method can throw an `IllegalArgumentException` for invalid role strings, and this should be handled gracefully.
+   - There are no checks for the potential number of parts split from the line, which can lead to `ArrayIndexOutOfBoundsException`.
+   - Overall, these factors result in this part not meeting the requirements, leading to a deduction of marks.
+
+3. The `writePlayersToFile` method has issues regarding the expected format of the output. It uses spaces instead of commas to separate values, which does not align with the expected CSV format. Moreover, it does not account for potential exceptions that can occur during file writing, so this part does not meet the requirements, resulting in lost marks.
+
+4. The `updatePlayerStats` method has a critical flaw in checking for player names, using `==` for string comparison instead of `.equals()`. This will fail to correctly compare the content of the strings and throw a false negative. This part does not meet the requirements and loses marks accordingly.
+
+5. The `calculateTeamAverageRuns` method similarly uses `==` for string comparison instead of `.equals()`, potentially leading to erroneous comparisons. Additionally, it does not correctly check if any players belong to the specified team, incorrectly throwing an exception even if players exist. This part also does not meet the requirements, resulting in lost marks.
+
+6. The `filter` method in the `TeamFilterStrategy` class contains the same issue with string comparison using `==`, which will not correctly filter players by team and results in missed functionality in this method.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented. It efficiently checks for both runs and wickets against the criteria, identifying all-rounders and earning full marks for this functionality.
+
+Overall, the student has shown a solid understanding of some elements of functionality, particularly with the `RunsComparator` and `AllRounderStatsFilter` classes. However, there are significant issues with file handling methods, string comparisons, and adhering to the expected CSV format for both input and output. The student could improve by focusing on exception handling, correct string comparison methods, and implementing line parsing that aligns with the CSV format.

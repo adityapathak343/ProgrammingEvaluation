@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. The logic is sound and adheres to the requirements of returning negative, positive, or zero values based on the comparison.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is well-structured. It correctly initializes a list, reads from the file, and processes each line to create `Player` objects. However, it lacks error handling for the case where the file is not found, as it only prints "File Not Found" without throwing an exception or handling it further. It would be better to throw the `FileNotFoundException` after logging the message.
+
+3. The `writePlayersToFile` method has a critical error in the way it writes player data. It mistakenly writes the `wicketsTaken` value twice instead of writing the `teamName`. This will lead to incorrect data being saved in the output file.
+
+4. The `updatePlayerStats` method is implemented correctly. It iterates through the list of players, checks for a match by name, and updates the runs and wickets accordingly. The exception handling for a player not found is also correctly implemented.
+
+5. The `calculateTeamAverageRuns` method does not handle the case where no players from the specified team are found. It should throw an `IllegalArgumentException` if `playerNo` remains zero after the loop, to prevent division by zero. This is a critical oversight.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates a new list for players matching the specified team and returns it as expected.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also correctly implemented. It checks for the role of the player and the criteria for runs and wickets, adding matching players to the list.
+
+8. The constructor in the `Player` class is properly defined and initializes all the properties accurately.
+
+The student's performance shows a good understanding of the requirements and implementation of the methods. However, there are critical issues in the `writePlayersToFile` and `calculateTeamAverageRuns` methods that need to be addressed for the code to function correctly. Overall, the student demonstrates a solid grasp of Java and object-oriented programming principles, but attention to detail in error handling and data integrity is necessary for improvement.

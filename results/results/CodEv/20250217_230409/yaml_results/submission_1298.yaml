@@ -1,0 +1,50 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0.3
+    compare: 0
+    readPlayersFromFile: 1.2
+    teamFilter: 0
+    updatePlayerStats: 0.3
+    writePlayersToFile: 0.3
+  total_score_variance: 7.5
+function_scores:
+  allRounderFilter:
+    feedback: The filter method is not implemented at all.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: The method does not correctly filter players by team or calculate the
+      average runs. The logic for checking team names is incorrect.
+    max_score: 5
+    score: 1
+  compare:
+    feedback: The compare method is incorrectly implemented. The syntax for accessing
+      player runs is incorrect. Use p1.getRunsScored() and p2.getRunsScored() instead.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The method initializes a list and attempts to read from a file, but
+      it does not correctly handle reading lines or creating Player objects. The logic
+      for reading lines and splitting them is missing.
+    max_score: 9
+    score: 2
+  teamFilter:
+    feedback: The filter method is not implemented at all.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: The method does not correctly iterate through the players list or update
+      the player's stats. The logic for checking player names is incorrect.
+    max_score: 5
+    score: 1
+  writePlayersToFile:
+    feedback: The method attempts to write player data but does not iterate through
+      the players list correctly. The output format is not properly implemented.
+    max_score: 4
+    score: 1
+overall_feedback: The code has several incomplete methods and incorrect implementations.
+  Focus on correctly implementing the logic for reading, writing, and filtering player
+  data.
+total_score: 5

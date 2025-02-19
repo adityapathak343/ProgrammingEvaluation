@@ -1,0 +1,47 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0.2
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0.2
+    teamFilter: 0
+    updatePlayerStats: 0.2
+    writePlayersToFile: 0
+  total_score_variance: 0.8
+function_scores:
+  allRounderFilter:
+    feedback: Logic is incorrect. Needs proper checks for role and stats.
+    max_score: 5
+    score: 1
+  calculateTeamAverageRuns:
+    feedback: Partially implemented. Issues with filtering players and calculating
+      average.
+    max_score: 5
+    score: 2
+  compare:
+    feedback: Correctly implemented the comparison logic for runs.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: Partially implemented. Issues with reading lines and creating Player
+      objects.
+    max_score: 9
+    score: 3
+  teamFilter:
+    feedback: Partially implemented. Issues with iteration and adding players to the
+      list.
+    max_score: 5
+    score: 2
+  updatePlayerStats:
+    feedback: Logic is incorrect. Needs proper iteration and updating of player stats.
+    max_score: 5
+    score: 1
+  writePlayersToFile:
+    feedback: Method not implemented.
+    max_score: 4
+    score: 0
+overall_feedback: The implementation shows some understanding of the requirements,
+  but there are significant issues in several methods that need to be addressed for
+  full functionality.
+total_score: 11

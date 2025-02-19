@@ -1,0 +1,23 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, which is good.
+
+2. In the `readPlayersFromFile` method, there are several issues:
+   - The method attempts to use `Open` and `Close` methods which do not exist in Java. Instead, it should use `BufferedReader` and `FileReader` correctly without those calls. The `Open` and `Close` should be removed entirely.
+   - The line reading logic is incorrect. The `readLine()` method should be called on the `reader` object, and the line should be checked for null before processing.
+   - The parsing of the line into player attributes is incorrect. The `String.parseString` and `Role.parseString` methods do not exist. Instead, the line should be split using `String.split(",")` and the appropriate values should be parsed from the resulting array.
+   - The `Integer.parseint` should be `Integer.parseInt` (case sensitivity issue).
+   - The `line = reader.readline() != null` should be corrected to ensure that `line` is initialized properly before checking for null.
+
+3. The `writePlayersToFile` method is not implemented at all, which is a significant omission.
+
+4. In the `updatePlayerStats` method, the use of `Iterator` is incorrect. The `Iterator` should be instantiated properly, and the `next()` method should be called only once per iteration. The current implementation calls `next()` multiple times, which will skip players.
+
+5. The `calculateTeamAverageRuns` method has multiple issues:
+   - The method incorrectly uses `getteamName()` instead of `getTeamName()`, which will lead to a compilation error.
+   - The `IllegalArgumentException` should be thrown with a message for clarity.
+   - The logic for filtering players and calculating the average runs is convoluted and contains errors in the use of iterators.
+
+6. In the `filter` method of `TeamFilterStrategy`, the `next()` method is incorrectly called without parentheses, which will lead to a compilation error. The method should also use `getTeamName()` instead of `getteamName()`.
+
+7. The `filter` method in `AllRounderStatsFilter` has similar issues with the use of `next()` and should also check if the player is an all-rounder before adding them to the list.
+
+Overall, the student's performance shows a basic understanding of Java and object-oriented programming concepts, but there are significant issues with syntax, method implementations, and logic that need to be addressed for the code to compile and function correctly. The student should focus on understanding Java's syntax and the proper use of iterators and file handling.

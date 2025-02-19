@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class has a logical error. It currently returns `-1` for both cases where `p1` has more runs and where `p1` has fewer runs, which is incorrect. It should return `1` when `p1` has fewer runs than `p2` to indicate that `p2` should come before `p1` in descending order. The correct implementation should return `-1` if `p1` has more runs, `1` if `p1` has fewer runs, and `0` if they have the same number of runs.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is not implemented at all. This method is crucial for reading player data from a file, and without it, the program cannot function as intended.
+
+3. The `writePlayersToFile` method is also not implemented. This method is necessary for writing the updated player data back to a file, which is a key requirement of the assignment.
+
+4. The `updatePlayerStats` method is not implemented. This method is essential for updating the statistics of players, and its absence means that player stats cannot be modified as required.
+
+5. The `calculateTeamAverageRuns` method is not implemented. This method is important for calculating the average runs of players in a specific team, and without it, the program cannot provide team statistics.
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented. This method is necessary for filtering players by their team, which is a required functionality.
+
+7. The `filter` method in the `AllRounderStatsFilter` class contains several issues. It attempts to declare variables `min` and `max` without initialization, and it includes incorrect syntax for creating a list. Additionally, the logic for filtering players is incomplete and does not follow the required steps. Moreover, the return statement for the filtered list is incorrect.
+
+8. The overall performance of the student is significantly lacking as none of the required methods are implemented, and there are critical logical errors in the provided code. 
+
+9. The submission does not meet the expectations set by the rubric, resulting in a poor evaluation.

@@ -1,0 +1,50 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0.2
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.2
+function_scores:
+  allRounderFilter:
+    feedback: The method attempts to filter all-rounders but contains syntax errors
+      and does not correctly check player roles.
+    max_score: 5
+    score: 2
+  calculateTeamAverageRuns:
+    feedback: The method attempts to calculate the average but contains errors in
+      iterating through players and calculating the average.
+    max_score: 5
+    score: 2
+  compare:
+    feedback: The compare method correctly implements the logic for comparing runs
+      in descending order.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: The method initializes the list and attempts to read from the file,
+      but contains errors in reading lines and creating Player objects.
+    max_score: 9
+    score: 3
+  teamFilter:
+    feedback: The method attempts to filter players by team but contains syntax errors
+      and does not correctly iterate through the list.
+    max_score: 5
+    score: 2
+  updatePlayerStats:
+    feedback: The method attempts to update player stats but contains syntax errors
+      and does not throw an exception if the player is not found.
+    max_score: 5
+    score: 2
+  writePlayersToFile:
+    feedback: The method is not implemented.
+    max_score: 4
+    score: 0
+overall_feedback: The code demonstrates an understanding of the required functionalities
+  but contains multiple syntax errors and incomplete implementations. Focus on correcting
+  these issues and completing the missing methods.
+total_score: 13

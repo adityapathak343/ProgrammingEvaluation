@@ -1,0 +1,46 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0.2
+    writePlayersToFile: 0
+  total_score_variance: 0.2
+function_scores:
+  allRounderFilter:
+    feedback: The filter method is not implemented.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: The method contains syntax errors and does not correctly calculate the
+      average runs.
+    max_score: 5
+    score: 0
+  compare:
+    feedback: The compare method is not implemented.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The readPlayersFromFile method is incomplete and contains syntax errors.
+    max_score: 9
+    score: 0
+  teamFilter:
+    feedback: The filter method works but uses '==' for string comparison instead
+      of '.equals()'.
+    max_score: 5
+    score: 3
+  updatePlayerStats:
+    feedback: The method updates player stats but does not throw an exception if the
+      player is not found.
+    max_score: 5
+    score: 3
+  writePlayersToFile:
+    feedback: The writePlayersToFile method is not implemented.
+    max_score: 4
+    score: 0
+overall_feedback: The code has multiple incomplete methods and syntax errors. Focus
+  on implementing the required methods correctly and ensure proper error handling.
+total_score: 6

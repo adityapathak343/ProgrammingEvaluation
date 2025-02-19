@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, which is accurate. (2/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is incomplete. While it initializes a list, the actual implementation has a significant issue: the `str` array is declared but not initialized, leading to a potential `NullPointerException`. The reading from the file is also not effectively handled, as it does not create `Player` objects based on the read data. However, the student correctly attempts to read data from the file. (2/9 marks)
+
+3. The `writePlayersToFile` method is not implemented at all, which is a significant omission. This method is crucial for writing player data back to a file, and without it, the functionality of the application is incomplete. (0/4 marks)
+
+4. The `updatePlayerStats` method is not implemented, which is another critical functionality that is missing. This method is essential for updating player statistics based on the provided parameters. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method is also not implemented, which is necessary for calculating the average runs of players in a specific team. This omission affects the overall functionality of the application. (0/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented, which is required for filtering players by their team. This is a key feature of the application that is missing. (0/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is not implemented, which is necessary for filtering all-rounders based on their statistics. This is another critical functionality that is absent. (0/5 marks)
+
+The evaluation indicates that the student's performance shows a good understanding of the `compare` method, but the majority of the required methods are either incomplete or not implemented at all. This significantly impacts the overall functionality of the application, resulting in a low score. The student should focus on completing the remaining methods to fulfill the requirements of the assignment. 
+
+Total score: 4/35 marks.

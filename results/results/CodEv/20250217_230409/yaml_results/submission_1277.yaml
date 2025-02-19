@@ -1,0 +1,51 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0.3
+    compare: 0.3
+    readPlayersFromFile: 0.3
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 2.3
+function_scores:
+  allRounderFilter:
+    feedback: The method correctly filters all-rounders based on the specified criteria.
+    max_score: 5
+    score: 5
+  calculateTeamAverageRuns:
+    feedback: The method calculates the average runs but does not handle the case
+      where no players belong to the specified team, which should throw an IllegalArgumentException.
+    max_score: 5
+    score: 3
+  compare:
+    feedback: The compare method does not return the correct values for descending
+      order. It should return a negative value if the first player has more runs,
+      a positive value if the second player has more runs, or zero if they have the
+      same number of runs.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The method correctly reads player data from the file but does not handle
+      the case where the file does not exist properly. It also does not return an
+      empty list if the file is empty.
+    max_score: 9
+    score: 7
+  teamFilter:
+    feedback: The method correctly filters players by team.
+    max_score: 5
+    score: 5
+  updatePlayerStats:
+    feedback: The method updates player statistics correctly but does not throw an
+      IllegalArgumentException if no player matches the given name.
+    max_score: 5
+    score: 4
+  writePlayersToFile:
+    feedback: The method correctly writes player data to the file in the required
+      format.
+    max_score: 4
+    score: 4
+overall_feedback: The implementation is mostly correct but has some issues with error
+  handling and the compare method logic. Focus on improving these areas.
+total_score: 28

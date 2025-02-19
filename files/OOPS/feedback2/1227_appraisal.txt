@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, which is accurate. (2/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is mostly correct. However, it does not handle the case in which the `Scanner` is created after catching the `FileNotFoundException`, which will lead to a potential `NullPointerException` when calling `inputStream.nextLine()`. It should also throw an `IOException` instead of just printing a message, as it does not handle further exceptions outside the scope of this method. (6/9 marks)
+
+3. The `writePlayersToFile` method is mostly correct, but it does not close the `PrintWriter` after writing to the file, which can lead to resource leaks. It also lacks exception handling for the case where the `PrintWriter` cannot be created. (2/4 marks)
+
+4. The `updatePlayerStats` method is correctly implemented, but it does not throw an `IllegalArgumentException` if no player matches the given name, which is required by the specifications. (4/5 marks)
+
+5. The `calculateTeamAverageRuns` method has a logical flaw. It attempts to calculate the average runs without checking if `playerNum` is zero, which would lead to a division by zero error. The method should throw an `IllegalArgumentException` if no players from the specified team are found, instead of attempting to compute the average when `playerNum` is zero. (2/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented and effectively filters players by their team name. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented, checking both runs and wickets against the criteria and returning the appropriate list of players. (5/5 marks)
+
+The student has demonstrated a good understanding of the required functionalities, but there are several critical issues, particularly with exception handling and resource management. Overall, the submission shows promise but requires attention to detail in error handling and resource management to meet the specifications fully.

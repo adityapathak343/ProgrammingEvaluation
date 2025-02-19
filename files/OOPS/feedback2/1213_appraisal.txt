@@ -1,0 +1,19 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is mostly correct. It creates a list, opens the file, skips the header, reads player data, and adds players to the list. However, it does not handle the case where the file might not contain any data after the header, which could lead to an `ArrayIndexOutOfBoundsException` when accessing `lineData`. This oversight results in a loss of marks.
+
+3. The `writePlayersToFile` method is well-implemented. It prepares to write to the file, writes the header, and iterates through the player list to write each player's details correctly. This part earns full marks.
+
+4. The `updatePlayerStats` method is partially correct. It correctly updates the player's runs and wickets if a match is found. However, it fails to throw an `IllegalArgumentException` if no player matches the given name, which is a requirement. This results in a loss of marks.
+
+5. The `calculateTeamAverageRuns` method is mostly correct but lacks the necessary check for an empty list of players for the specified team. If no players are found, it should throw an `IllegalArgumentException`, which is a requirement. This oversight results in a loss of marks.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates a list of players matching the specified team name and returns it, earning full marks.
+
+7. The `filter` method in the `AllRounderStatsFilter` class contains a logical error in the condition used to check if a player meets the criteria. The use of the bitwise OR operator (`|`) instead of the logical OR operator (`||`) is incorrect. This mistake results in a loss of marks.
+
+8. The implementation of the `readPlayersFromFile` method does not handle the case of potentially throwing an `ArrayIndexOutOfBoundsException` if any player data is missing fields. This is an important detail primarily because it shows that the student might not be adequately validating input data, which is crucial in robust programming.
+
+9. In the `calculateTeamAverageRuns` method, if the calculated average runs is `NaN` (which would occur if `total_players` equals zero), the method should handle this case and throw an `IllegalArgumentException`. This is another missed check that warrants attention. 
+
+10. Overall, the student demonstrated a good understanding of the requirements and implemented most methods correctly. However, there were critical oversights in error handling and logical conditions that affected the overall performance. The student should focus on edge cases and proper exception handling in future submissions.

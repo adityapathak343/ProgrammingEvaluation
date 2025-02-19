@@ -1,0 +1,48 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0.2
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.2
+function_scores:
+  allRounderFilter:
+    feedback: The filter method is not implemented.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: The method correctly calculates the average runs for the specified team.
+    max_score: 5
+    score: 5
+  compare:
+    feedback: The compare method is incorrectly defined with an extra method declaration
+      inside it.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The method reads the file but has issues with splitting the line and
+      creating Player objects.
+    max_score: 9
+    score: 5
+  teamFilter:
+    feedback: The filter method is incomplete and does not return the filtered list.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: The method correctly updates player statistics and handles exceptions
+      properly.
+    max_score: 5
+    score: 5
+  writePlayersToFile:
+    feedback: The method lacks proper exception handling and is missing a call to
+      close the BufferedWriter.
+    max_score: 4
+    score: 2
+overall_feedback: The implementation has several incomplete methods and issues with
+  the compare method. Focus on completing the filtering methods and fixing the readPlayersFromFile
+  method.
+total_score: 17

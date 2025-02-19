@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is not implemented. This is essential for sorting players based on their runs, and without it, the sorting functionality will not work. (2 marks)
+
+2. In the `readPlayersFromFile` method, the code attempts to read player data but does not correctly parse the lines into `Player` objects. The line `PlayerDetails.add(Player);` is incorrect as it tries to add the class type instead of an instance. Additionally, the method does not handle the steps outlined in the rubric, such as ignoring the first line and splitting the line into player attributes. (9 marks)
+
+3. The `writePlayersToFile` method does not correctly implement the file writing logic. It uses `out.print(players);`, which will not format the player data correctly. The method also does not include writing the column names or iterating through the player list to write each player's details. (4 marks)
+
+4. The `updatePlayerStats` method is incomplete. It does not iterate through the list of players to find the matching player and update their stats. Instead, it incorrectly assigns values to the class fields directly. This method needs to follow the steps outlined in the rubric to function correctly. (5 marks)
+
+5. The `calculateTeamAverageRuns` method is not implemented at all. It needs to filter players by team, calculate total runs, and compute the average, as specified in the rubric. (5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented. This method should create a list of players matching the specified team name, but it currently lacks any logic. (5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented. This method should filter all-rounders based on the provided criteria for runs and wickets, but it is currently empty. (5 marks)
+
+8. Overall, the class `Player` and enum `Role` are well structured and provide a good foundation for handling player data. The method `toCsvFormat` in `Player` is a good addition for CSV writing, although it is not utilized in the provided methods. Points for this could be noted as a positive aspect. (0 marks)
+
+The student's submission is incomplete and does not implement the required functionalities as specified in the rubric. There are significant gaps in the logic and structure of the methods, leading to a failure to compile and run the program successfully. Overall, the student needs to focus on correctly implementing the methods and following the rubric's guidelines to achieve a passing grade.

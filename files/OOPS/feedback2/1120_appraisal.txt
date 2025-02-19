@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, which is correct. (2/2 marks)
+
+2. In the `readPlayersFromFile` method, the student has created an empty list but fails to properly read player data from the file. The line `player.add(sc.nextLine());` is incorrect because it attempts to add a `String` instead of a `Player` object. The method also does not split the line into player attributes or create `Player` objects. (3/9 marks)
+
+3. The `writePlayersToFile` method is incomplete. The student has not implemented the logic to write player details to the file. The column names are written, but the player data is not processed or written, which is necessary for this method. (1/4 marks)
+
+4. The `updatePlayerStats` method is not implemented correctly. The student has incomplete logic and syntax errors, such as `if(player.nextLine==)` and `player.getRunsScored=`. The method does not iterate through the player list correctly or update the stats as required. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method is incomplete and contains errors. The student attempts to use `player.hasNext()` and `player.getRunsScored`, which are not valid in this context. The logic to filter players by team and calculate the average is missing. (0/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented. The student has not created the logic to filter players by team name, which is required. (0/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented. The student has not provided any logic to filter all-rounders based on the given criteria. (0/5 marks)
+
+The student's performance shows a basic understanding of some concepts, particularly in the `RunsComparator` class. However, the majority of the methods are incomplete or contain significant errors, leading to a low overall score. The student needs to focus on implementing the required logic and handling data correctly in future submissions.

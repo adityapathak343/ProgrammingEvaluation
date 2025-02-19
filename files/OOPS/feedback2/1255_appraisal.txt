@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. The logic is sound and adheres to the requirements. (2/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is incomplete. While it initializes the list and attempts to read from the file, it does not add the created `Player` objects to the `players` list, nor does it close the `Scanner` object. This results in a failure to return the list of players. (4/9 marks)
+
+3. The `writePlayersToFile` method is mostly correct, but it opens the file in append mode (`FileOutputStream(fileName, true)`), which is not appropriate for writing the entire player list. It should open the file in overwrite mode. Additionally, there is no error handling for the `PrintWriter` object. (2/4 marks)
+
+4. The `updatePlayerStats` method correctly updates the player's statistics and throws an `IllegalArgumentException` if no player matches the given name. However, it uses `==` for string comparison instead of `.equals()`, which can lead to incorrect behavior. (3/5 marks)
+
+5. The `calculateTeamAverageRuns` method is well-structured, but it does not handle the case where the filtered list is empty before calculating the average, which could lead to a division by zero error. (3/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class has a logic error. It incorrectly breaks the loop after finding the first matching player instead of adding all matching players to the list. It also throws an exception if no players match, which is not necessary as the method should return an empty list instead. (2/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class has a similar issue; it returns prematurely after checking the first player. It should iterate through all players and only return after the loop completes. (2/5 marks)
+
+8. The handling of the PrintWriter in `writePlayersToFile` can be improved by adding a check if the PrintWriter was successfully created before trying to close it, to avoid a potential NullPointerException. (Added point)
+
+The student's performance shows a good understanding of the concepts but has several critical implementation issues, particularly with incomplete methods and logic errors. The student should focus on ensuring that all parts of the methods are correctly implemented and that they handle edge cases appropriately.

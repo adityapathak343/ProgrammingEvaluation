@@ -1,0 +1,21 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs in descending order. It returns a negative value if the first player has more runs, which is appropriate. (2/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is incomplete and contains syntax errors. The variable `name` is declared but not used correctly, and the logic for reading lines and creating `Player` objects is missing. This method does not fulfill any of the required steps. (0/9 marks)
+
+3. The `writePlayersToFile` method is not implemented at all, which means it does not meet any of the requirements outlined in the rubric. (0/4 marks)
+
+4. The `updatePlayerStats` method has several issues. The comparison of player names should use `.equals()` instead of `==`, and the exception handling is incorrectly structured. The method does not throw an `IllegalArgumentException` if no player matches the name. (1/5 marks)
+
+5. The `calculateTeamAverageRuns` method is not implemented, which means it does not meet any of the requirements outlined in the rubric. (0/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is incomplete. It does not return the list of players and has a missing closing brace. The comparison of team names should also use `.equals()`. (1/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is not implemented at all, which means it does not meet any of the requirements outlined in the rubric. (0/5 marks)
+
+8. The overall performance shows a mix of correct and incorrect implementations. The `compare` method is well-implemented; however, the majority of other methods are either incomplete or contain significant errors, leading to a low overall score. The student needs to focus on completing the methods and ensuring proper syntax and logic in their implementations. 
+
+9. The student should also handle `IOException` properly when reading the file instead of hardcoding the file name in the `readPlayersFromFile` method. It is important to make the method generic to handle various input files, adhering to the requirements outlined in the project description. 
+
+10. It's notable that the student has shown a good understanding of object-oriented principles by creating the `Player` class and the relevant methods therein. Significant progress can be made if the remaining methods are completed thoughtfully.
+
+Final conclusions: The student has demonstrated the ability to implement parts of the object-oriented design but needs to focus on completing functional parts of the program, proper error handling, logical checks, and ensuring the return of correct data types and structures. The incomplete methods significantly affect the overall score as many key functionalities are left out. The current appraisal results in a low score but recognizes potential for improvement.

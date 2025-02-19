@@ -1,0 +1,22 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. In the `readPlayersFromFile` method, the code attempts to read player data from a file. However, there are several issues:
+   - The `role`, `runsScored`, and `wicketsTaken` variables are assigned directly from the string array without converting them to the appropriate types. The `role` should be converted using `Role.fromString(allInfo[2])`, and `runsScored` and `wicketsTaken` should be parsed as integers using `Integer.parseInt(allInfo[3])` and `Integer.parseInt(allInfo[4])`, respectively. This results in type incompatibility errors.
+   - The method does not handle the case where the file might not exist or is empty properly, which could lead to runtime exceptions.
+
+3. The `writePlayersToFile` method is mostly correct, but it lacks error handling for the file writing process. It should also ensure that the column names are written correctly, which is not clear from the provided code.
+
+4. In the `updatePlayerStats` method, the comparison of player names uses `==`, which checks for reference equality instead of value equality. It should use `.equals(playerName)` instead. Additionally, the exception throwing syntax is incorrect; it should be `throw new IllegalArgumentException();`.
+
+5. The `calculateTeamAverageRuns` method has the same issue with string comparison as the previous method. It should use `.equals(teamName)` for comparing team names. The exception throwing syntax is also incorrect here.
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented at all, which means it does not fulfill the requirements of the task.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented, which means it does not fulfill the requirements of the task.
+
+Overall, the student has made a good attempt at implementing the required functionalities, particularly in the `RunsComparator` and `writePlayersToFile` methods. However, there are significant issues in type handling, string comparisons, and missing implementations that need to be addressed for the code to compile and function correctly. The student should focus on correcting type conversions, implementing missing methods, and ensuring proper exception handling. 
+
+**Additional Notes:**
+- The code does not include any user prompts or messages that clarify what operations are being performed or any errors that occur during execution. Adding such user-friendly messages would enhance the usability of the application.
+- Close attention should be given to ensure proper resource management by using try-with-resources for file handling.
+- Overall, code clarity can be improved with better comments and possibly breaking down complex operations into smaller methods to enhance readability and maintainability.

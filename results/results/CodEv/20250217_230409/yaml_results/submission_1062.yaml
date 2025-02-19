@@ -1,0 +1,44 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 1.5
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 1.5
+function_scores:
+  allRounderFilter:
+    feedback: The method does not check if the player is an all-rounder before filtering.
+    max_score: 5
+    score: 2
+  calculateTeamAverageRuns:
+    feedback: The method correctly calculates the average runs for a team.
+    max_score: 5
+    score: 5
+  compare:
+    feedback: The compare method does not return values in descending order as required.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The method correctly implements all steps for reading players from a
+      file.
+    max_score: 9
+    score: 9
+  teamFilter:
+    feedback: The method correctly filters players by team.
+    max_score: 5
+    score: 5
+  updatePlayerStats:
+    feedback: The method correctly updates player statistics as required.
+    max_score: 5
+    score: 5
+  writePlayersToFile:
+    feedback: The method correctly implements all steps for writing players to a file.
+    max_score: 4
+    score: 4
+overall_feedback: The implementation is mostly correct, with some issues in the compare
+  method and all-rounder filtering.
+total_score: 30

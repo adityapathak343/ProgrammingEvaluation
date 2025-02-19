@@ -1,0 +1,23 @@
+1. The `compare` method in the `RunsComparator` class has improved, but it still lacks the condition to return `0` when both players have the same number of runs. This is essential for proper comparison.
+
+2. The `readPlayersFromFile` method now has a partly structured attempt for reading player data, but it still contains logical errors:
+   - The `Role` variable is never assigned a value which will lead to a `NullPointerException` when creating a `Player` object.
+   - The splitting of the line into player attributes is not correctly implemented, which could lead to misreading the input data.
+   - The use of `nextLine()` after `nextInt()` can lead to skipping important input due to the way `Scanner` handles line breaks.
+
+3. The `writePlayersToFile` method has significant issues:
+   - The `PrintWriter` is set to write into the input file instead of the output file, which is an incorrect implementation.
+   - There are syntax errors in the `println` statement and in accessing player details, which should use getter methods instead. The current method attempts to access the fields directly, which will lead to errors.
+
+4. The `updatePlayerStats` method contains several logical errors:
+   - The code incorrectly compares a `Player` object with a `String` using `i.equals(playerName)`. Instead, it should be comparing `i.getPlayerName()` with `playerName`.
+   - The way to update runs and wickets references incorrect syntax and does not use proper setter methods or direct field modification. 
+
+5. The `calculateTeamAverageRuns` method has not been implemented at all, which is a major omission in fulfilling the requirements of the assignment.
+
+6. The `filter` method in the `TeamFilterStrategy` class is incomplete and contains syntax errors:
+   - The structure to check for a player's team is not correctly implemented, leading to potential runtime errors.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also not implemented, which is a significant omission.
+
+The student's submission demonstrates an attempt to engage with the assignment but has several logical errors, missing implementations, and incorrect syntax that must be addressed to meet the requirements adequately. More attention to detail is necessary to ensure methods are correctly implemented and handle all cases as specified in the rubric.

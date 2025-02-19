@@ -1,0 +1,48 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0.2
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.2
+function_scores:
+  allRounderFilter:
+    feedback: Correctly implemented the filtering logic for all-rounders based on
+      criteria.
+    max_score: 5
+    score: 5
+  calculateTeamAverageRuns:
+    feedback: Partially implemented. Logic to calculate average runs is present, but
+      missing exception handling for no players found.
+    max_score: 5
+    score: 2
+  compare:
+    feedback: Correctly implemented the comparison logic for runs in descending order.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: Incomplete implementation. Missing logic to read player data, create
+      Player objects, and return the list.
+    max_score: 9
+    score: 0
+  teamFilter:
+    feedback: Correctly implemented the filtering logic for players by team.
+    max_score: 5
+    score: 5
+  updatePlayerStats:
+    feedback: Partially implemented. Logic to update stats is correct, but exception
+      handling for player not found is incorrect.
+    max_score: 5
+    score: 3
+  writePlayersToFile:
+    feedback: Incomplete implementation. Missing logic to write player data to the
+      file.
+    max_score: 4
+    score: 0
+overall_feedback: The implementation shows a good understanding of the requirements,
+  but several methods are incomplete or have issues that need to be addressed.
+total_score: 17

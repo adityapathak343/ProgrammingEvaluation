@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. This part is correct and earns full marks.
+
+2. In the `readPlayersFromFile` method, the declaration of `PlayerList` should use `ArrayList<Player>` instead of `List<Player>`. Additionally, the method attempts to call `Role(StringArray[1])`, which is incorrect; it should call `Role.fromString(StringArray[1])`. The `br.close()` statement is incorrectly placed inside the loop, which will cause the method to close the reader prematurely. The return statement is also incorrectly placed inside the loop, which will cause the method to return after reading only one player. These issues result in compilation errors and incorrect logic.
+
+3. The `writePlayersToFile` method has similar issues. The declaration of `writer` should use `new FileWriter(fileName)` instead of `new FileWriter(filename)`. The line `writer.write("PlayerName,Role,RunsScored,WicketsTaken,TeamName")` is missing a semicolon at the end. The method also incorrectly throws `IOExcepion` instead of `IOException`. These errors will prevent the code from compiling.
+
+4. The `updatePlayerStats` method is correctly implemented and updates the player's statistics as required. This part is correct and earns full marks.
+
+5. In the `calculateTeamAverageRuns` method, the variable `TeamPlayers` is used before it is declared, leading to a compilation error. The filtering logic should be done using the `filter` method, but it is incorrectly implemented. The method also has duplicate code for calculating total runs, which is unnecessary. These issues need to be addressed for the method to function correctly.
+
+6. The `filter` method in the `TeamFilterStrategy` class incorrectly declares `emptylist` as `List<Player> empylist=new List<>();`, which should be `List<Player> emptylist = new ArrayList<>();`. This will cause a compilation error. The method logic is otherwise correct.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented to filter players based on the criteria provided. This part is correct and earns full marks.
+
+8. The code submission demonstrates a good understanding of object-oriented principles and the functionality of the application as required by the prompt. The use of interfaces and functional programming concepts in filtering strategies aligns with modern Java practices. 
+
+Overall, the student has demonstrated a good understanding of the required functionalities, but there are several critical compilation errors and logical issues in the code that need to be addressed. The student should focus on correcting the syntax errors, ensuring proper method calls, and improving the overall structure of the code.

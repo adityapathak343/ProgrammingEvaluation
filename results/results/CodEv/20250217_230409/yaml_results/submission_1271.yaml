@@ -1,0 +1,49 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0.2
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.2
+function_scores:
+  allRounderFilter:
+    feedback: Incorrect handling of player role check and syntax errors.
+    max_score: 5
+    score: 1
+  calculateTeamAverageRuns:
+    feedback: Logic is mostly correct, but incorrect handling of the filtered list
+      and division by zero potential.
+    max_score: 5
+    score: 3
+  compare:
+    feedback: Syntax errors in the compare method. Use parentheses for method calls
+      and correct the if-else structure.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: File reading logic is mostly correct, but missing exception handling
+      for player creation and incorrect data type handling.
+    max_score: 9
+    score: 5
+  teamFilter:
+    feedback: Incorrect use of iterator and missing exception handling.
+    max_score: 5
+    score: 2
+  updatePlayerStats:
+    feedback: Logic is mostly correct, but incorrect use of iterator and missing exception
+      handling for player not found.
+    max_score: 5
+    score: 2
+  writePlayersToFile:
+    feedback: Syntax errors in the PrintWriter initialization and missing exception
+      handling.
+    max_score: 4
+    score: 2
+overall_feedback: The code contains several syntax errors and logical issues that
+  need to be addressed. Focus on correcting method implementations and ensuring proper
+  exception handling.
+total_score: 15

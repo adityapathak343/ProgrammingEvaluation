@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is not implemented. This is essential for sorting players based on their runs, and without it, the sorting functionality will not work. (2 marks)
+
+2. In the `readPlayersFromFile` method, while the student attempts to create an input stream, the logic for reading lines and creating `Player` objects is incomplete and lacks necessary error handling. Specifically, the initialization of the `PlayersFILE` list is not used to store player details as required. The entire reading and parsing logic should be redone to ensure player details are correctly added to a list. (9 marks)
+
+3. The `writePlayersToFile` method is incomplete. The student initializes a `PrintWriter`, but does not write the column names or player details to the file. This method needs to be fully implemented to fulfill its purpose. (4 marks)
+
+4. The `updatePlayerStats` method is not implemented. This method is crucial for updating player statistics and must be completed to ensure the application functions correctly. (5 marks)
+
+5. The `calculateTeamAverageRuns` method is also not implemented. This method is necessary for calculating the average runs of players in a specific team and needs to be completed. (5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented. This method is essential for filtering players by their team and must be completed. (5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is not implemented. This method is necessary for filtering all-rounders based on their statistics and must be completed. (5 marks)
+
+8. The submission lacks comprehensive error handling and input validation, which can lead to runtime exceptions during file operations or when processing player data. Students should ensure robust handling of potential errors. 
+
+The student's submission is incomplete, with all required methods either not implemented or lacking essential logic. This significantly impacts the functionality of the application, resulting in a poor performance overall.

@@ -1,0 +1,44 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0
+function_scores:
+  allRounderFilter:
+    feedback: The allRounderFilter method is not implemented.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: The calculateTeamAverageRuns method is incomplete and contains errors.
+    max_score: 5
+    score: 0
+  compare:
+    feedback: The compare method is not implemented.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The readPlayersFromFile method is incomplete and contains errors.
+    max_score: 9
+    score: 0
+  teamFilter:
+    feedback: The teamFilter method is incomplete and contains errors.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: The updatePlayerStats method has logic errors and does not throw an
+      exception correctly.
+    max_score: 5
+    score: 3
+  writePlayersToFile:
+    feedback: The writePlayersToFile method is incomplete and contains errors.
+    max_score: 4
+    score: 0
+overall_feedback: The code submission is incomplete and contains multiple errors.
+  Key methods are not implemented or have significant issues that need to be addressed.
+total_score: 3

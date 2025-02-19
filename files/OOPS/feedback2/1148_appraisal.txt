@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, fulfilling the requirements of Question 1. (2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is incomplete. The code does not properly read the file, ignore the first line, or parse player data into `Player` objects. The use of `StringTokenizer` is partially implemented but does not successfully create `Player` instances. The method does not return a list of players as required, indicating that substantial work is needed. (0 marks)
+
+3. The `writePlayersToFile` method is not implemented at all, which means it does not fulfill any of the requirements for Question 3. (0 marks)
+
+4. The `updatePlayerStats` method is correctly implemented. It iterates through the list of players, updates the runs and wickets for the specified player, and throws an exception if the player is not found. This meets the requirements of Question 4. (5 marks)
+
+5. The `calculateTeamAverageRuns` method is mostly correct, but it throws an exception with the message "Player does not exist" instead of a more appropriate message indicating that no players from the specified team were found. This could lead to confusion. A better message would enhance clarity. (4 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates a list of players matching the specified team name and returns it as required by Question 6. (5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented. It filters players based on the criteria for runs and wickets and returns the matching players as required by Question 7. (5 marks)
+
+Overall, the student has demonstrated a good understanding of the requirements for some of the methods, particularly in the `RunsComparator`, `updatePlayerStats`, `TeamFilterStrategy`, and `AllRounderStatsFilter` classes. However, significant issues exist in the `readPlayersFromFile` and `writePlayersToFile` methods, which are incomplete. The handling of exceptions in `calculateTeamAverageRuns` could also be improved. The student should focus on completing the missing functionalities and ensuring clarity in exception messages.

@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is well-structured and follows the steps outlined in the question. It correctly reads player data from a file, creates `Player` objects, and adds them to a list. This implementation meets all the requirements, thus deserving full marks.
+
+3. The `writePlayersToFile` method has a significant issue. The output format is incorrect; it concatenates player details without any delimiters, which will lead to a malformed CSV file. It should use commas to separate the values, which would result in a loss of marks for this part. The correct implementation should utilize the `toCsvFormat()` method of the `Player` class for correct formatting.
+
+4. The `updatePlayerStats` method is correctly implemented. It iterates through the list of players, updates the runs and wickets as specified, and throws an exception if the player is not found. This part meets the requirements and earns full marks.
+
+5. The `calculateTeamAverageRuns` method is correctly implemented. It filters players by team, calculates the total runs, and computes the average. The exception handling for no players found is also correctly implemented, earning full marks.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates a new list for players matching the specified team and returns it as required, thus deserving full marks.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also correctly implemented. It checks for the role of the player and the criteria for runs and wickets, adding matching players to the list. This part meets the requirements and earns full marks.
+
+8. Overall, the student's performance is commendable, with most parts of the code correctly implemented. However, the `writePlayersToFile` method has a critical flaw in the output format, which affects the overall functionality. Overall, the student demonstrates a solid understanding of the concepts but needs to pay attention to detail in output formatting.

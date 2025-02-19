@@ -1,0 +1,49 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0.2
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.2
+function_scores:
+  allRounderFilter:
+    feedback: Successfully implemented the filtering logic for all-rounders based
+      on criteria.
+    max_score: 5
+    score: 5
+  calculateTeamAverageRuns:
+    feedback: Correctly filtered players and calculated average, but division should
+      be handled as a double to avoid integer division.
+    max_score: 5
+    score: 4
+  compare:
+    feedback: Correctly implemented the comparison logic for runs in descending order.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: Successfully implemented most steps, but the line splitting and reading
+      logic is incorrect. Use nextLine() and split() for proper parsing.
+    max_score: 9
+    score: 7
+  teamFilter:
+    feedback: Successfully implemented the filtering logic for players by team.
+    max_score: 5
+    score: 5
+  updatePlayerStats:
+    feedback: Logic for updating stats is mostly correct, but the exception is thrown
+      incorrectly inside the loop.
+    max_score: 5
+    score: 3
+  writePlayersToFile:
+    feedback: Wrote the column names correctly, but did not add new line after each
+      player's data.
+    max_score: 4
+    score: 3
+overall_feedback: The implementation is mostly correct with some minor issues in file
+  reading/writing and exception handling. Focus on improving the parsing logic and
+  ensuring proper output formatting.
+total_score: 29

@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. The logic is sound, and it returns the expected values for the comparison.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is incomplete. While it initializes the player list and opens the file, it does not properly parse the player data from the CSV file. The logic for extracting player details from the line is overly complex and does not create `Player` objects or add them to the list, which is a critical requirement. This section requires a complete implementation to fulfill the requirements.
+
+3. The `writePlayersToFile` method is correctly implemented. It prepares to write to the specified file, writes the column names, and iterates through the player list to write each player's details in the correct format.
+
+4. The `updatePlayerStats` method is mostly correct. It successfully finds the player and updates their runs and wickets. However, it does not handle the case where the player is not found properly, as it throws an `IllegalArgumentException` without a message, which could be improved for clarity.
+
+5. The `calculateTeamAverageRuns` method is well-implemented. It correctly filters players by team, checks for an empty list, calculates the total runs, and computes the average. The logic is clear and follows the requirements.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates a list for players matching the specified team and returns it after checking each player's team name.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also correctly implemented. It checks if players are all-rounders and meets the criteria for runs and wickets, adding them to the list as required.
+
+8. Overall, the student's performance shows a good understanding of Java and object-oriented programming principles. However, there are significant issues with the `readPlayersFromFile` method that need to be addressed for the code to function correctly. The extraction of player details could be streamlined by using a simpler approach, such as using the `String.split()` method to parse the CSV data, instead of manually iterating through the characters in the string. This would improve readability and maintainability. 
+
+9. The implementation demonstrates competence in implementing the required functionalities, but attention to detail and completeness in the implementation is necessary for full marks.

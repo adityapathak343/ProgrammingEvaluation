@@ -1,0 +1,15 @@
+1. The `compare` method in `RunsComparator` contains a typo where `o22` should be `o2`. This will result in a compilation error. The overall logic for comparing runs is mostly correct, but the code lacks a return statement for the case when both scores are equal (it should return 0). The correct implementation should return 0 explicitly after the comparison checks.
+
+2. In the `readPlayersFromFile` method, the instantiation of the list is incorrect. The line `List<Player> players=new List<player>();` should be `List<Player> players = new ArrayList<>();`. The usage of `Player` constructor is incorrect as it should be instantiated with parameters directly, instead of using setters after instantiation.
+
+3. The `setRole` method is being called with a `String` argument in `readPlayersFromFile`, but it expects a `Role` type. The line `p.setRole(s2);` should be updated to `p.setRole(Role.fromString(s2));` to correctly assign the role.
+
+4. The `writePlayersToFile` method includes an incorrect instantiation of `FileOutputStream`. The line `pw = new PrintWriter(new fileOutputstream("data.csv"));` has a typo and should be changed to `new FileOutputStream("data.csv")`. The `println` method incorrectly uses multiple string arguments instead of a formatted string.
+
+5. Inside the `calculateTeamAverageRuns` method, there is incorrect instantiation of `List<Player>`. The check `if(it.getTeamName==teamname)` is syntactically incorrect; it should call `getTeamName()` method instead and also ensure `teamName` should be passed correctly. The logic for calculating the average runs does not account for the fact that players from the specified team need to be filtered and summed before calculating the average.
+
+6. In the `TeamFilterStrategy` class, there is an incorrect instantiation similar to the previous points: `this.players = new List<Player>( readPlayersFromFile("InputCricketData.csv"));` should be corrected to an actual instantiation. The filtering logic lacks proper iteration and checking for team names, relying instead on incorrect calls.
+
+7. The `AllRounderStatsFilter` class is incomplete, lacking implementation of the filtering logic as required. The method should properly filter based on runs and wickets.
+
+The student's submission shows an understanding of object-oriented programming concepts, but significant fixes are needed for syntax and logical errors that impede compilation and functionality.

@@ -1,0 +1,36 @@
+1. The `compare` method in the `RunsComparator` class is incorrectly implemented. The method should compare the `runsScored` of the two `Player` objects passed as parameters, but instead, it creates new `Player` instances within the method. This is a fundamental error that prevents the method from functioning as intended. (0/2 marks)
+
+2. In the `readPlayersFromFile` method, there are multiple issues:
+   - The `BufferedReader` is declared but not used correctly; it should be used to read lines from the file.
+   - The `br.realine()` method call is incorrect and should be `br.readLine()` to ignore the first line.
+   - The `StringTokenizer` is incorrectly instantiated with `Sting` instead of `String`, and the syntax is incorrect.
+   - The variables `playerName`, `role`, `runsScored`, `wicketsTaken`, and `teamName` are not declared in the method scope, leading to compilation errors.
+   - The method does not return the list of players as required. (0/9 marks)
+
+3. The `writePlayersToFile` method has several syntax errors:
+   - The `PrintWriter` instantiation is incorrect; it should be `new PrintWriter(new FileOutputStream(fileName))`.
+   - The column names are not formatted correctly; there should be a newline character after the header.
+   - The method does not close the `PrintWriter` after writing, which can lead to resource leaks.
+   - The `toCsvFormat()` method is called incorrectly; it should be called on the `Player` object, not on the string representation of the player. (0/4 marks)
+
+4. The `updatePlayerStats` method has a logical error:
+   - The comparison `player.getPlayerName() == playerName` should use `.equals()` for string comparison in Java.
+   - The method does not throw an `IllegalArgumentException` if no player matches the given name, which is a requirement. (1/5 marks)
+
+5. In the `calculateTeamAverageRuns` method:
+   - The `getTeamName` method is incorrectly called without parentheses.
+   - The list is incorrectly initialized as `ArrrayList` instead of `ArrayList`.
+   - The sum calculation is incorrect; it should iterate over `newList` instead of `it`.
+   - The average calculation does not account for the actual number of players in `newList`, leading to potential division by zero. (0/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class has similar issues as in the previous methods:
+   - The `getTeamName` method is incorrectly called without parentheses.
+   - The list is incorrectly initialized as `ArrrayList` instead of `ArrayList`.
+   - The method does not return the filtered list, which is required. (0/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class has similar issues:
+   - The `getRunsScored` and `getWicketsTaken` methods are incorrectly called without parentheses.
+   - The list is incorrectly initialized as `ArrrayList` instead of `ArrayList`.
+   - The method does not return the filtered list, which is required. (0/5 marks)
+
+Overall, the student's submission contains numerous syntax and logical errors that prevent the code from compiling and functioning correctly. The implementation lacks adherence to Java conventions and fails to meet the requirements outlined in the rubric. The student needs to significantly improve their understanding of Java syntax, file handling, and object-oriented principles.

@@ -1,0 +1,46 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0.2
+    calculateTeamAverageRuns: 0.3
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0.2
+    writePlayersToFile: 0
+  total_score_variance: 6.5
+function_scores:
+  allRounderFilter:
+    feedback: The filter method uses '==' for role comparison instead of '.equals()'.
+    max_score: 5
+    score: 2
+  calculateTeamAverageRuns:
+    feedback: The method correctly calculates the average but does not handle division
+      by zero.
+    max_score: 5
+    score: 4
+  compare:
+    feedback: The compare method is not implemented.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The method reads players from the file but does not handle the first
+      line correctly.
+    max_score: 9
+    score: 7
+  teamFilter:
+    feedback: The filter method uses '==' for string comparison instead of '.equals()'.
+    max_score: 5
+    score: 3
+  updatePlayerStats:
+    feedback: The method throws an exception for every player that does not match,
+      instead of only if no players match.
+    max_score: 5
+    score: 3
+  writePlayersToFile:
+    feedback: The method does not close the PrintWriter after writing.
+    max_score: 4
+    score: 3
+overall_feedback: The implementation has several issues that need to be addressed,
+  particularly in method implementations and error handling.
+total_score: 19

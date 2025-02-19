@@ -1,0 +1,15 @@
+1. The `compare` method in `RunsComparator` contains logical errors and syntax issues. The method lacks proper control flow and variable declarations, which will lead to compilation errors. 
+
+2. In the `readPlayersFromFile` method, there are several issues with variable types (e.g., `list<player>` should be `List<Player>`), and the method does not implement file reading correctly. A `BufferedReader` should be used for reading files instead of directly using `FileInputStream`. The logic to split the player information is also missing.
+
+3. The `writePlayersToFile` method is incomplete and contains invalid syntax, which would cause compilation errors. It should include logic to write player data correctly based on the specified format.
+
+4. The `updatePlayerStats` method has incorrect syntax for the loop and conditionals (e.g., `file(Player p: players){` should be `for (Player p : players) {`). The method also has flawed logic for updating runs and wickets.
+
+5. The `calculateTeamAverageRuns` method contains logical issues, including incorrect variable checks and a lack of average calculation logic, which will lead to runtime errors.
+
+6. The `filter` method in `TeamFilterStrategy` has similar syntax and logical issues that would prevent the method from functioning as intended. 
+
+7. The `filter` method in `AllRounderStatsFilter` is incomplete and fails to filter based on the criteria, as well as having syntax issues.
+
+Overall, the student's submission has numerous critical syntax and logical errors that need substantial revisions to be functional and meet assignment requirements.

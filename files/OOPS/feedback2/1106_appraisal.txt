@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is incorrectly implemented. The logic for comparing runs does not follow the required structure. Instead of comparing using `compare` methods, it should return the result of a comparison between the two players' runs. A proper implementation would be: `return Integer.compare(p2.getRunsScored(), p1.getRunsScored());` to compare runs in descending order.
+
+2. In the `readPlayersFromFile` method, the file path is incorrectly formatted with backslashes. It should use double backslashes (`\\`) or forward slashes (`/`). Additionally, the method does not correctly implement the logic to read lines, split them, create `Player` objects, and add them to the list. The return statement at the end of the method should also return the list of players created.
+
+3. The `writePlayersToFile` method is not implemented at all, which is a significant omission as it is required to write player data back to a file. The student should provide a proper implementation to fulfill this requirement.
+
+4. In the `updatePlayerStats` method, the loop uses `players.length`, which is incorrect since `players` is a `List`. It should instead use `players.size()`. The comparison for player names should use `equals()` instead of `==` to compare strings properly. The `throw` statement is incorrectly written; it should be `throw new IllegalArgumentException("no change");`.
+
+5. The `calculateTeamAverageRuns` method has several issues: it uses `players.length` instead of `players.size()`, and the condition for checking if players belong to the team should be handled outside the loop before attempting to calculate averages. The statements for `throw` should be invoked properly, and the return statement for the average should return a double value. 
+
+6. In the `filter` method of `TeamFilterStrategy`, the same issue with `players.length` exists. The return statement is incorrectly formatted; it should be `return pl;` instead of `return(pl)`.
+
+7. The `filter` method in `AllRounderStatsFilter` contains significant errors: it incorrectly uses `players.length`, the list type is incorrectly declared as `List<Players>`, and the comparison conditions for filtering players should utilize `>=` instead of `==` to meet the criteria for runs and wickets.
+
+Overall, the student's performance shows a lack of understanding of Java syntax, resulting in multiple compilation errors and incomplete implementations across the provided methods. Significant improvements are needed in method implementations, adherence to Java conventions, and fulfilling the requirements set forth in the rubric to achieve a passing grade.

@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is not implemented, which is essential for sorting players based on their runs. This is a critical omission and results in a lack of functionality for sorting players. (2 marks)
+
+2. In the `readPlayersFromFile` method, the code attempts to read from a file named "specifiedFile.txt" instead of the provided `fileName` parameter. Additionally, the method does not correctly handle the reading of player data, including splitting the line and creating `Player` objects. The use of `outputStream.close()` is incorrect as `outputStream` is not defined in this context, and missing the return statement leads to an incomplete method. The logic inside the method is flawed. (5 marks)
+
+3. The `writePlayersToFile` method is not implemented at all, which is necessary for writing player data back to a file. This is a significant oversight. (4 marks)
+
+4. The `updatePlayerStats` method has a logical flaw. It does not throw an `IllegalArgumentException` if no player matches the given name, which is required by the rubric. Instead, it simply completes without any action if the player is not found. (3 marks)
+
+5. The `calculateTeamAverageRuns` method is not implemented, which is crucial for calculating the average runs of players in a specific team. This is a major missing functionality. (5 marks)
+
+6. In the `filter` method of the `TeamFilterStrategy` class, the condition checks if the player's name matches the team name instead of checking the player's team. This will lead to incorrect filtering. Additionally, the method adds players to the same list it is iterating over, which can cause a `ConcurrentModificationException`. (3 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented and filters players based on the criteria provided. This part of the code meets the requirements outlined in the rubric. (5 marks)
+
+8. The `filter` method in the `PlayerFilter` interface is incorrectly defined and contains logic that doesn't align with the rubric requirements. The interface should not have a default implementation for filtering as it is meant to define a contract. (2 marks)
+
+Overall, the student's performance shows significant gaps in understanding file handling, method implementation, and logical flow in Java. The code submission lacks critical functionalities and contains several errors that prevent it from compiling successfully. The overall assessment reveals a lack of understanding of Java programming concepts, particularly in file I/O and object-oriented design.

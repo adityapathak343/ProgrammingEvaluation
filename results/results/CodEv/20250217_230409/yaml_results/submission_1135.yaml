@@ -1,0 +1,48 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0.2
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.8
+function_scores:
+  allRounderFilter:
+    feedback: The method is incomplete and does not filter all-rounders by stats.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: The method is incomplete and contains syntax errors. It does not calculate
+      the average runs.
+    max_score: 5
+    score: 0
+  compare:
+    feedback: The method correctly returns a negative value for more runs, but does
+      not handle the case for equal runs or when the second player has more runs.
+    max_score: 2
+    score: 1
+  readPlayersFromFile:
+    feedback: The implementation has syntax errors and does not correctly read from
+      the file or handle player data.
+    max_score: 9
+    score: 0
+  teamFilter:
+    feedback: The method is incomplete and does not filter players by team.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: The method is incomplete and contains syntax errors. It does not correctly
+      update player statistics.
+    max_score: 5
+    score: 0
+  writePlayersToFile:
+    feedback: The method is incomplete and contains syntax errors. It does not write
+      player data to the file.
+    max_score: 4
+    score: 0
+overall_feedback: The code contains multiple syntax errors and incomplete implementations.
+  Significant revisions are needed to meet the requirements.
+total_score: 1

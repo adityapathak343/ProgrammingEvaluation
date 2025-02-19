@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, fulfilling the requirements of Question 1. (2/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class has a logical error. The loop that reads lines from the file should check for `in.hasNext()` before calling `in.nextLine()`. As it stands, it may throw an exception if the file has no lines after the header. Additionally, the method does not handle the case where the file is empty gracefully. (6/9 marks)
+
+3. The `writePlayersToFile` method is implemented correctly. It prepares to write data, writes the column names, and iterates through the player list to write each player's information. The method handles file writing appropriately. (4/4 marks)
+
+4. The `updatePlayerStats` method is correctly implemented. It iterates through the player list, checks for a matching player name, and updates the runs and wickets accordingly. It also throws an `IllegalArgumentException` if no player is found, which is appropriate. (5/5 marks)
+
+5. The `calculateTeamAverageRuns` method has a logical error in the average calculation. The division of `total_runs` by `playersFound` should be cast to `double` to avoid integer division, which could lead to incorrect average values. Additionally, the exception message should indicate that no players were found for the specified team, not for a player name. (3/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates a new list for players matching the specified team and iterates through the player list to add matching players. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented. It checks if a player is an all-rounder and meets the criteria for runs and wickets, adding them to the list as required. (5/5 marks)
+
+8. The implementation contains a clear and systematic approach to each requirement, demonstrating the student’s understanding of object-oriented principles and effective data handling techniques. The overall code structure is clean and adheres to best practices, such as encapsulation and separation of concerns throughout class definitions. (2 marks)
+
+The student has demonstrated a good understanding of the requirements and implemented most methods correctly. However, there are some logical errors in the `readPlayersFromFile` and `calculateTeamAverageRuns` methods that need to be addressed for full marks. Overall, the submission shows a solid grasp of the concepts, but attention to detail in handling edge cases is necessary for improvement.

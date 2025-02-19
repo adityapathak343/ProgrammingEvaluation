@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class has several syntax errors including the incorrect use of assignment (`=`) instead of equality checking (`==`). Also, the method signature is not aligned with the expected functionality. The logic needs to be corrected to properly compare runs of two players. (0/2 marks)
+
+2. The `readPlayersFromFile` method has critical errors in implementation, such as the use of outdated syntax for list instantiation, and the method does not correctly open or read from the specified file. This method is incomplete and cannot be compiled without revisions. (0/9 marks)
+
+3. The `writePlayersToFile` method correctly creates the `PrintWriter` object, but it lacks the sequential logic to write player details to the file and contains a syntax error due to the misplaced semicolon. This method is incomplete and cannot be compiled. (0/4 marks)
+
+4. The `updatePlayerStats` method lacks proper exception handling and does not have the logic needed for updating the player statistics correctly. The use of incorrect logical conditions will lead to a compilation failure. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method is not implemented and therefore cannot be evaluated. (0/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is completely unimplemented. (0/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is similarly unimplemented. (0/5 marks)
+
+Overall, despite the efforts made in attempting to implement the methods, the student's submission contains major issues leading to a compilation failure. None of the required functionality has been correctly implemented. Overall score: 0 out of 35 marks. The student should review Java syntax, core methodologies for file handling, and specific instructions outlined for each method to ensure successful implementation in the future.

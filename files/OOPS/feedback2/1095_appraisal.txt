@@ -1,0 +1,28 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored. It returns the expected values for descending order sorting. (2/2 marks)
+
+2. The `readPlayersFromFile` method has several issues:
+   - The line splitting logic uses `split("")`, which will not correctly separate the CSV values. It should use `split(",")` instead. (1/9 marks)
+   - The method does not handle potential exceptions when reading the file, which could lead to runtime errors. (0/9 marks)
+   - The `scanner` should first check if the file exists before attempting to read it to avoid `FileNotFoundException`. (0/9 marks)
+   - The file reading logic does not ensure proper exception handling, e.g., catching `FileNotFoundException` or `IOException`. (0/9 marks)
+   - The variable `details` is not correctly populated due to the incorrect split method, which can lead to potential `ArrayIndexOutOfBoundsException`. (0/9 marks)
+
+3. The `writePlayersToFile` method is partially implemented:
+   - The method does not close the `PrintWriter` after writing to the file, which can lead to resource leaks. (3/4 marks)
+   - The output does not match the expected CSV format; it uses spaces instead of commas. (0/4 marks)
+
+4. The `updatePlayerStats` method has logical issues:
+   - The variable `yes` is not initialized properly, which can lead to a potential compilation error. It should be initialized to `false`. (2/5 marks)
+   - The exception thrown is a `RuntimeException`, but it should be an `IllegalArgumentException` as specified in the requirements. (0/5 marks)
+   - The method does not correctly set the `yes` variable to `true` when the player is found, causing it to throw an exception incorrectly in the case where a player is found. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method is incomplete:
+   - The method does not implement the logic to calculate the average runs and lacks the return statement. (0/5 marks)
+   - The boolean variable `yes` is not used correctly to check if any players were found; it is initialized to `true` but should reflect player searches accurately. (0/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented to filter players by team. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class has a minor issue:
+   - The condition for adding players to the list should use `>=` instead of `>`, as the criteria specify "minimum" runs and wickets. (4/5 marks)
+
+The student's performance shows a good understanding of some concepts, particularly in the `RunsComparator` and filtering methods. However, there are significant issues in file handling and data processing methods that need to be addressed for the code to function correctly. Overall, the submission needs substantial improvements to meet the requirements fully.

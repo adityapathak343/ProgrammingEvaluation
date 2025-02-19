@@ -1,0 +1,47 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 7.5
+    calculateTeamAverageRuns: 7.5
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 7.5
+    writePlayersToFile: 0
+  total_score_variance: 10.8
+function_scores:
+  allRounderFilter:
+    feedback: The method is implemented correctly and follows all steps as required.
+    max_score: 5
+    score: 5
+  calculateTeamAverageRuns:
+    feedback: The method is implemented correctly and follows all steps as required.
+    max_score: 5
+    score: 5
+  compare:
+    feedback: The compare method is not implemented correctly. The inner class definition
+      is unnecessary and the method does not return a value.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The method is implemented correctly and follows all steps as required.
+    max_score: 9
+    score: 9
+  teamFilter:
+    feedback: The method has syntax errors and is not implemented correctly. The method
+      signature and logic need to be fixed.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: The method is implemented correctly and follows all steps as required.
+    max_score: 5
+    score: 5
+  writePlayersToFile:
+    feedback: The method is not implemented. No code is provided to write player data
+      to a file.
+    max_score: 4
+    score: 0
+overall_feedback: The implementation is partially complete. The compare method, writePlayersToFile
+  method, and teamFilter method need significant corrections. The other methods are
+  implemented correctly.
+total_score: 24

@@ -1,0 +1,44 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0
+function_scores:
+  allRounderFilter:
+    feedback: The filter method is not implemented.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: The method is not implemented.
+    max_score: 5
+    score: 0
+  compare:
+    feedback: The compare method is not implemented.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The method has incomplete implementation and does not return a list
+      of players.
+    max_score: 9
+    score: 0
+  teamFilter:
+    feedback: The filter method is not implemented.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: The method is not implemented.
+    max_score: 5
+    score: 0
+  writePlayersToFile:
+    feedback: The method is not implemented.
+    max_score: 4
+    score: 0
+overall_feedback: The code lacks implementations for all required methods, which are
+  essential for the functionality of the Cricket Analytics System.
+total_score: 0

@@ -97,6 +97,8 @@ class JavaJudge:
 You will be provided with the question and a rubric that describes the criteria for evaluation, with a marking scheme. 
 The question is a code sample that the examiner provides, containing a template wherein the student is required to write the code as well as comments and instructions from the examiner's end.
 Following this you will be provided with the code submission, along with the response from the Java compiler that runs this code.
+Note that the code may be formatted liberally, the specific positioning of the code within the methods are not important.
+Code may be present either before or after the comments prepared by the instructor.
 You are to evaluate the code based only on logical correctness. You are to ignore any syntax errors that the compiler may have thrown. 
 Any syntax errors that you encounter can be treated as correct syntax, and you are to infer the student's logical flow and intention from the code.
 You are to return your response as a JSON dictionary containing a detailed, nested evaluation of the student's marks for each line in the rubric.

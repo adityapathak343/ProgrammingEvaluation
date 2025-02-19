@@ -1,0 +1,45 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0.3
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.3
+function_scores:
+  allRounderFilter:
+    feedback: Logic is mostly correct but lacks proper checks for player role.
+    max_score: 5
+    score: 4
+  calculateTeamAverageRuns:
+    feedback: Logic for filtering players is incorrect and redundant calculations.
+    max_score: 5
+    score: 3
+  compare:
+    feedback: Correctly implemented the comparison logic for runs.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: Missing proper list initialization, incorrect method calls, and file
+      handling issues.
+    max_score: 9
+    score: 5
+  teamFilter:
+    feedback: Incorrect list initialization and method calls.
+    max_score: 5
+    score: 3
+  updatePlayerStats:
+    feedback: Correctly implemented the logic to update player statistics.
+    max_score: 5
+    score: 5
+  writePlayersToFile:
+    feedback: Syntax errors and missing proper file handling.
+    max_score: 4
+    score: 2
+overall_feedback: The implementation shows a good understanding of the requirements,
+  but there are several syntax errors and logical issues that need to be addressed
+  for full functionality.
+total_score: 24

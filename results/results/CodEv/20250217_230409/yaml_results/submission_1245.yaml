@@ -1,0 +1,51 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0
+function_scores:
+  allRounderFilter:
+    feedback: The method is not implemented. There is no logic to filter all-rounders
+      based on the specified criteria.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: The method is not implemented. There is no logic to calculate the average
+      runs for a team.
+    max_score: 5
+    score: 0
+  compare:
+    feedback: The compare method has incorrect syntax and logic. The variables r1
+      and r2 are not defined, and the comparison logic is flawed.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The method has incomplete implementation, incorrect variable names,
+      and lacks proper file reading logic.
+    max_score: 9
+    score: 0
+  teamFilter:
+    feedback: The method is not implemented. There is no logic to filter players by
+      team.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: The method has incorrect logic and syntax errors. It does not correctly
+      update player statistics or handle exceptions properly.
+    max_score: 5
+    score: 0
+  writePlayersToFile:
+    feedback: The method is incomplete and has incorrect variable names. It does not
+      write player data to the file.
+    max_score: 4
+    score: 0
+overall_feedback: The code submission lacks proper implementations for all required
+  methods, contains multiple syntax errors, and does not follow Java conventions.
+  Significant revisions are needed.
+total_score: 0

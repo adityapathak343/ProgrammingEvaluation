@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is mostly correct, but it lacks a return statement for the case when the runs are equal. This will lead to a compilation error. The method should return 0 when the runs are equal.
+
+2. In the `readPlayersFromFile` method, the declaration of the list `Player_details` is incorrect. It should be `List<Player> playerDetails = new ArrayList<>();`. Additionally, the method does not implement the required steps for reading from the file, such as reading lines, splitting them, and creating `Player` objects.
+
+3. The `writePlayersToFile` method has several issues. The `PrintWriter` is incorrectly instantiated as `Printwriter`, which should be `PrintWriter`. The method also does not implement the required steps for writing data to the file, such as writing column names and player details.
+
+4. The `updatePlayerStats` method is completely unimplemented. It should iterate through the list of players, check for a matching name, and update the runs and wickets accordingly. If no player matches, it should throw an `IllegalArgumentException`.
+
+5. The `calculateTeamAverageRuns` method is incomplete. It does not filter players by team, calculate total runs, or compute the average. The use of `this.TeamName` is incorrect and should be removed.
+
+6. The `filter` method in the `TeamFilterStrategy` class is incomplete. It initializes a list but does not implement the logic to filter players by team name. The return statement is also incorrectly placed.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is unimplemented. It should create a list of players who are all-rounders and meet the specified criteria for runs and wickets.
+
+8. The student's performance shows a lack of understanding of the required implementations for the methods. Many methods are either incomplete or contain syntax errors, which would prevent the code from compiling successfully. The student needs to focus on correctly implementing the logic as per the requirements and ensuring proper syntax. 
+
+9. The student has demonstrated some understanding of basic Java constructs and object-oriented principles, but a more holistic grasp of file handling, data manipulation, and algorithmic thinking is necessary to fulfill the assignment's objectives.

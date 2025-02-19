@@ -1,0 +1,42 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0
+function_scores:
+  allRounderFilter:
+    feedback: Successfully filters all-rounders based on criteria.
+    max_score: 5
+    score: 5
+  calculateTeamAverageRuns:
+    feedback: Successfully calculates average runs for the specified team.
+    max_score: 5
+    score: 5
+  compare:
+    feedback: Correctly implemented the comparison logic for runs.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: Successfully implemented all steps for reading players from file.
+    max_score: 9
+    score: 9
+  teamFilter:
+    feedback: Correctly filters players by team.
+    max_score: 5
+    score: 5
+  updatePlayerStats:
+    feedback: Player stats update logic is correctly implemented.
+    max_score: 5
+    score: 5
+  writePlayersToFile:
+    feedback: All steps for writing players to file are correctly implemented.
+    max_score: 4
+    score: 4
+overall_feedback: The implementation is complete and meets all requirements effectively.
+total_score: 35

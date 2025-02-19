@@ -1,0 +1,46 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0.3
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0.3
+    writePlayersToFile: 0
+  total_score_variance: 0.8
+function_scores:
+  allRounderFilter:
+    feedback: The method is incomplete and contains syntax errors.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: The method has syntax errors and does not handle exceptions properly.
+    max_score: 5
+    score: 2
+  compare:
+    feedback: The compare method is incomplete and contains syntax errors. The comparison
+      logic is incorrect.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The method is incomplete. It lacks proper file reading logic and player
+      creation.
+    max_score: 9
+    score: 0
+  teamFilter:
+    feedback: The method is incomplete and contains syntax errors.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: The method has logic errors and syntax issues. It does not throw an
+      exception correctly.
+    max_score: 5
+    score: 2
+  writePlayersToFile:
+    feedback: The method is not implemented. It needs to write player data to a file.
+    max_score: 4
+    score: 0
+overall_feedback: The code contains multiple syntax errors and incomplete implementations.
+  Significant revisions are needed to meet the requirements.
+total_score: 4

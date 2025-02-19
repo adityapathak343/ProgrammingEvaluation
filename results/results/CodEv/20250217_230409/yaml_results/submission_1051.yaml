@@ -1,0 +1,49 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0
+function_scores:
+  allRounderFilter:
+    feedback: Correctly implemented filtering logic for all-rounders.
+    max_score: 5
+    score: 5
+  calculateTeamAverageRuns:
+    feedback: Logic is mostly correct, but team name comparison should use .equals()
+      instead of ==, and division by 11 should be dynamic.
+    max_score: 5
+    score: 3
+  compare:
+    feedback: Correctly implemented the comparison logic for runs.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: File reading logic is mostly correct, but splitting lines by space instead
+      of comma may lead to errors.
+    max_score: 9
+    score: 7
+  teamFilter:
+    feedback: Logic is mostly correct, but team name comparison should use .equals()
+      instead of ==.
+    max_score: 5
+    score: 3
+  updatePlayerStats:
+    feedback: Logic is mostly correct, but string comparison should use .equals()
+      instead of ==.
+    max_score: 5
+    score: 4
+  writePlayersToFile:
+    feedback: Correctly writes player data, but the column names are not formatted
+      correctly.
+    max_score: 4
+    score: 3
+overall_feedback: The implementation is mostly correct but contains some issues with
+  string comparison and file reading format. Attention to detail is needed for correct
+  functionality.
+total_score: 27

@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class has a critical flaw where a new `RunsComparator` class is incorrectly defined inside it. This will lead to a compilation error. The correct implementation should return the comparison result directly.
+
+2. The `readPlayersFromFile` method is incorrectly defined twice, which is not allowed in Java. This will cause a compilation error as the second definition is nested within the first. The implementation should be provided only once.
+
+3. The `writePlayersToFile` method is defined but not implemented, which is a significant omission as it is required by the rubric. This will lead to incomplete functionality.
+
+4. The `updatePlayerStats` method is incorrectly defined twice, which is not valid in Java. The implementation should be provided only once, and the duplicate definition should be removed.
+
+5. The `calculateTeamAverageRuns` method suffers from the same issue as `updatePlayerStats`, where it is incorrectly defined twice. This will cause a compilation error.
+
+6. In the `TeamFilterStrategy` class, the method `filter` features several syntax errors, including `list<player>filteredplayers` and `retrun filteredplayer`. These should be corrected to the appropriate Java syntax, such as `List<Player> filteredPlayers = new ArrayList<>();` and `return filteredPlayers;`.
+
+7. The `AllRounderStatsFilter` class also has a similar issue with the method `filter` being redundantly defined, which is not valid. The correct definition should be provided only once.
+
+8. There are some stylistic issues present, such as inconsistent naming conventions, which could be improved for code clarity.
+
+Overall, the student's submission exhibits several critical syntax errors and structural issues that prevent the code from compiling successfully. The student must revise their code to ensure that methods are defined correctly, without duplication, and that all required methods are implemented to fulfill the rubric requirements. The overall execution and logical flow of the program are on the right track but require careful attention to detail in the implementation to achieve successful execution.

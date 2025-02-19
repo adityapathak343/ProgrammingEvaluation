@@ -208,7 +208,7 @@ class CricketDataHandler {
 			tname = playerdetails4.get(4);
 			Player p1 = new Player(pname, role, rscored, wtaken, tname);
 			players.add(p1);
-		}
+		}1  
 		
 		try {
 			fInputStream.close();

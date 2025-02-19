@@ -1,0 +1,21 @@
+1. The `compare` method in the `RunsComparator` class is mostly correct. However, it would be better to use a single return statement that handles all three cases (greater than, less than, and equal) for clarity. It correctly identifies the need for sorting in descending order.
+
+2. The `readPlayersFromFile` method is incomplete and contains a logic error. The current implementation does not utilize a proper mechanism for reading lines from the file and parsing the CSV data. It should employ a `BufferedReader` to read lines from the file rather than using `FileInputStream` and `infile.read()`.
+
+3. The `writePlayersToFile` method is not implemented at all. This method must be completed to facilitate writing player data back to a file, which includes writing the header and correctly iterating through the list of players to write their details in the required format.
+
+4. The `updatePlayerStats` method has a syntax error when throwing the `IllegalArgumentException`. It should be `throw new IllegalArgumentException("No such member");` instead of `throw IllegalArgumentException("No such member");`. The current implementation will cause a compilation error.
+
+5. In the `calculateTeamAverageRuns` method, the variable `teamFound` is declared but never set to `true`, which means the check for whether any players were found will always fail. The logic should be adjusted to set `teamFound` to `true` when a player from the specified team is found.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented and follows the required steps to filter players by team. It creates a new list and adds players that match the team name, which is a proper implementation.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is also correctly implemented, checking both runs and wickets against the criteria and returning the matching players.
+
+8. The implementation shows that the student has a good understanding of the requirements. However, specific critical errors and incomplete implementations need further attention to ensure the code functions properly. The student should focus on fixing the logical errors, completing the missing methods, and ensuring proper syntax to avoid compilation issues.
+
+9. The overall structure of the code is logical, demonstrating the use of encapsulation and adherence to OOP principles. However, clarity of logic in methods is important, so revisiting and revising the implementation based on feedback will be beneficial.
+
+10. Additional suggestion: Adopting proper exception handling and management of resources such as file streams should be considered to enhance the robustness of the application. Using "try-with-resources" for reading and writing files can improve properly managing resources. 
+
+Overall, the student's performance indicates a solid foundation in object-oriented programming but requires attention to detail to address the highlighted issues.

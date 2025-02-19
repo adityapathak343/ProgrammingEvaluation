@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. This part is correct and meets the requirements of Question 1.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is mostly correct. It creates a list, opens the file, skips the header, reads player data, and adds players to the list. However, it does not handle the case where the file might not be found properly, as it continues execution even if the file is not found. This could lead to a `NullPointerException` when trying to read from a null `Scanner`. This method could be improved by throwing an exception if the file is not found.
+
+3. The `writePlayersToFile` method is implemented correctly. It prepares to write to the file, writes the header, and iterates through the player list to write each player's details. This part meets the requirements of Question 3.
+
+4. The `updatePlayerStats` method is correctly implemented. It iterates through the player list, checks for a matching player name, and updates the runs and wickets accordingly. It also throws an `IllegalArgumentException` if the player is not found, which meets the requirements of Question 4.
+
+5. The `calculateTeamAverageRuns` method is implemented correctly. It calculates the total runs for players from the specified team and computes the average. It also throws an `IllegalArgumentException` if no players are found from the specified team, which meets the requirements of Question 5.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates a list for players matching the team name and returns it, fulfilling the requirements of Question 6.
+
+7. The `filter` method in the `AllRounderStatsFilter` class has a syntax error. The condition in the `if` statement is missing a closing parenthesis. This will cause a compilation error and needs to be fixed to meet the requirements of Question 7.
+
+8. Additionally, error handling in `readPlayersFromFile` should be explicitly better structured to avoid proceeding with a null `Scanner`.
+
+Overall, the student has demonstrated a good understanding of the requirements and has implemented most of the methods correctly. However, there are minor issues, particularly with error handling in the `readPlayersFromFile` method and a syntax error in the `filter` method of the `AllRounderStatsFilter` class. These issues need to be addressed for the code to function correctly.

@@ -1,0 +1,15 @@
+1. The `compare` method in `RunsComparator` does not handle all cases for comparing runs. While it correctly identifies one case, it fails to return the correct values for cases where `p2` has more runs or if both players have the same runs. The implementation needs to be rectified to ensure it adheres to the expectations stated in the question. (1/2 marks)
+
+2. The implementation of the `readPlayersFromFile` method demonstrates multiple syntax and logical inaccuracies. The use of `fileinputstream` is incorrect and the method overall lacks proper syntax, structure, and logic to read from a file and create `Player` objects. It should include functionality to successfully read lines, parse them into components, and instantiate `Player` objects. As a result, it receives no marks. (0/9 marks)
+
+3. The `writePlayersToFile` method is not implemented properly. The attempt to create a `PrintWriter` lacks correct syntax and does not provide the necessary logic to write player data to a file. Full implementation of this method is necessary to meet the requirements. (0/4 marks)
+
+4. The `updatePlayerStats` method is lacking critical implementation. There’s no logic to iterate through the players or to update the statistics. The method's structure suggests a misunderstanding of how to implement this functionality. It will not fulfill expectations in its current form. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method is not implemented satisfactorily. The logic for filtering players and calculating averages is incomplete. This method must be fully detailed and functional to qualify for marks. (0/5 marks)
+
+6. The `filter` method in `TeamFilterStrategy` is also incomplete; it contains no logic to filter the players based on team. As such, it does not meet the question's requirements. (0/5 marks)
+
+7. The `filter` method in `AllRounderStatsFilter` lacks any implementation to filter players based on the provided criteria. Each method needs correct implementation to offer value to the assignment. (0/5 marks)
+
+Overall, the student's submission shows significant deficiencies in completing the assignment requirements, with most methods being either incomplete or suffering from critical syntax errors. A focused effort is needed to grasp Java's syntax and concepts, especially when implementing class methods to satisfy specified requirements.

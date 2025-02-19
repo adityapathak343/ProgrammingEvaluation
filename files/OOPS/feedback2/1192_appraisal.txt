@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. The logic is sound, and it returns the expected values based on the comparison.
+
+2. The `readPlayersFromFile` method is incomplete. Although the student has started writing code to read from the file, the implementation is not finished. The variable `player` is referenced but never defined, and there's missing logic to handle file reading, split the data, and create `Player` objects.
+
+3. The `writePlayersToFile` method is also incomplete as no logic is implemented to write player data to the file. The file path provided has incorrect escape sequences (e.g., `C:\Users\user\Desktop\SS_24_25_CBT.txt` should use double backslashes or forward slashes).
+
+4. There are issues in the `updatePlayerStats` method as the variable `playername` is not defined; it should be `playerName`. Additionally, the logic for throwing an exception is incorrect; it should only throw the exception if no player matches after checking all players, not within the loop.
+
+5. The `calculateTeamAverageRuns` method contains logical issues. The variable `count` is incorrectly incremented (`count += count;` should be `totalRuns += p.getRunsScored();`), and the return statement is incorrectly placed. The check for `count == 0` should occur before returning the average.
+
+6. The `filter` method in the `TeamFilterStrategy` class has a string comparison issue. The `==` operator should not be used for string comparison; `equals()` should be used instead. Additionally, the list `p1` should be of type `List<Player>` instead of `ArrayList<String>`.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is not implemented at all, which is a significant omission.
+
+8. The student performs some basic operations correctly but needs to ensure they are following best practices in areas such as file handling and string comparisons. More attention is needed towards exception handling and local variable management.
+
+The student's performance shows a basic understanding of the requirements but lacks the detailed implementation in multiple methods, along with several syntax and logical errors that need to be addressed for the code to compile and function correctly. Overall, the submission requires significant improvement to meet the assignment's expectations.

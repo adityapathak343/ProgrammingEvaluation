@@ -1,0 +1,45 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0.3
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.3
+function_scores:
+  allRounderFilter:
+    feedback: The method is not implemented at all.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: The method is not implemented at all.
+    max_score: 5
+    score: 0
+  compare:
+    feedback: The comparison logic is mostly correct, but it incorrectly returns -1
+      for both cases of p1 having more runs and p2 having fewer runs.
+    max_score: 2
+    score: 1
+  readPlayersFromFile:
+    feedback: The method is incomplete and does not implement any of the required
+      steps for reading players from the file.
+    max_score: 9
+    score: 0
+  teamFilter:
+    feedback: The method is not implemented at all.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: The method is not implemented at all.
+    max_score: 5
+    score: 0
+  writePlayersToFile:
+    feedback: The method is not implemented at all.
+    max_score: 4
+    score: 0
+overall_feedback: The implementation is incomplete with only the compare method partially
+  implemented. All other methods need to be completed to meet the requirements.
+total_score: 1

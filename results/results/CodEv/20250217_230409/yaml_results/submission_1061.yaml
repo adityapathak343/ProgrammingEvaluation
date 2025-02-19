@@ -1,0 +1,43 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0
+function_scores:
+  allRounderFilter:
+    feedback: The filter method in AllRounderStatsFilter is not implemented.
+    max_score: 5
+    score: 0
+  calculateTeamAverageRuns:
+    feedback: The calculateTeamAverageRuns method is not implemented.
+    max_score: 5
+    score: 0
+  compare:
+    feedback: The compare method is not implemented.
+    max_score: 2
+    score: 0
+  readPlayersFromFile:
+    feedback: The readPlayersFromFile method is not implemented.
+    max_score: 9
+    score: 0
+  teamFilter:
+    feedback: The filter method in TeamFilterStrategy is not implemented.
+    max_score: 5
+    score: 0
+  updatePlayerStats:
+    feedback: The updatePlayerStats method is not implemented.
+    max_score: 5
+    score: 0
+  writePlayersToFile:
+    feedback: The writePlayersToFile method is not implemented.
+    max_score: 4
+    score: 0
+overall_feedback: All required methods are not implemented. Please complete the implementation
+  for full credit.
+total_score: 0

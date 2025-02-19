@@ -1,0 +1,17 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs in descending order. It returns a negative value if the first player has more runs, a positive value if the second player has more runs, and zero if they have the same number of runs. (2/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is well-structured and follows the steps outlined in the question. It correctly creates a list, reads from the file, splits the data, creates `Player` objects, and adds them to the list. However, it does not handle potential exceptions that may arise from file reading or parsing errors. (7/9 marks)
+
+3. The `writePlayersToFile` method is partially implemented. It prepares to write data and writes the column names correctly, but the comment for writing each player's information is misleading as it does not explicitly state that the writing happens in the loop. The method also lacks exception handling for file writing. (3/4 marks)
+
+4. The `updatePlayerStats` method is correctly implemented. It iterates through the list of players, checks for a match by name, and updates the runs and wickets accordingly. It also throws an `IllegalArgumentException` if no player matches, which is appropriate. (5/5 marks)
+
+5. The `calculateTeamAverageRuns` method is mostly correct, but the calculation of the average runs is flawed. The expression `(1.0)*(numberOfPlayers)` is unnecessary and could lead to confusion. The check for an empty filtered list is commented out, which should be active to prevent division by zero. (3/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented. It creates a new list, iterates through the players, and adds those that match the team name. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class has a logical error. It checks for equality with the criteria instead of greater than or equal to, which does not fulfill the requirement of filtering all-rounders based on minimum runs and wickets. (1/5 marks)
+
+The student has demonstrated a good understanding of the required functionalities, with some minor issues in exception handling and logical errors in the filtering methods. Overall, the submission shows promise but requires attention to detail in certain areas. The issues in the `readPlayersFromFile` and `writePlayersToFile` methods could be improved with better error handling, and the logic in the `AllRounderStatsFilter` class needs correction to meet the guidelines specified. 
+
+Additional comments can be added emphasizing the need for careful exception handling and clarifying the filtering criteria for the all-rounders to better align with the assignment's goals.

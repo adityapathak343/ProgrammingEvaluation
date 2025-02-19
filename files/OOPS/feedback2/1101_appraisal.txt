@@ -1,0 +1,24 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values for the comparison, thus fulfilling the requirement. (2/2 marks)
+
+2. The `readPlayersFromFile` method has several issues:
+   - The use of `ipstream.next("%s")` is incorrect; it should be `ipstream.nextLine()` to read the entire line and then split it.
+   - The reference to `pRole.fromString(...)` is incorrectly added as `Role pRole=new Role()`; it should be directly called using `Role.fromString(...)`.
+   - The method does not handle exceptions that may arise from file reading properly. (4/9 marks)
+
+3. The `writePlayersToFile` method has a few issues:
+   - The `printf` method should include a newline character after each player's data to ensure each player's information is written on a new line.
+   - The column names should be written using `println` instead of `printf` for a proper line break.
+   - The method does not handle exceptions that may arise from file writing properly. (2/4 marks)
+
+4. The `updatePlayerStats` method has a critical flaw:
+   - The check for player name equality should use `.equals()` instead of `==` to compare strings.
+   - The method throws an `IllegalArgumentException` inside the loop, which will terminate the loop prematurely. It should only throw this exception after checking all players. (2/5 marks)
+
+5. The `calculateTeamAverageRuns` method is mostly correct, but it could be improved:
+   - The average calculation should use `double` division to avoid integer division issues, which can lead to incorrect results. (4/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented and effectively filters players by team name. (5/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented and effectively filters all-rounders based on the given criteria. (5/5 marks)
+
+Overall, the student has demonstrated a good understanding of the requirements, but there are several critical issues in the file handling, string comparison logic, and numeric calculations that need to be addressed. The implementation of the filtering methods is strong, but the reading and writing methods require significant corrections to function properly. The student should focus on improving error handling, ensuring the correct use of data types, and ensuring accurate calculations.

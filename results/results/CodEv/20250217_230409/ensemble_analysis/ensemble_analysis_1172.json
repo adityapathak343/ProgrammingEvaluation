@@ -1,0 +1,54 @@
+{
+  "submission_id": "1172",
+  "evaluation_time": "2025-02-17 23:27:08",
+  "ensemble_statistics": {
+    "evaluations_count": 5,
+    "score_variance": {
+      "compare": 0,
+      "readPlayersFromFile": 0,
+      "writePlayersToFile": 0,
+      "updatePlayerStats": 0,
+      "calculateTeamAverageRuns": 0,
+      "teamFilter": 0,
+      "allRounderFilter": 0
+    },
+    "total_score_variance": 0
+  },
+  "function_scores": {
+    "compare": {
+      "final_score": 0,
+      "max_score": 2,
+      "variance": 0
+    },
+    "readPlayersFromFile": {
+      "final_score": 0,
+      "max_score": 9,
+      "variance": 0
+    },
+    "writePlayersToFile": {
+      "final_score": 0,
+      "max_score": 4,
+      "variance": 0
+    },
+    "updatePlayerStats": {
+      "final_score": 3,
+      "max_score": 5,
+      "variance": 0
+    },
+    "calculateTeamAverageRuns": {
+      "final_score": 0,
+      "max_score": 5,
+      "variance": 0
+    },
+    "teamFilter": {
+      "final_score": 0,
+      "max_score": 5,
+      "variance": 0
+    },
+    "allRounderFilter": {
+      "final_score": 0,
+      "max_score": 5,
+      "variance": 0
+    }
+  }
+}

@@ -1,0 +1,20 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, which is correct. (2/2 marks)
+
+2. The `readPlayersFromFile` method has several issues:
+   - The `StringTokenizer` is incorrectly using a space as a delimiter instead of a comma, which would lead to incorrect parsing of the CSV data. (1/9 marks)
+   - The method does not handle the case where the file cannot be opened properly, as it continues execution without returning an empty list or throwing an exception. (1/9 marks)
+   - The method should also call `st.nextToken()` multiple times to read values correctly. It should specify the correct number of tokens based on the expected format. (1/9 marks)
+
+3. The `writePlayersToFile` method has a critical error:
+   - The `PrintWriter` variable `out` is declared twice, which causes a compilation error. The second declaration should be removed. (0/4 marks)
+   - The method does not implement the steps for writing the player details to the file, which is required. (0/4 marks)
+
+4. The `updatePlayerStats` method does not throw an `IllegalArgumentException` if no player matches the given name, which is a requirement. This is a significant oversight. The implementation is otherwise sound but needs that error checking. (3/5 marks)
+
+5. The `calculateTeamAverageRuns` method has a potential division by zero issue if there are no players in the specified team. It should throw an `IllegalArgumentException` in such cases. Additionally, the computation of the average is done as an integer division instead of casting to double, potentially losing precision. (2/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented to filter players by their team name. However, it lacks proper handling for the case where no players are found. (4/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class incorrectly checks the role of the player using `equals("ALL_ROUNDER")` instead of comparing it to the `Role` enum. This could lead to runtime errors. The correct comparison should be made using `element.getRole() == Role.ALL_ROUNDER`. (3/5 marks)
+
+Overall, the student has demonstrated a basic understanding of the required functionalities, but there are several critical errors and oversights in the implementation that need to be addressed. The code submission lacks proper error handling and does not fully implement the required methods, which significantly impacts the overall performance.

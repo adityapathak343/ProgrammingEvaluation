@@ -1,0 +1,45 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0.3
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.3
+function_scores:
+  allRounderFilter:
+    feedback: Correctly filters all-rounders based on the specified criteria.
+    max_score: 5
+    score: 5
+  calculateTeamAverageRuns:
+    feedback: Correctly calculates the average runs for the specified team.
+    max_score: 5
+    score: 5
+  compare:
+    feedback: Correctly implemented the comparison of runs in descending order.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: File reading logic is mostly correct, but there is an issue with adding
+      players to the list (use add instead of addLast).
+    max_score: 9
+    score: 6
+  teamFilter:
+    feedback: Successfully filters players by team.
+    max_score: 5
+    score: 5
+  updatePlayerStats:
+    feedback: Successfully updates player statistics and handles exceptions correctly.
+    max_score: 5
+    score: 5
+  writePlayersToFile:
+    feedback: Correctly writes player data, but missing newline after each player's
+      data.
+    max_score: 4
+    score: 3
+overall_feedback: The implementation is mostly correct with minor issues in file handling
+  methods. Overall, good job!
+total_score: 31

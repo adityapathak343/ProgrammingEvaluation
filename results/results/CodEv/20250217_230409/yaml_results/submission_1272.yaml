@@ -1,0 +1,44 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0.2
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0
+    teamFilter: 0.2
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 0.8
+function_scores:
+  allRounderFilter:
+    feedback: Logic for filtering all-rounders is incorrect; should check for both
+      runs and wickets.
+    max_score: 5
+    score: 2
+  calculateTeamAverageRuns:
+    feedback: Successfully calculated average runs with proper exception handling.
+    max_score: 5
+    score: 5
+  compare:
+    feedback: Correctly implemented the comparison of runs in descending order.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: Successfully implemented all steps for reading players from file.
+    max_score: 9
+    score: 9
+  teamFilter:
+    feedback: Correctly implemented filtering of players by team.
+    max_score: 5
+    score: 5
+  updatePlayerStats:
+    feedback: Correctly implemented player stats update with exception handling.
+    max_score: 5
+    score: 5
+  writePlayersToFile:
+    feedback: Missing file closing operation after writing.
+    max_score: 4
+    score: 3
+overall_feedback: The implementation is mostly correct with minor issues in writing
+  to file and filtering all-rounders. Overall, good job!
+total_score: 31

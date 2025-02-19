@@ -1,0 +1,46 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0.3
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0.3
+  total_score_variance: 2.2
+function_scores:
+  allRounderFilter:
+    feedback: Correctly implemented filtering for all-rounders based on criteria.
+    max_score: 5
+    score: 5
+  calculateTeamAverageRuns:
+    feedback: Logic is mostly correct, but exception handling for division by zero
+      is not implemented.
+    max_score: 5
+    score: 4
+  compare:
+    feedback: Correctly implemented the comparison logic for runs.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: File reading logic is mostly correct, but missing exception handling
+      for closing the input stream.
+    max_score: 9
+    score: 9
+  teamFilter:
+    feedback: Correctly implemented filtering by team.
+    max_score: 5
+    score: 5
+  updatePlayerStats:
+    feedback: Logic is correct, but missing exception throwing for player not found.
+    max_score: 5
+    score: 4
+  writePlayersToFile:
+    feedback: Correctly implemented writing logic, but missing exception handling
+      for closing the output stream.
+    max_score: 4
+    score: 3
+overall_feedback: The implementation is mostly correct with minor issues in exception
+  handling and logic completeness. Good job overall.
+total_score: 31

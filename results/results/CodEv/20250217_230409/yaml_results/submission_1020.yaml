@@ -1,0 +1,49 @@
+ensemble_statistics:
+  evaluations_count: 5
+  score_variance:
+    allRounderFilter: 0
+    calculateTeamAverageRuns: 0
+    compare: 0
+    readPlayersFromFile: 0.3
+    teamFilter: 0
+    updatePlayerStats: 0
+    writePlayersToFile: 0
+  total_score_variance: 2.3
+function_scores:
+  allRounderFilter:
+    feedback: Logic for filtering all-rounders is mostly correct, but role comparison
+      is incorrect.
+    max_score: 5
+    score: 3
+  calculateTeamAverageRuns:
+    feedback: Logic for calculating average runs is mostly correct, but team name
+      comparison is incorrect.
+    max_score: 5
+    score: 3
+  compare:
+    feedback: Correctly implemented the comparison logic for runs.
+    max_score: 2
+    score: 2
+  readPlayersFromFile:
+    feedback: File reading logic is mostly correct, but player creation has issues.
+    max_score: 9
+    score: 5
+  teamFilter:
+    feedback: Logic for filtering by team is mostly correct, but team name comparison
+      is incorrect.
+    max_score: 5
+    score: 3
+  updatePlayerStats:
+    feedback: Logic for updating stats is mostly correct, but player name comparison
+      is incorrect.
+    max_score: 5
+    score: 3
+  writePlayersToFile:
+    feedback: File writing logic is incorrect; BufferedWriter is not instantiated
+      properly.
+    max_score: 4
+    score: 2
+overall_feedback: The implementation has several logical errors, particularly in string
+  comparisons and file handling. Review the comparison methods and ensure proper object
+  instantiation.
+total_score: 19

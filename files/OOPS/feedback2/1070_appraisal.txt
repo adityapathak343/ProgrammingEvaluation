@@ -1,0 +1,21 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. The logic is sound and correctly returns the expected comparison values based on input.
+
+2. The `readPlayersFromFile` method contains significant complexity and inefficiencies. Although it has an attempt to read player data from a file, it does not clearly and efficiently parse player data using standard file reading practices. A `BufferedReader` would have offered better performance and clarity for reading lines and parsing player details.
+
+3. The `writePlayersToFile` method is missing entirely, which is a crucial functional component that prevents the application from saving player data.
+
+4. There is an oversight in the `updatePlayerStats` method with respect to `IllegalArgumentException`. The exception should be instantiated correctly with a message. The method also has the potential to be simplified by using a boolean flag to check for player existence rather than using an integer and a break statement.
+
+5. The logic within `calculateTeamAverageRuns` is problematic. It redundantly creates distinct lists for each team, impacting efficiency. Moreover, the computation of total runs lacks initialization, resulting in potential errors. The method should directly filter players based on the team name without creating separate lists for each.
+
+6. The `filter` method in the `TeamFilterStrategy` class is not implemented, presenting a significant omission that results in incomplete functionality for filtering players by team.
+
+7. Similar to point 6, the `filter` method in the `AllRounderStatsFilter` class is not implemented. As filtering all-rounders is a key functionality, this lack of implementation directly affects the expected operations of the application.
+
+8. The code adheres to the principles of object-oriented programming, utilizing encapsulation and appropriate accessors and mutators for attributes of the Player class.
+
+9. The player statistics update mechanism is somewhat convoluted but effective in updating player statistics sequentially, demonstrating the student's understanding of data manipulation in lists.
+
+10. The error handling techniques used are insufficient in some areas, particularly in file operations where more robust exception handling could improve the robustness of the program.
+
+The student's performance shows a mix of correct implementations and significant omissions, which need addressing. While some methods work as intended, others lack implementation or contain logical errors that could hinder application functionality. The student is encouraged to simplify their code and implement all required methods completely, while also enhancing error handling for better application stability.

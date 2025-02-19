@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is incorrectly structured due to misplaced code outside the method body. The correct comparison logic should utilize `p1.getRunsScored()` and `p2.getRunsScored()`. Proper implementation is necessary for comparing runs in descending order. (0/2 marks)
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is not implemented. However, the student has made an attempt to outline the steps, which indicates understanding of the methodology required to read from a file and parse data into `Player` objects. Implementation is essential for full credit. (0/9 marks)
+
+3. The `writePlayersToFile` method is not implemented, but the skeleton is provided which shows the intention to write player data back to a file. Actual implementation is needed to fulfill the requirement. (0/4 marks)
+
+4. The `updatePlayerStats` method has significant issues. The variable `players` is re-declared inside the method, which will lead to a compilation error. The condition to check player's name uses an incorrect syntax. However, the basic logic of incrementing runs and wickets is present, showing some understanding of the requirements. (0/5 marks)
+
+5. The `calculateTeamAverageRuns` method is incorrectly implemented as it improperly uses a `Scanner` for user input which is unnecessary. The logic for calculating average runs is scattered, and it fails to properly check if players exist in the specified team. Some intent to calculate total and average runs is shown, yet the implementation does not meet the requirements. (0/5 marks)
+
+6. The `filter` method in the `TeamFilterStrategy` class contains errors in both declaration and logic. The method has multiple syntax issues, such as the improper use of variable types and control structures. Expected functionality needs to be fully implemented for proper filtering. (0/5 marks)
+
+7. The `filter` method in the `AllRounderStatsFilter` class is incomplete and incorrectly structured. The condition checking if a player is an all-rounder is not formatted correctly, and the return statement lacks meaningful return of filtered players. However, the header comments hint at an understanding of the filtering process. Implementation should be completed to gain marks. (0/5 marks)
+
+Overall, while the student has made attempts in outlining their thought process and method structures, the submission lacks complete and correct implementations for all required functionalities, resulting in a score of 0 out of 40. The student must revise Java syntax rules, logical flow, and method implementations in the context of object-oriented programming to succeed in this assignment.
